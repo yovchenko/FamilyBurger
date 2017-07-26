@@ -12,10 +12,6 @@ min-height: 100vh;
 margin-bottom: 120px;
 }
 
-.background {
-position: absolute;
-}
-
 .flex-container {
 -webkit-flex: 1 100%;
 flex: 1 100%;
@@ -58,7 +54,7 @@ background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
 
 .carousel-inner > .carousel-item > img {
         display: block;
-        height: 768px;
+        height: auto;
         min-width: 100%;
         width: 100%;
         max-width: 100%;
