@@ -34,6 +34,12 @@ font-size: 3em;
 align-self: center;
 }
 
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 main {
 
 }
@@ -62,7 +68,7 @@ background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
 
 /* media queries*/
 
-@media (max-width: 576px) { 
+@media all and (max-width: 576px) { 
 .carousel-inner > .carousel-item > img {
         display: block;
         height: 320px;
@@ -73,7 +79,7 @@ background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
 }
 }
 
-@media (max-width: 768px) { 
+@media all and (max-width: 768px) and (min-width: 577px) { 
         .carousel-inner > .carousel-item > img {
         display: block;
         height: 480px;
