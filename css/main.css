@@ -78,7 +78,6 @@ background-position: center;
 -moz-background-size: cover;
 background-size: cover;
 -o-background-size: cover;
-background-repeat: no-repeat; 
 background-attachment: fixed;
 }
 
@@ -90,26 +89,34 @@ background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 1);
 }
 
-#image-1 {
+.carousel-inner > :nth-child(1) > .fill{
 background-image:url('../images/slide-1-fullScreen.png');
 }
 
-#image-2 {
+.carousel-inner > :nth-child(2) > .fill{
 background-image:url('../images/slide-2-fullScreen.png');
 }
 
-#image-3 {
+.carousel-inner > :nth-child(3) > .fill{
 background-image:url('../images/slide-3-fullScreen.png');
 }
 /* media queries*/
-
 @media all and (max-width: 576px) { 
+.navbar {
+background-image: url("../svg/i-like-food.svg");
+background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
+}
+
 .carousel,
 .item,
 .active {
 height: 50vh;
 }
 
+a[class] {
+display: none;
+}
+
 .containerCarousel{
 margin-top: 50px;
 }
@@ -118,49 +125,52 @@ margin-top: 50px;
 background-attachment: inherit;
 }
 
-#image-1 {
+.carousel-inner > :nth-child(1) > .fill{
 background-image:url('../images/slide-1.png');
 }
 
-#image-2 {
+.carousel-inner > :nth-child(2) > .fill{
 background-image:url('../images/slide-2.png');
 }
 
-#image-3 {
+.carousel-inner > :nth-child(3) > .fill{
 background-image:url('../images/slide-3.png');
-}
-
-.navbar {
-background-image: url("../svg/i-like-food.svg");
-background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
 }
 }
 
 @media all and (max-width: 768px) and (min-width: 577px) { 
+.navbar {
+background-image: url("../svg/i-like-food.svg");
+background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
+}
+
 .carousel,
 .item,
 .active {
 height: 70vh;
 }
 
+a[class] {
+display: none;
+}
+
 .containerCarousel{
 margin-top: 50px;
 }
 
 .fill {
 background-attachment: inherit;
-background-image: none;
 }
 
-#image-1 {
+.carousel-inner > :nth-child(1) > .fill{
 background-image:url('../images/slide-1.png');
 }
 
-#image-2 {
+.carousel-inner > :nth-child(2) > .fill{
 background-image:url('../images/slide-2.png');
 }
 
-#image-3 {
+.carousel-inner > :nth-child(3) > .fill{
 background-image:url('../images/slide-3.png');
 }
 
@@ -173,3 +183,4 @@ background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
 @media (min-width: 992px) { }
 
 @media (min-width: 1200px) { }
+
