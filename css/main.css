@@ -113,7 +113,7 @@ background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
 height: 50vh;
 }
 
-a[class] {
+.carousel-inner ~ a[class] {
 display: none;
 }
 
@@ -150,7 +150,7 @@ background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
 height: 70vh;
 }
 
-a[class] {
+.carousel-inner ~ a[class] {
 display: none;
 }
 
