@@ -88,8 +88,17 @@ background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
 }
 
+#image-1 {
+background-image:url('../images/slide-1.png');
+}
 
+#image-2 {
+background-image:url('../images/slide-2.png');
+}
 
+#image-3 {
+background-image:url('../images/slide-3.png');
+}
 /* media queries*/
 
 @media all and (max-width: 576px) { 
@@ -98,11 +107,25 @@ background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
 .active {
     height: 50vh;
 }
+
 .containerCarousel{
 margin-top: 50px;
 }
+
 .fill {
 background-attachment: inherit;
+}
+
+#image-1 {
+background-image:url('../images/slide-1-compressed.png');
+}
+
+#image-2 {
+background-image:url('../images/slide-2-compressed.png');
+}
+
+#image-3 {
+background-image:url('../images/slide-3-compressed.png');
 }
 }
 
@@ -112,11 +135,26 @@ background-attachment: inherit;
 .active {
     height: 70vh;
 }
+
 .containerCarousel{
 margin-top: 50px;
 }
+
 .fill {
 background-attachment: inherit;
+background-image: none;
+}
+
+#image-1 {
+background-image:url('../images/slide-1-compressed.png');
+}
+
+#image-2 {
+background-image:url('../images/slide-2-compressed.png');
+}
+
+#image-3 {
+background-image:url('../images/slide-3-compressed.png');
 }
 }
 
