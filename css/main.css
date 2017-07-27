@@ -59,7 +59,7 @@ section {
 .carousel,
 .item,
 .active {
-height: 70vh;
+height: 80vh;
 }
 
 .carousel-inner {
