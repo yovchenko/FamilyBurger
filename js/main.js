@@ -5,14 +5,10 @@ $( document ).ready(function() {
          interval: 3500,
          pause: "false"
     });
-
-var $itemNum;    
-$('.carousel-control-next').click(function(){
-$itemNum = $('.active').index();  
-$carousel.carousel($itemNum + 1);
-$('.carousel-control-prev').click(function(){
-$itemNum = $('.active').index();  
-$carousel.carousel($itemNum - 1);
-});
-});
+ $("#myCarousel").swiperight(function() {  
+    		  $(this).carousel('prev');  
+	    		});  
+		   $("#myCarousel").swipeleft(function() {  
+		      $(this).carousel('next');  
+}); 
 });
