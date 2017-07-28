@@ -1,9 +1,9 @@
-#preload-01 { background:url('../images/slide-1-lg.jpg') no-repeat -9999px -9999px; }
-#preload-02 { background:url('../images/slide-2-lg.jpg') no-repeat -9999px -9999px; }
-#preload-03 { background:url('../images/slide-3-lg.jpg') no-repeat -9999px -9999px; }
-#preload-04 { background:url('../images/slide-1-md.jpg') no-repeat -9999px -9999px; }
-#preload-05 { background:url('../images/slide-2-md.jpg') no-repeat -9999px -9999px; }
-#preload-06 { background:url('../images/slide-3-md.jpg') no-repeat -9999px -9999px; }
+#preload-01 { background:url(../images/slide-1-lg.jpg) no-repeat -9999px -9999px; }
+#preload-02 { background:url(../images/slide-2-lg.jpg) no-repeat -9999px -9999px; }
+#preload-03 { background:url(../images/slide-3-lg.jpg) no-repeat -9999px -9999px; }
+#preload-04 { background:url(../images/slide-1-md.jpg) no-repeat -9999px -9999px; }
+#preload-05 { background:url(../images/slide-2-md.jpg) no-repeat -9999px -9999px; }
+#preload-06 { background:url(../images/slide-3-md.jpg) no-repeat -9999px -9999px; }
 
 html,body {
 height:100%;
