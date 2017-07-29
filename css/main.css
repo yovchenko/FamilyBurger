@@ -3,7 +3,8 @@ height:100%;
 margin: 0;
 box-sizing: border-box;
 font-family: 'Alegreya', serif;
-text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+font-weight: bold;
+text-shadow: -1px 0 rgba(0%,0%,0%, 0.4), 0 1px rgba(0%,0%,0%, 0.4), 1px 0 rgba(0%,0%,0%, 0.4), 0 -1px rgba(0%,0%,0%, 0.4);
 }
 
 body {
@@ -21,29 +22,93 @@ background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
 }
 
+.navbar-inverse {
+border: none;
+  
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+border: none;
+}
+
 .navbar-inverse .navbar-brand {
-color:rgba(71.4%, 33.3%, 6.1%, 1);
+color:rgba(94.1%, 28.4%, 10.2%, 1);
 font-size: 2em;
 }
+
 .navbar-inverse .navbar-toggle {
-border-color: rgba(71.4%, 33.3%, 6.1%, 1);
+border-color: rgba(94.1%, 28.4%, 10.2%, 1);
 }
 
 .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
-background-color: white;
-}
-
-.navbar-nav>li>a {
-line-height: 25px;
-font-size: 1.5em;
+background-color: transparent; 
 }
 
 .navbar-inverse .navbar-toggle .icon-bar {
-background-color: rgba(71.4%, 33.3%, 6.1%, 1);
+background-color: rgba(94.1%, 28.4%, 10.2%, 1);
+}
+
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+color: rgba(94.1%, 28.4%, 10.2%, 1);
+background-color: transparent; 
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+color: rgba(94.1%, 28.4%, 10.2%, 1);
+background-color: transparent; 
 }
 
 .navbar-inverse .navbar-nav>li>a {
-color: rgba(71.4%, 33.3%, 6.1%, 1);
+color: rgba(94.1%, 28.4%, 10.2%, 1);
+line-height: 25px;
+font-size: 1.5em;
+position: relative;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+color: rgba(94.1%, 28.4%, 10.2%, 1);
+}
+
+.navbar-inverse .navbar-nav>li>a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 7px;
+  left: 0;
+  background-color: rgba(94.1%, 28.4%, 10.2%, 1);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover:after {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.navbar-inverse .navbar-nav>li>a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 7px;
+  left: 0;
+  background-color: rgba(94.1%, 28.4%, 10.2%, 1);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .containerCarousel{
@@ -107,6 +172,22 @@ background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
 }
 
+.navbar-inverse .navbar-nav>li>a:after {
+ display: none;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover:after {
+ display: none;
+}
+
+.navbar-inverse .navbar-nav>li>a:before {
+ display: none;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover:before {
+ display: none;
+}
+
 .carousel,
 .item,
 .active {
@@ -142,6 +223,22 @@ background-image:url('../images/slide-3-md.jpg');
 .navbar {
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
+}
+
+.navbar-inverse .navbar-nav>li>a:after {
+ display: none;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover:after {
+ display: none;
+}
+
+.navbar-inverse .navbar-nav>li>a:before {
+ display: none;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover:before {
+ display: none;
 }
 
 .carousel,
