@@ -20,11 +20,15 @@ flex: 1 100%;
 .navbar {
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
+padding-bottom: 32px;
+}
+
+.navbar-nav {
+float: right;
 }
 
 .navbar-inverse {
 border: none;
-  
 }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
@@ -34,6 +38,7 @@ border: none;
 .navbar-inverse .navbar-brand {
 color:rgba(94.1%, 28.4%, 10.2%, 1);
 font-size: 2em;
+padding-top: 1.2em;
 }
 
 .navbar-inverse .navbar-toggle {
@@ -63,6 +68,7 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
 line-height: 25px;
 font-size: 1.5em;
 position: relative;
+padding-top: 1.6em;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
@@ -112,7 +118,7 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
 }
 
 .containerCarousel{
-margin-top: 55px;
+margin-top: 105px;
 }
 
 main {
@@ -170,6 +176,29 @@ background-image:url('../images/slide-3-lg.jpg');
 .navbar {
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
+padding-bottom: 55px;
+}
+
+.navbar-collapse {
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+.navbar-nav {
+    float: left;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 0px;
+    top: 28px;
+    margin-right: 15px;
+    margin-bottom: 0px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }
 
 .navbar-inverse .navbar-nav>li>a:after {
@@ -199,7 +228,7 @@ display: none;
 }
 
 .containerCarousel{
-margin-top: 50px;
+margin-top: 104px;
 }
 
 .fill {
@@ -219,10 +248,35 @@ background-image:url('../images/slide-3-md.jpg');
 }
 }
 
-@media all and (max-width: 768px) and (min-width: 577px) { 
+@media all and (max-width: 767px) and (min-width: 577px) { 
 .navbar {
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
+padding-bottom: 55px;
+}
+
+.navbar-collapse {
+padding-right: 15px;
+padding-left: 15px;
+overflow-x: visible;
+-webkit-overflow-scrolling: touch;
+border-top: 1px solid transparent;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 0px;
+    top: 28px;
+    margin-right: 15px;
+    margin-bottom: 0px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }
 
 .navbar-inverse .navbar-nav>li>a:after {
@@ -252,7 +306,7 @@ display: none;
 }
 
 .containerCarousel{
-margin-top: 50px;
+margin-top: 104px;
 }
 
 .fill {
