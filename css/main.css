@@ -217,6 +217,10 @@ box-shadow: none;
  display: none;
 }
 
+.navbar-nav {
+    float: left;
+}
+
 .carousel,
 .item,
 .active {
@@ -293,6 +297,10 @@ box-shadow: none;
 
 .navbar-inverse .navbar-nav>li>a:hover:before {
  display: none;
+}
+
+.navbar-nav {
+    float: left;
 }
 
 .carousel,
