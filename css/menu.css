@@ -40,6 +40,9 @@ height: 100vh;
 .row  img {
  max-width: 75%;
 }
+.row  img:hover {
+transform: scale(1.07);
+}
 }
 
 @media all and (max-width: 767px) and (min-width: 577px) { 
