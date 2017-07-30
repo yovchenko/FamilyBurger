@@ -1,0 +1,49 @@
+.menu {
+width: 100%;
+margin-top: 104px;
+background-image: url("../svg/i-like-food.svg");
+background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
+padding: 15px 0 15px 0;
+overflow: hidden;
+}
+
+.menu > .row {
+margin: 0;
+padding: 0px 15px 0px 15px;
+}
+
+.row {
+text-align: center;
+}
+
+.row div {
+padding:15px 0 15px 0;
+}
+
+.row  img {
+ max-width: 75%;
+ border-right: 2px solid rgba(94.1%, 28.4%, 10.2%, 1);
+ border-left: 2px solid rgba(94.1%, 28.4%, 10.2%, 1);
+ border-radius: 25px;
+ 
+}
+
+.row  img:hover {
+transform: scale(1.05);
+}
+
+footer {
+height: 100vh;
+}
+
+@media all and (max-width: 576px) { 
+.row  img {
+ max-width: 75%;
+}
+}
+
+@media all and (max-width: 767px) and (min-width: 577px) { 
+.row  img {
+ max-width: 85%;
+}
+}

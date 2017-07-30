@@ -121,14 +121,6 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
 margin-top: 105px;
 }
 
-main {
-
-}
-
-section {
-
-}
-
 .carousel,
 .item,
 .active {
@@ -156,7 +148,7 @@ display: flex;
 height: 100vh;
 font-size: 2vmin;
 background-image: url("../svg/i-like-food.svg");
-background-color: rgba(96.4%, 82.5%, 47.7%, 1);
+background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
 }
 
 .carousel-inner > :nth-child(1) > .fill{
