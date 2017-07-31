@@ -20,7 +20,13 @@ flex: 1 100%;
 .navbar {
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
-    min-height: 105px;
+min-height: 105px;
+}
+
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: 10px;
 }
 
 .navbar-nav {
@@ -242,10 +248,10 @@ background-image:url('../images/slide-3-lg.jpg');
 .navbar {
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
-min-height: 104px;
+min-height: 105px;
 }
 
-.navbar-collapse {
+.navbar-collapse  {
 -webkit-box-shadow: none;
 box-shadow: none;
 }
@@ -322,7 +328,7 @@ background-image:url('../images/slide-3-md.jpg');
 .navbar {
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
-min-height: 104px;
+min-height: 105px;
 }
 
 .navbar-collapse {
