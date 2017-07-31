@@ -25,11 +25,13 @@ padding:15px 0 15px 0;
  border-color: rgba(0%, 0%, 0%, 0.15);
  border-style: groove;
  border-radius: 25px;
- 
+ -moz-box-transition:  0.2s ease-in-out;
+ -webkit-transition:  0.2s ease-in-out;
+ transition: 0.2s ease-in-out;
 }
 
 .row  img:hover {
-transform: scale(1.05);
+transform: scale(1.06);
 }
 
 footer {
@@ -41,7 +43,7 @@ footer {
  max-width: 75%;
 }
 .row  img:hover {
-transform: scale(1.07);
+transform: scale(1.06);
 }
 }
 
