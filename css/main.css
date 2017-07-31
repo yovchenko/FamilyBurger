@@ -20,7 +20,7 @@ flex: 1 100%;
 .navbar {
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
-padding-bottom: 32px;
+    min-height: 105px;
 }
 
 .navbar-nav {
@@ -242,7 +242,7 @@ background-image:url('../images/slide-3-lg.jpg');
 .navbar {
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
-padding-bottom: 55px;
+min-height: 104px;
 }
 
 .navbar-collapse {
@@ -322,7 +322,7 @@ background-image:url('../images/slide-3-md.jpg');
 .navbar {
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
-padding-bottom: 55px;
+min-height: 104px;
 }
 
 .navbar-collapse {
