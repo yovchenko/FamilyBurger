@@ -1,8 +1,6 @@
 .menu {
 width: 100%;
 margin-top: 104px;
-background-image: url("../svg/i-like-food.svg");
-background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
 padding: 15px 0 15px 0;
 overflow: hidden;
 }
@@ -33,7 +31,7 @@ transform: scale(1.05);
 }
 
 footer {
-height: 100vh;
+
 }
 
 @media all and (max-width: 576px) { 

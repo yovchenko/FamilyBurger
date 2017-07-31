@@ -7,14 +7,14 @@ font-weight: bold;
 text-shadow: -1px 0 rgba(0%,0%,0%, 0.4), 0 1px rgba(0%,0%,0%, 0.4), 1px 0 rgba(0%,0%,0%, 0.4), 0 -1px rgba(0%,0%,0%, 0.4);
 }
 
-body {
-min-height: 100vh;
-margin-bottom: 120px;
-}
-
 .flex-container {
--webkit-flex: 1 100%;
-flex: 1 100%;
+flex-direction: column;
+background-image: url("../svg/i-like-food.svg");
+background-size: 75px 75px;
+background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
+min-height: 100vh; 
+flex: 1 0 auto;
+order: 1;
 }
 
 .navbar {
@@ -24,9 +24,9 @@ min-height: 105px;
 }
 
 .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
-    margin-right: -15px;
-    margin-left: -15px;
-    margin-bottom: 10px;
+margin-right: -15px;
+margin-left: -15px;
+margin-bottom: 10px;
 }
 
 .navbar-nav {
@@ -93,33 +93,6 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .navbar-inverse .navbar-toggle {
 border-color: rgba(94.1%, 28.4%, 10.2%, 1);
@@ -224,11 +197,16 @@ background-attachment: fixed;
 }
 
 footer {
-display: flex;
-height: 100vh;
+order: 2;
+border-top: 1px solid rgba(96.4%, 82.5%, 47.7%, 0.85);
+height: 105px;
 font-size: 2vmin;
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
+}
+
+.footer {
+
 }
 
 .carousel-inner > :nth-child(1) > .fill{
