@@ -20,8 +20,10 @@ padding:15px 0 15px 0;
 
 .row  img {
  max-width: 75%;
- border-right: 2px solid rgba(94.1%, 28.4%, 10.2%, 1);
- border-left: 2px solid rgba(94.1%, 28.4%, 10.2%, 1);
+ border-right: 10px ;
+ border-left: 10px;
+ border-color: rgba(0%, 0%, 0%, 0.15);
+ border-style: groove;
  border-radius: 25px;
  
 }
