@@ -39,7 +39,81 @@ border: none;
 color:rgba(94.1%, 28.4%, 10.2%, 1);
 font-size: 2em;
 padding-top: 1.2em;
+position: relative;
 }
+
+.navbar-inverse .navbar-brand:hover {
+color: rgba(94.1%, 28.4%, 10.2%, 1);
+}
+
+.navbar-inverse .navbar-brand::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 21px;
+  left: 0;
+  background-color: rgba(94.1%, 28.4%, 10.2%, 1);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-inverse .navbar-brand:hover:after {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.navbar-inverse .navbar-brand::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -17px;
+  left: 0;
+  background-color: rgba(94.1%, 28.4%, 10.2%, 1);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-inverse .navbar-brand:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .navbar-inverse .navbar-toggle {
 border-color: rgba(94.1%, 28.4%, 10.2%, 1);
@@ -75,7 +149,7 @@ padding-top: 1.6em;
 color: rgba(94.1%, 28.4%, 10.2%, 1);
 }
 
-.navbar-inverse .navbar-nav>li>a:after {
+.navbar-inverse .navbar-nav>li>a::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -96,7 +170,7 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
   transform: scaleX(1);
 }
 
-.navbar-inverse .navbar-nav>li>a:before {
+.navbar-inverse .navbar-nav>li>a::before {
   content: "";
   position: absolute;
   width: 100%;
