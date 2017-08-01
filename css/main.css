@@ -305,15 +305,21 @@ background-attachment: inherit;
 }
 
 .carousel-inner > :nth-child(1) > .fill{
-background-image:url('../images/slide-1-md.jpg');
+  width: 1024px;
+  height: 768px;
+  background-color: red;
 }
 
 .carousel-inner > :nth-child(2) > .fill{
-background-image:url('../images/slide-2-md.jpg');
+  width: 1024px;
+  height: 768px;
+  background-color: green;
 }
 
 .carousel-inner > :nth-child(3) > .fill{
-background-image:url('../images/slide-3-md.jpg');
+  width: 1024px;
+  height: 768px;
+  background-color: yellow;
 }
 }
 
@@ -390,17 +396,22 @@ background-attachment: inherit;
 background-image:url('../images/slide-1-md.jpg');
 }
 
+.carousel-inner > :nth-child(1) > .fill{
+  width: 1024px;
+  height: 768px;
+  background-color: red;
+}
+
 .carousel-inner > :nth-child(2) > .fill{
-background-image:url('../images/slide-2-md.jpg');
+  width: 1024px;
+  height: 768px;
+  background-color: green;
 }
 
 .carousel-inner > :nth-child(3) > .fill{
-background-image:url('../images/slide-3-md.jpg');
-}
-
-.navbar {
-background-image: url("../svg/i-like-food.svg");
-background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
+  width: 1024px;
+  height: 768px;
+  background-color: yellow;
 }
 }
 
