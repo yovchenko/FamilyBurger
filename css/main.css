@@ -208,32 +208,48 @@ border-top: 1px solid rgba(96.4%, 82.5%, 47.7%, 0.85);
 -moz-box-shadow: 0px 2px 5px 5px rgba(0%, 0%, 0%, 0.60);
 -webkit-box-shadow: 0px 2px 5px 5px rgba(0%, 0%, 0%, 0.60);
 box-shadow: 0px 2px 5px 5px rgba(0%, 0%, 0%, 0.60);
-height: 105px;
+
 font-size: 2vmin;
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
 }
 
 .footer {
+display: flex;
+height: 105px;
+justify-content: flex-end;
+align-items: center;
+}
 
+.footer > div {
+ margin-right: 15px;
+}
+
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
 }
 
 .carousel-inner > :nth-child(1) > .fill{
   width: 1024px;
   height: 768px;
-  background-color: red;
+  background-color: transparent;
 }
 
 .carousel-inner > :nth-child(2) > .fill{
   width: 1024px;
   height: 768px;
-  background-color: green;
+  background-color: transparent;
 }
 
 .carousel-inner > :nth-child(3) > .fill{
   width: 1024px;
   height: 768px;
-  background-color: yellow;
+  background-color: transparent;
 }
 
 /* media queries*/
@@ -307,19 +323,19 @@ background-attachment: inherit;
 .carousel-inner > :nth-child(1) > .fill{
   width: 1024px;
   height: 768px;
-  background-color: red;
+  background-color: transparent;
 }
 
 .carousel-inner > :nth-child(2) > .fill{
   width: 1024px;
   height: 768px;
-  background-color: green;
+  background-color: transparent;
 }
 
 .carousel-inner > :nth-child(3) > .fill{
   width: 1024px;
   height: 768px;
-  background-color: yellow;
+  background-color: transparent;
 }
 }
 
@@ -395,19 +411,19 @@ background-attachment: inherit;
 .carousel-inner > :nth-child(1) > .fill{
   width: 1024px;
   height: 768px;
-  background-color: red;
+  background-color: transparent;
 }
 
 .carousel-inner > :nth-child(2) > .fill{
   width: 1024px;
   height: 768px;
-  background-color: green;
+  background-color: transparent;
 }
 
 .carousel-inner > :nth-child(3) > .fill{
   width: 1024px;
   height: 768px;
-  background-color: yellow;
+  background-color: transparent;
 }
 }
 
