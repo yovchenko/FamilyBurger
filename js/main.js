@@ -4,18 +4,18 @@ $(document).ready(function () {
             var img1 = new Image();
             var img2 = new Image();
             var img3 = new Image();
-            img1.src = "http://yovchenko.github.io/familyBurger/images/slide-1-lg.jpg";
+         /*   img1.src = "http://yovchenko.github.io/familyBurger/images/slide-1-lg.jpg";
             img2.src = "http://yovchenko.github.io/familyBurger/images/slide-2-lg.jpg";
-            img3.src = "http://yovchenko.github.io/familyBurger/images/slide-3-lg.jpg";
+            img3.src = "http://yovchenko.github.io/familyBurger/images/slide-3-lg.jpg"; */
         }
 
         else if (document.images && window.matchMedia('(max-width: 768px)').matches) {
             var img4 = new Image();
             var img5 = new Image();
             var img6 = new Image();
-            img4.src = "http://yovchenko.github.io/familyBurger/images/slide-1-md.jpg";
+           /* img4.src = "http://yovchenko.github.io/familyBurger/images/slide-1-md.jpg";
             img5.src = "http://yovchenko.github.io/familyBurger/images/slide-2-md.jpg";
-            img6.src = "http://yovchenko.github.io/familyBurger/images/slide-3-md.jpg";
+            img6.src = "http://yovchenko.github.io/familyBurger/images/slide-3-md.jpg";*/
         }
     }
     function addLoadEvent(func) {

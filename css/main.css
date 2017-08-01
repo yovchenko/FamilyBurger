@@ -393,10 +393,6 @@ background-attachment: inherit;
 }
 
 .carousel-inner > :nth-child(1) > .fill{
-background-image:url('../images/slide-1-md.jpg');
-}
-
-.carousel-inner > :nth-child(1) > .fill{
   width: 1024px;
   height: 768px;
   background-color: red;
