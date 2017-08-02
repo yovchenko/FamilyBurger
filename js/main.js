@@ -48,6 +48,9 @@ $(document).ready(function () {
 });
 
 var $images = $('.product-img');
+function modalFunction1() {
+$images.css('background-image','url("images/product/img-1.png")');
+}
 function modalFunction2() {
 $images.css('background-image','url("images/product/img-2.png")');
 }
