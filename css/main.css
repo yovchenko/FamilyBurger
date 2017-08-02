@@ -26,6 +26,11 @@ min-height: 105px;
 box-shadow: 0px 1px 5px 1px rgba(0%, 0%, 0%, 0.7);
 }
 
+a:focus {
+  outline: none; 
+  outline-offset: none; 
+}
+
 .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
 margin-right: -15px;
 margin-left: -15px;
@@ -121,7 +126,6 @@ background-color: transparent;
 
 .navbar-inverse .navbar-nav>li>a {
 color: rgba(94.1%, 28.4%, 10.2%, 1);
-line-height: 25px;
 font-size: 1.5em;
 position: relative;
 padding-top: 1.6em;
@@ -331,6 +335,7 @@ background-attachment: inherit;
   height: 768px;
   background-color: transparent;
 }
+
 }
 
 @media all and (max-width: 767px) and (min-width: 577px) { 
@@ -338,6 +343,10 @@ background-attachment: inherit;
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
 min-height: 105px;
+}
+
+.navbar-nav {
+    float: left;
 }
 
 .navbar-collapse {
@@ -415,6 +424,7 @@ background-attachment: inherit;
   height: 768px;
   background-color: transparent;
 }
+
 }
 
 @media (min-width: 992px) { }

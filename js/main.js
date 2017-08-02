@@ -45,8 +45,63 @@ $(document).ready(function () {
     $carousel.swipeleft(function () {
         $(this).carousel('next');
     });
-  var $itemText = $('.notify-badge');
-  $itemText.arctext({radius: 300});
 });
 
- 
+var $images = $('.product-img');
+function modalFunction2() {
+$images.css('background-image','url("images/product/img-2.png")');
+}
+function modalFunction3() {
+$images.css('background-image','url("images/product/img-3.png")');
+}
+function modalFunction4() {
+$images.css('background-image','url("images/product/img-4.png")');
+}
+function modalFunction5() {
+$images.css('background-image','url("images/product/img-5.png")');
+}
+function modalFunction6() {
+$images.css('background-image','url("images/product/img-6.png")');
+}
+function modalFunction7() {
+$images.css('background-image','url("images/product/img-7.png")');
+}
+function modalFunction8() {
+$images.css('background-image','url("images/product/img-8.png")');
+}
+function modalFunction9() {
+$images.css('background-image','url("images/product/img-9.png")');
+}
+function modalFunction10() {
+$images.css('background-image','url("images/product/img-10.png")');
+}
+function modalFunction11() {
+$images.css('background-image','url("images/product/img-11.png")');
+}
+function modalFunction12() {
+$images.css('background-image','url("images/product/img-12.png")');
+}
+function modalFunction13() {
+$images.css('background-image','url("images/product/img-13.png")');
+}
+function modalFunction14() {
+$images.css('background-image','url("images/product/img-14.png")');
+}
+function modalFunction15() {
+$images.css('background-image','url("images/product/img-15.png")');
+}
+function modalFunction16() {
+$images.css('background-image','url("images/product/img-16.png")');
+}
+function modalFunction17() {
+$images.css('background-image','url("images/product/img-17.png")');
+}
+function modalFunction18() {
+$images.css('background-image','url("images/product/img-18.png")');
+}
+function modalFunction19() {
+$images.css('background-image','url("images/product/img-19.png")');
+}
+function modalFunction20() {
+$images.css('background-image','url("images/product/img-20.png")');
+}
