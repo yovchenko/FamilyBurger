@@ -45,4 +45,8 @@ $(document).ready(function () {
     $carousel.swipeleft(function () {
         $(this).carousel('next');
     });
+  var $itemText = $('.notify-badge');
+  $itemText.arctext({radius: 400});
 });
+
+ 

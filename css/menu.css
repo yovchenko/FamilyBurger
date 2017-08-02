@@ -19,7 +19,7 @@ padding:15px 0 15px 0;
 }
 
 .row  img {
- max-width: 75%;
+ max-width: 85%;
  border-right: 10px ;
  border-left: 10px;
  border-color: rgba(0%, 0%, 0%, 0.15);
@@ -36,14 +36,36 @@ padding:15px 0 15px 0;
 transform: scale(1.06);
 }
 
-footer {
+.item-img {
+position:relative;
+display: inline-block;
 
 }
+
+.notify-badge{
+position:relative;
+font-size: 1.5em;
+ margin: 0;
+}
+
+.notify-badge span {
+	height: 40px;
+  line-height: 40px;
+  color:rgba(94.1%, 28.4%, 10.2%, 1);
+}
+
 
 @media all and (max-width: 576px) { 
 .row  img {
  max-width: 75%;
 }
+
+.notify-badge{
+position:relative;
+font-size: 1.35em;
+margin: 0;
+}
+
 .row  img:hover {
 transform: scale(1.06);
 }
