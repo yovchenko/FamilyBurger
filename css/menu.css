@@ -54,7 +54,6 @@ line-height: 40px;
 }
 
 .product-img {
-background-image: url("../images/product/img-1.png");
 background-size: contain;
 background-repeat: no-repeat;
 height: 420px;
