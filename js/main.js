@@ -46,7 +46,7 @@ $(document).ready(function () {
         $(this).carousel('next');
     });
   var $itemText = $('.notify-badge');
-  $itemText.arctext({radius: 400});
+  $itemText.arctext({radius: 300});
 });
 
  

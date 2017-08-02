@@ -44,14 +44,14 @@ display: inline-block;
 
 .notify-badge{
 position:relative;
-font-size: 1.5em;
+font-size: 1.7em;
  margin: 0;
 }
 
 .notify-badge span {
-	height: 40px;
-  line-height: 40px;
-  color:rgba(94.1%, 28.4%, 10.2%, 1);
+height: 40px;
+color:rgba(94.1%, 28.4%, 10.2%, 1);
+line-height: 40px;
 }
 
 
@@ -62,7 +62,7 @@ font-size: 1.5em;
 
 .notify-badge{
 position:relative;
-font-size: 1.35em;
+font-size: 1.40em;
 margin: 0;
 }
 
