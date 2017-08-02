@@ -34,7 +34,7 @@ padding:15px 0 15px 0;
 
 .row  img:hover {
 transform: scale(1.06);
-border-radius: 100%;
+border-radius: 25%;
 }
 
 .item-img {
