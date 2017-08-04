@@ -106,12 +106,12 @@ width: 90%;
     width: 70px;
     right: -50px;
     line-height: 50px;
-    font-size: 2em;
+    font-size: 1.6em;
     font-family: 'Alegreya', serif;
     font-weight: bold;
     text-shadow: -1px 0 rgba(0%,0%,0%, 0.4), 0 1px rgba(0%,0%,0%, 0.4), 1px 0 rgba(0%,0%,0%, 0.4), 0 -1px rgba(0%,0%,0%, 0.4);
     top: 0;
-    margin-right: 5px;
+    margin-right: 10px;
     color: rgba(94.1%, 28.4%, 10.2%, 1);
 }
 
