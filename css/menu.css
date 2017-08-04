@@ -59,6 +59,8 @@ background-size: contain;
 background-repeat: no-repeat;
 height: 420px;
 width: 90%;
+-webkit-filter: drop-shadow(1px 3px 10px rgba(255%, 255%, 255%, 0.60));
+  filter: drop-shadow(1px 3px 10px rgba(255%, 255%, 255%, 0.60));
 }
 
 .modal-fullscreen {
@@ -113,6 +115,8 @@ width: 90%;
     top: 0;
     margin-right: 10px;
     color: rgba(94.1%, 28.4%, 10.2%, 1);
+    -webkit-filter: drop-shadow(1px 3px 10px rgba(255%, 255%, 255%, 0.60));
+  filter: drop-shadow(1px 3px 10px rgba(255%, 255%, 255%, 0.60));
 }
 
 .ribbon:after,
