@@ -103,7 +103,7 @@ width: 90%;
 .ribbon {
     background: rgba(255%,255%,255%,0.2);
     position: absolute;
-    width: 70px;
+    width: 60px;
     right: -50px;
     line-height: 50px;
     font-size: 1.6em;
@@ -126,12 +126,12 @@ width: 90%;
 }
 
 .ribbon:after {
-    border-left: 35px solid transparent;
+    border-left: 30px solid transparent;
     right: 0px;
 }
 
 .ribbon:before {
-    border-right: 35px solid transparent;
+    border-right: 30px solid transparent;
     left: 0px;
 }
 
