@@ -57,14 +57,14 @@ line-height: 40px;
 .product-img {
 background-size: contain;
 background-repeat: no-repeat;
-height: 420px;
+height: 18em;
 width: 90%;
 -webkit-filter: drop-shadow(1px 3px 10px rgba(255%, 255%, 255%, 0.60));
   filter: drop-shadow(1px 3px 10px rgba(255%, 255%, 255%, 0.60));
 }
 
 .modal-fullscreen {
-  background: transparent;
+background: rgba(0%,0%,0%, 0.5);
 }
 
 .modal-fullscreen .modal-content {
@@ -89,13 +89,24 @@ width: 90%;
 }
 
 .modal-body > .container:first-child {
-    border: 5px solid rgba(255%,255%,255%,0.2);
-    border-radius: 20px;
-    overflow: hidden;
+  border: 5px solid rgba(255%,255%,255%,0.2);
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .modal-body > .container > .row div {
   padding-top: 0;
+}
+
+.modal-body > .container > .row > div:last-child {
+  color: rgba(94.1%, 28.4%, 10.2%, 1);
+  text-shadow: -1px 0 rgba(0%,0%,0%, 0.4), 0 1px rgba(0%,0%,0%, 0.4), 1px 0 rgba(0%,0%,0%, 0.4), 0 -1px rgba(0%,0%,0%, 0.4);
+}
+
+.modal-body > .container > .row > div > h2 {
+text-align: start;
+margin-left: 50px;
+margin-top: 5px;
 }
 
 .modal-header {
@@ -142,6 +153,11 @@ width: 90%;
 @media all and (max-width: 576px) { 
 .row  img {
  max-width: 80%;
+}
+
+.modal-body > .container > .row > div > h2 {
+text-align: start;
+margin: 5px;
 }
 
 .notify-badge{
