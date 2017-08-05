@@ -47,7 +47,6 @@ $(document).ready(function () {
     });
     var $images = $('.product-img');
     var itemImg = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
-    console.log(itemImg);
     for (var i = 0; i < itemImg.length; i++) {
         itemImg[i].onclick = addImage;
     }
