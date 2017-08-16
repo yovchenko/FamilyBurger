@@ -54,13 +54,13 @@ $(document).ready(function () {
         var num = itemImg.indexOf(this) + 1;
         var price = document.getElementsByClassName('ribbon')[0];
         (function slideDown() {
-            var h = 0;
+            var hgt = 25;
             interval = setInterval(function () {
-                if (50 > h) {
-                    h++;
-                    price.style.height = h + "%";
+                if (50 > hgt) {
+                    hgt += 1/2;
+                    price.style.height = hgt + "%";
                 } else {
-                    price.style.height = h + "%";
+                    price.style.height = hgt + "%";
                     clearInterval(interval);
                 }
             }, 25);
