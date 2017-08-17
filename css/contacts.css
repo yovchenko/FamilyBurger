@@ -34,7 +34,7 @@ label {
 hr {
     margin-top: 20px;
     margin-bottom: 20px;
-    border-top: 2px solid rgba(94.1%, 28.4%, 10.2%, 1);
+    border-top: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
     width: 100%;
 }
 
