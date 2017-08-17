@@ -13,7 +13,10 @@ main {
 }
 
 .container h1 {
+    display: flex;
+    position: relative;
     font-size: 2em;
+    margin-bottom: -15px;
 }
 
 div[class|="col"] {
@@ -79,6 +82,60 @@ color: rgba(92.2%, 89%, 80.4%, 0.9);
 width: 30%;
 }
 
+.wrapper {
+    max-width: 30px;
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    right: 50%;
+}
+
+svg {
+    width: 30px;
+    max-height: 40px;
+    display: inline-block;
+}
+
+.arrow-down path {
+	stroke: rgba(94.1%, 28.4%, 10.2%, 1);
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:.8}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:.8}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrow-down path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrow-down path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrow-down path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+
 @media all and (max-width: 576px) { 
 .map-container {
    height: 65vh;
@@ -93,6 +150,9 @@ width: 30%;
  display: block;
 }
 
+.wrapper {
+ display: none;
+}
 }
 
 @media all and (max-width: 767px) and (min-width: 577px) { 
