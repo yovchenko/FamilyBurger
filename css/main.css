@@ -186,7 +186,7 @@ margin-top: 105px;
 .carousel,
 .item,
 .active {
-height: 80vh;
+height: 75vh;
 }
 
 .carousel-inner {
@@ -305,7 +305,7 @@ box-shadow: none;
 .carousel,
 .item,
 .active {
-height: 50vh;
+height: 65vh;
 }
 
 .carousel-inner ~ a[class] {
@@ -394,7 +394,7 @@ border-radius: 4px;
 .carousel,
 .item,
 .active {
-height: 70vh;
+height: 65vh;
 }
 
 .carousel-inner ~ a[class] {
