@@ -50,11 +50,43 @@
             </div>
             <!-- /.container -->
         </nav>
-     <main style = "height: 100vh; margin-top: 104px;">   
+        <main>   
          <div class="map-container">
          <div id="map">
          </div>
          </div>
+        <div class = "container">
+            <h1>Наші контакти:</h1>
+            <hr>
+            <div = "row">
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">      
+        <address><p>
+         Наша адреса: <br>Сумська область,м.Ромни,вул.Соборна 23.<br>
+         Тел.: +38 (000) 000-0000<br>
+         Електронна пошта: familyburger@com <br>
+         </p>
+        </address>
+        </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <hr class="sm-md-line">
+              <p>Зворотній зв'язок</p>
+              <form id="contactForm" action="" method="post">
+              <label for="message">Ваше повідомлення : <br>
+              <textarea name="message" value="Your Message" id="message"></textarea>
+              </label>
+              <label for="name">Ім'я: <br>
+              <input type="text" name="name" id="name" minlength="1" required/>
+              </label>
+              <label for="email">Email: <br>
+              <input type="email" name="email" id="email" required/>
+              </label>
+              <input type="text" name="_gotcha" style="display:none"/>
+              <input type="submit" id="submit" name="submit" value="Надіслати"/>
+            </form>
+            </div>
+            </div>
+         <hr>
+        </div>
      </main>
      </div>
     <footer>
@@ -70,6 +102,7 @@
         </div>
     </footer>
     <script type="application/javascript" src="js/jquery-2.2.4.min.js"></script>
+    <script type="application/javascript" src="js/jquery.validate.min.js"></script>
     <script type="application/javascript" src="js/jquery.mobile.custom.min.js"></script>
     <script type="application/javascript" src="js/bootstrap.min.js"></script>
     <script type="application/javascript" src="js/main.js"></script>
