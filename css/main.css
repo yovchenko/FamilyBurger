@@ -222,8 +222,18 @@ background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
 .footer {
 display: flex;
 height: 105px;
-justify-content: flex-end;
 align-items: center;
+justify-content: flex-end;
+}
+
+.social {
+text-align: center;
+margin-top: 2em;
+}
+
+.copyright {
+margin-top: 10px;
+font-size: 1em;
 }
 
 .btn-social-icon.btn-vk {
@@ -336,6 +346,10 @@ background-attachment: inherit;
   width: 1024px;
   height: 768px;
   background-color: transparent;
+}
+
+.copyright {
+font-size: 1.3em;
 }
 
 }

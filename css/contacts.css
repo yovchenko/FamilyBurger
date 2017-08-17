@@ -135,6 +135,15 @@ svg {
 	-webkit-animation-delay:0s; /* Safari 和 Chrome */
 }
 
+.container .social {
+text-align: center;
+margin-top: 2em;
+}
+
+.container .copyright {
+margin-top: 10px;
+font-size: 1em;
+}
 
 @media all and (max-width: 576px) { 
 .map-container {
@@ -162,5 +171,9 @@ svg {
 
 .sm-md-line {
  display: block;
+}
+
+.container .copyright {
+font-size: 1.3em;
 }
 }
