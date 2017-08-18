@@ -173,12 +173,12 @@ svg {
 .container #contactForm .button--split-effect.button--send:focus,.container #contactForm .button--split-effect.button--send:hover {
     background-color: rgba(94.1%, 28.4%, 10.2%, 1);
     border-color: rgba(94.1%, 28.4%, 10.2%, 1);
-    box-shadow: 5px 5px rgba(94.1%, 28.4%, 10.2%, 0.5);
+    box-shadow: 6px 6px rgba(94.1%, 28.4%, 10.2%, 0.5);
 }
 
 .container #contactForm .button--split-effect.button--send:focus::before,.container #contactForm .button--split-effect.button--send:hover::before {
-    -webkit-transform: translate(-8px,-8px);
-    transform: translate(-8px,-8px);
+    -webkit-transform: translate(-6px,-6px);
+    transform: translate(-6px,-6px);
     opacity: 1;
 }
 
