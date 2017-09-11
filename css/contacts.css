@@ -55,6 +55,11 @@ hr {
    height: 75vh;
 }
 
+.social > .copyright {
+    margin: 10px 0 10px 0;
+    font-size: 14px;
+}
+
 #map {
    height: 100%;
 }
@@ -193,12 +198,6 @@ svg {
 
 .container .social {
 text-align: center;
-margin-top: 2em;
-}
-
-.container .copyright {
-margin-top: 10px;
-font-size: 1em;
 }
 
 @media all and (max-width: 576px) { 
@@ -229,7 +228,4 @@ font-size: 1em;
  display: block;
 }
 
-.container .copyright {
-font-size: 1.3em;
-}
 }
