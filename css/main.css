@@ -39,6 +39,23 @@ margin-bottom: 10px;
 float: right;
 }
 
+.sign {
+background-image: url(../images/sign.png);
+background-size: contain;
+width: 1.55em;
+height: 1.55em;
+position: relative;
+top: -12px;
+}
+
+.navbar-brand {
+display: flex;
+}
+
+.nav-sign {
+  display: flex;
+}
+
 .navbar-inverse {
 border: none;
 }
