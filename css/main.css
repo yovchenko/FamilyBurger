@@ -64,7 +64,7 @@ display: flex;
 }
 
 .nav-sign {
-  display: flex;
+display: flex;
 }
 
 .navbar-inverse {
@@ -389,7 +389,7 @@ box-shadow: none;
 }
 
 .navbar-nav {
-    float: left;
+float: left;
 }
 
 .carousel-inner ~ a[class] {
@@ -414,10 +414,6 @@ min-height: 105px;
   position: relative;
   width: 100vw;
   height: calc(100vw * (9/16));
-}
-
-.responsive::before {
-display: none;
 }
 
 .carousel-inner > :nth-child(1) > .fill {
@@ -496,6 +492,11 @@ display: none;
 margin-top: 104px;
 }
 
+@media all and (orientation:landscape) {
+  .navbar {
+    position: absolute;
+  }
+}
 }
 
 @media (min-width: 992px) { }
