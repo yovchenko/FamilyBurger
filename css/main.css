@@ -39,6 +39,12 @@ margin-bottom: 10px;
 float: right;
 }
 
+.carousel-indicators li {
+height: 0px;
+position: relative;
+bottom: -20px;
+}
+
 .sign {
 background-image: url(../images/sign.png);
 background-size: contain;
@@ -194,32 +200,64 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
 }
 
 .containerCarousel{
-margin-top: 105px;
+  margin-top: 105px;
+  }
+  
+  .responsive {
+    display: block;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .responsive::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 40.25%;
+  }
+
+.carousel-inner > :nth-child(1) > .fill {
+  background-image: url(../images/carousel/img-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover; 
+  background-size: cover; 
+   -moz-box-shadow: inset  0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);;
+  -webkit-box-shadow: inset  0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);;
+  box-shadow: inset 0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);
 }
 
-.carousel,
-.item,
-.active {
-height: 75vh;
+.carousel-inner > :nth-child(2) > .fill {
+  background-image: url(../images/carousel/img-2.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover; 
+  background-size: cover; 
+   -moz-box-shadow: inset  0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);;
+  -webkit-box-shadow: inset  0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);;
+  box-shadow: inset 0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);
 }
 
-.carousel-inner {
-height: 100%;
+.carousel-inner > :nth-child(3) > .fill {
+  background-image: url(../images/carousel/img-3.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover; 
+  background-size: cover; 
+   -moz-box-shadow: inset  0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);;
+  -webkit-box-shadow: inset  0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);;
+  box-shadow: inset 0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);
 }
 
-/* Background images are set within the HTML using inline CSS, not here */
-.fill {
-width: 100%;
-height: 100%;
-background-repeat: no-repeat;
-background-position: center;
--webkit-background-size: cover; 
-background-size: cover; 
-margin: 0 auto;
-background-attachment: fixed;
- -moz-box-shadow: inset  0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);;
-    -webkit-box-shadow: inset  0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);;
-    box-shadow: inset 0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);
+.carousel-inner > :nth-child(4) > .fill {
+  background-image: url(../images/carousel/img-4.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover; 
+  background-size: cover; 
+   -moz-box-shadow: inset  0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);;
+  -webkit-box-shadow: inset  0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);;
+  box-shadow: inset 0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);
 }
 
 footer {
@@ -255,30 +293,35 @@ margin-right: 15px;
     background-color: #587ea3;
 }
 
-.carousel-inner > :nth-child(1) > .fill{
-width: 1024px;
-height: 768px;
-background-color: transparent;
-}
-
-.carousel-inner > :nth-child(2) > .fill{
-width: 1024px;
-height: 768px;
-background-color: transparent;
-}
-
-.carousel-inner > :nth-child(3) > .fill{
-  width: 1024px;
-  height: 768px;
-  background-color: transparent;
-}
-
 /* media queries*/
 @media all and (max-width: 576px) { 
 .navbar {
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
 min-height: 105px;
+}
+
+.responsive::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-bottom: 75.25%;
+}
+
+.carousel-inner > :nth-child(1) > .fill {
+  background-image: url(../images/carousel/img-1-mob.jpg);
+}
+
+.carousel-inner > :nth-child(2) > .fill {
+  background-image: url(../images/carousel/img-2-mob.jpg);
+}
+
+.carousel-inner > :nth-child(3) > .fill {
+  background-image: url(../images/carousel/img-3-mob.jpg);
+}
+
+.carousel-inner > :nth-child(4) > .fill {
+  background-image: url(../images/carousel/img-4-mob.jpg);
 }
 
 .navbar-collapse  {
@@ -323,40 +366,12 @@ box-shadow: none;
     float: left;
 }
 
-.carousel,
-.item,
-.active {
-height: 65vh;
-}
-
 .carousel-inner ~ a[class] {
 display: none;
 }
 
 .containerCarousel{
 margin-top: 104px;
-}
-
-.fill {
-background-attachment: inherit;
-}
-
-.carousel-inner > :nth-child(1) > .fill{
-  width: 1024px;
-  height: 768px;
-  background-color: transparent;
-}
-
-.carousel-inner > :nth-child(2) > .fill{
-  width: 1024px;
-  height: 768px;
-  background-color: transparent;
-}
-
-.carousel-inner > :nth-child(3) > .fill{
-  width: 1024px;
-  height: 768px;
-  background-color: transparent;
 }
 
 }
@@ -368,8 +383,35 @@ background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
 min-height: 105px;
 }
 
+.responsive {
+  display: block;
+  position: relative;
+  width: 100vw;
+  height: calc(100vw * (9/16));
+}
+
+.responsive::before {
+display: none;
+}
+
+.carousel-inner > :nth-child(1) > .fill {
+  background-image: url(../images/carousel/img-1-pad.jpg);
+}
+
+.carousel-inner > :nth-child(2) > .fill {
+  background-image: url(../images/carousel/img-2-pad.jpg);
+}
+
+.carousel-inner > :nth-child(3) > .fill {
+  background-image: url(../images/carousel/img-3-pad.jpg);
+}
+
+.carousel-inner > :nth-child(4) > .fill {
+  background-image: url(../images/carousel/img-4-pad.jpg);
+}
+
 .navbar-nav {
-    float: left;
+  float: left;
 }
 
 .navbar-collapse {
@@ -412,40 +454,12 @@ border-radius: 4px;
  display: none;
 }
 
-.carousel,
-.item,
-.active {
-height: 65vh;
-}
-
 .carousel-inner ~ a[class] {
 display: none;
 }
 
 .containerCarousel{
 margin-top: 104px;
-}
-
-.fill {
-background-attachment: inherit;
-}
-
-.carousel-inner > :nth-child(1) > .fill{
-  width: 1024px;
-  height: 768px;
-  background-color: transparent;
-}
-
-.carousel-inner > :nth-child(2) > .fill{
-  width: 1024px;
-  height: 768px;
-  background-color: transparent;
-}
-
-.carousel-inner > :nth-child(3) > .fill{
-  width: 1024px;
-  height: 768px;
-  background-color: transparent;
 }
 
 }
