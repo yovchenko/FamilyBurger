@@ -1,3 +1,53 @@
+    
+$(document).ready(function () {
+    function preloader() {
+        if (document.images && window.matchMedia('(min-width: 768px)').matches) {
+            var img1 = new Image();
+            var img2 = new Image();
+            var img3 = new Image();
+            var img4 = new Image();
+            img1.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-1.jpg";
+            img2.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-2.jpg";
+            img3.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-3.jpg";
+            img4.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-4.jpg";
+        }
+
+        else if (document.images && window.matchMedia('(max-width: 767px) and (min-width: 577px)').matches) {
+            var img5 = new Image();
+            var img6 = new Image();
+            var img7 = new Image();
+            var img8 = new Image();
+            img5.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-1-pad.jpg";
+            img6.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-2-pad.jpg";
+            img7.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-3-pad.jpg";
+            img8.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-4-pad.jpg";
+        }
+
+        else {
+            var img9 = new Image();
+            var img10 = new Image();
+            var img11 = new Image();
+            var img12 = new Image();
+            img9.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-1-mob.jpg";
+            img10.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-2-mob.jpg";
+            img11.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-3-mob.jpg";
+            img12.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-4-mob.jpg";
+        }
+    }
+    function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+            window.onload = func;
+        } else {
+            window.onload = function () {
+                if (oldonload) {
+                    oldonload();
+                }
+                func();
+            }
+        }
+    }
+    addLoadEvent(preloader);
     var $carousel = $('.carousel');
     $carousel.carousel();
     $carousel.carousel({
@@ -11,6 +61,7 @@
     $carousel.swipeleft(function () {
         $(this).carousel('next');
     });
+});
     var $images = $('.product-img');
     var itemImg = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
     for (var i = 0; i < itemImg.length; i++) {
@@ -31,6 +82,7 @@
                 }
             }, 25);
         })();
+        
         var description = document.getElementsByClassName('description')[0];
         $images.css('background-image', 'url(images/product/img-' + num + '.png)');
         switch (num) {
