@@ -32,6 +32,10 @@ padding:15px 0 15px 0;
   filter: drop-shadow(2px 5px 5px rgba(0%, 0%, 0%, 0.60));
 }
 
+.sort {
+width: 100%;
+}
+
 .row  img:hover {
 transform: scale(1.06);
 border-radius: 25%;
