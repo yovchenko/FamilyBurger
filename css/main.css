@@ -331,18 +331,22 @@ min-height: 105px;
 }
 
 .carousel-inner > :nth-child(1) > .fill {
+  max-height: none;
   background-image: url(../images/carousel/img-1-mob.jpg);
 }
 
 .carousel-inner > :nth-child(2) > .fill {
+  max-height: none;
   background-image: url(../images/carousel/img-2-mob.jpg);
 }
 
 .carousel-inner > :nth-child(3) > .fill {
+  max-height: none;
   background-image: url(../images/carousel/img-3-mob.jpg);
 }
 
 .carousel-inner > :nth-child(4) > .fill {
+  max-height: none;
   background-image: url(../images/carousel/img-4-mob.jpg);
 }
 
@@ -418,21 +422,25 @@ display: none;
 
 .carousel-inner > :nth-child(1) > .fill {
   height: calc(100vw * (9/16));
+  max-height: none;
   background-image: url(../images/carousel/img-1-pad.jpg);
 }
 
 .carousel-inner > :nth-child(2) > .fill {
   height: calc(100vw * (9/16));
+  max-height: none;
   background-image: url(../images/carousel/img-2-pad.jpg);
 }
 
 .carousel-inner > :nth-child(3) > .fill {
   height: calc(100vw * (9/16));
+  max-height: none;
   background-image: url(../images/carousel/img-3-pad.jpg);
 }
 
 .carousel-inner > :nth-child(4) > .fill {
   height: calc(100vw * (9/16));
+  max-height: none;
   background-image: url(../images/carousel/img-4-pad.jpg);
 }
 
