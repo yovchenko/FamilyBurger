@@ -166,6 +166,14 @@ $(document).ready(function () {
                 price.innerHTML = '30 грн.';
                 description.innerHTML = 'Смак соковитої золотистої курочки з ніжним сиром, , з соковитою пекінською капустою, томатами та пікантним Французьким соусом, загорнутий в пшеничний лаваш і підсмажений на грилі. Справжня насолода!!!';
                 break;
+            case 21:
+                price.innerHTML = '00 грн.';
+                description.innerHTML = '';
+                break;
+            case 22:
+                price.innerHTML = '00 грн.';
+                description.innerHTML = '';
+                break;
         }
     }
 
