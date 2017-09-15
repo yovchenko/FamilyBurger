@@ -2,10 +2,10 @@
 $(document).ready(function () {
     function preloader() {
         if (document.images && window.matchMedia('(min-width: 768px)').matches) {
-            var img1 = new Image();
-            var img2 = new Image();
-            var img3 = new Image();
-            var img4 = new Image();
+            let img1 = new Image();
+            let img2 = new Image();
+            let img3 = new Image();
+            let img4 = new Image();
             img1.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-1.jpg";
             img2.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-2.jpg";
             img3.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-3.jpg";
@@ -13,10 +13,10 @@ $(document).ready(function () {
         }
 
         else if (document.images && window.matchMedia('(max-width: 767px) and (min-width: 577px)').matches) {
-            var img5 = new Image();
-            var img6 = new Image();
-            var img7 = new Image();
-            var img8 = new Image();
+            let img5 = new Image();
+            let img6 = new Image();
+            let img7 = new Image();
+            let img8 = new Image();
             img5.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-1-pad.jpg";
             img6.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-2-pad.jpg";
             img7.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-3-pad.jpg";
@@ -24,10 +24,10 @@ $(document).ready(function () {
         }
 
         else {
-            var img9 = new Image();
-            var img10 = new Image();
-            var img11 = new Image();
-            var img12 = new Image();
+            let img9 = new Image();
+            let img10 = new Image();
+            let img11 = new Image();
+            let img12 = new Image();
             img9.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-1-mob.jpg";
             img10.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-2-mob.jpg";
             img11.src = "http://yovchenko.github.io/familyBurger/images/carousel/img-3-mob.jpg";
@@ -35,7 +35,7 @@ $(document).ready(function () {
         }
     }
     function addLoadEvent(func) {
-        var oldonload = window.onload;
+        let oldonload = window.onload;
         if (typeof window.onload != 'function') {
             window.onload = func;
         } else {
@@ -48,7 +48,7 @@ $(document).ready(function () {
         }
     }
     addLoadEvent(preloader);
-    var $carousel = $('.carousel');
+    let $carousel = $('.carousel');
     $carousel.carousel();
     $carousel.carousel({
         interval: 3500,
@@ -62,16 +62,16 @@ $(document).ready(function () {
         $(this).carousel('next');
     });
 });
-    var $images = $('.product-img');
-    var itemImg = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
-    for (var i = 0; i < itemImg.length; i++) {
+    let $images = $('.product-img');
+    let itemImg = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
+    for (let i = 0; i < itemImg.length; i++) {
         itemImg[i].onclick = addImage;
     }
     function addImage() {
-        var num = itemImg.indexOf(this) + 1;
-        var price = document.getElementsByClassName('ribbon')[0];
+        let num = itemImg.indexOf(this) + 1;
+        let price = document.getElementsByClassName('ribbon')[0];
         (function slideDown() {
-            var hgt = 25;
+            let hgt = 25;
             interval = setInterval(function () {
                 if (50 > hgt) {
                     hgt += 1/2;
@@ -83,7 +83,7 @@ $(document).ready(function () {
             }, 25);
         })();
         
-        var description = document.getElementsByClassName('description')[0];
+        let description = document.getElementsByClassName('description')[0];
         $images.css('background-image', 'url(images/product/img-' + num + '.png)');
         switch (num) {
             case 1:
@@ -169,3 +169,14 @@ $(document).ready(function () {
         }
     }
 
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("scrollTop").style.display = "block";
+    } else {
+        document.getElementById("scrollTop").style.display = "none";
+    }
+}
+function goTop() {
+    $('html,body').animate({ scrollTop: 0 }, 'slow');
+}
