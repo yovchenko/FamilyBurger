@@ -42,10 +42,10 @@ margin: 15px 0 15px 0;
 #selectMenu {
 position: absolute;
 right: 0px;
-font-size: 1.2em;
+font-size: 1.25em;
 background-color:rgba(0%,0%,0%, 0.4);
 text-shadow: -1px 0 rgba(0%,0%,0%, 0.25), 0 1px rgba(0%,0%,0%, 0.25), 1px 0 rgba(0%,0%,0%, 0.25), 0 -1px rgba(0%,0%,0%, 0.25);
-border: 1px solid rgba(94.1%, 28.4%, 10.2%, 1);
+border: 1px solid rgba(94.1%, 28.4%, 10.2%, 0.8);
 }
 
 .row  img:hover {
