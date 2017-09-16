@@ -118,26 +118,22 @@ $('#selectMenu').change(function() {
     let str = '';
     if($option === 'Піца') {
         str = '#pizzaDiv';
-        scrollToDiv (100,str);
+        scrollToDiv (100,str,500);
     }
-    else if ($option === 'Роли') {
+    else if ($option === 'Роли' || $option === 'Салати') {
         str = '#rollDiv';
-        scrollToDiv (100,str);
-    }
-    else if ($option === 'Салати') {
-        str = '#salatDiv';
-        scrollToDiv (100,str);
+        scrollToDiv (100,str,600);
     }
     else if ($option === 'Різне') {
         str = '#elseDiv';
-        scrollToDiv (100,str);
+        scrollToDiv (100,str,400);
     }
 });
 
-function scrollToDiv (targetOffset,targetId) {
+function scrollToDiv (targetOffset,targetId,speed) {
     let target = $(targetId);
     $('html, body').animate({
         scrollTop: target.offset().top
-       -targetOffset}, 'slow');
+       -targetOffset}, speed);
        $('#selectMenu').val( 'burger' );
 }
