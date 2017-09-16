@@ -118,15 +118,15 @@ $('#selectMenu').change(function() {
     let str = '';
     if($option === 'Піца') {
         str = '#pizzaDiv';
-        scrollToDiv (100,str,500);
+        scrollToDiv (100,str,'slow');
     }
     else if ($option === 'Роли' || $option === 'Салати') {
         str = '#rollDiv';
-        scrollToDiv (100,str,600);
+        scrollToDiv (100,str,'slow');
     }
     else if ($option === 'Різне') {
         str = '#elseDiv';
-        scrollToDiv (100,str,400);
+        scrollToDiv (100,str,'slow');
     }
 });
 
