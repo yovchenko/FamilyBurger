@@ -10,7 +10,7 @@ function addImage() {
         let hgt = 25;
         interval = setInterval(function () {
             if (50 > hgt) {
-                hgt += 1/2;
+                hgt += 0.5;
                 price.style.height = hgt + "%";
             } else {
                 price.style.height = hgt + "%";
@@ -55,36 +55,36 @@ function addImage() {
             description.innerHTML = 'Легендарна картопля фрі – з апетитною хрусткою скоринкою та м’якою, розсипчастою серединкою.';
             break;
         case 9:
-            price.innerHTML = 'ціна';
-            description.innerHTML = '';
+            price.innerHTML = '79,50 грн.';
+            description.innerHTML = 'Склад:<br> вершковий соус, сир пармезан, сир дорблю, сир моцарелла, сир голандський , заправка, легка граціозність.';
             break;
         case 10:
             price.innerHTML = '49,99 грн.';
-            description.innerHTML = 'Діаметр - 30см.<br>Склад: соус,сир твердий, помідори, заправка, настоянка ніжності. ';
+            description.innerHTML = 'Склад:<br> соус,сир твердий, помідори, заправка, настоянка ніжності.';
             break;
         case 11:
             price.innerHTML = '74 грн.';
-            description.innerHTML = 'Склад: соус, куряче філе, сир, печериці, ананаси, заправка, гарний настрій';
+            description.innerHTML = 'Склад:<br> соус, куряче філе, сир, печериці, ананаси, заправка, гарний настрій.';
             break;
         case 12:
-            price.innerHTML = 'ціна';
-            description.innerHTML = '';
+            price.innerHTML = '68 грн.';
+            description.innerHTML = 'Склад:<br> cоус, шинка, бекон, сир, печериці, маслини, кукурудза, позитивні думки.';
             break;
         case 13:
-            price.innerHTML = 'ціна';
-            description.innerHTML = '';
+            price.innerHTML = '75 грн.';
+            description.innerHTML = 'Склад:<br> cоус томатний, шинка, сир, печериці, болгарський перець, вершковий соус, нотки чарівності.';
             break;
         case 14:
-            price.innerHTML = 'ціна';
-            description.innerHTML = '';
+            price.innerHTML = '68,50 грн.';
+            description.innerHTML = 'Склад:<br> cоус, куряче філе, сир Голандський, сир Фета, помідори, кукурудза, перець чілі, міцний дух.';
             break;
         case 15:
-            price.innerHTML = 'ціна';
-            description.innerHTML = '';
+            price.innerHTML = '85 грн';
+            description.innerHTML = 'Склад:<br> cоус, сир, Куряче філе,печериці, помідори, болгарський перець, кукурудза, ананас, родинне тепло.';
             break;
         case 16:
-            price.innerHTML = 'ціна';
-            description.innerHTML = '';
+            price.innerHTML = '67 грн.';
+            description.innerHTML = 'Склад:<br> cоус томатний, мисливські ковбаски, салямі, сир, вершковий соус, смак перемоги.';
             break;
         case 17:
             price.innerHTML = '35 грн.';
@@ -103,19 +103,19 @@ function addImage() {
             description.innerHTML = 'Смак соковитої золотистої курочки з ніжним сиром, , з соковитою пекінською капустою, томатами та пікантним Французьким соусом, загорнутий в пшеничний лаваш і підсмажений на грилі. Справжня насолода!!!';
             break;
         case 21:
-            price.innerHTML = '00 грн.';
-            description.innerHTML = '';
+            price.innerHTML = '29 грн.';
+            description.innerHTML = 'Грецький салат - це один з найлегших і низькокалорійних салатів, і при цьому він надзвичайно корисний та смачний! Назва в даному випадку повністю виправдовує себе - цей салат дійсно родом з Греції. Соковите листя салату, помідори, огірки, перець, ріпчаста цибуля, маслини, нарізаний кубиками сир заправлени олією і лимонним соком.';
             break;
         case 22:
-            price.innerHTML = '00 грн.';
-            description.innerHTML = '';
+            price.innerHTML = '27 грн.';
+            description.innerHTML = 'Воістину знамените блюдо Салат, як і імператор, теж може одночасно виконувати кілька справ. Ніжне куряче філе так буде буквально танути на Ваших зубах, а хрускіт підсмажених сухариків безсумнівно, викличе у вас приплив сил, звичайно ж листи салату, свіжі овочі. Все це, посипане повітряними пластівцями сиру і заправлене соусом, що витончено передає любов, з якою наш кухар готує свій твір мистецтва.';
             break;
     }
 }
 
 $('#selectMenu').change(function() {
-    var $option = $('#selectMenu option:selected').text();
-    var str = '';
+    let $option = $('#selectMenu option:selected').text();
+    let str = '';
     if($option === 'Піца') {
         str = '#pizzaDiv';
         scrollToDiv (100,str);
@@ -135,7 +135,7 @@ $('#selectMenu').change(function() {
 });
 
 function scrollToDiv (targetOffset,targetId) {
-    var target = $(targetId);
+    let target = $(targetId);
     $('html, body').animate({
         scrollTop: target.offset().top
        -targetOffset}, 'slow');
