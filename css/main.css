@@ -278,6 +278,10 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
   margin-top: 105px ;
   }
   
+  #myCarousel {
+    box-shadow: inset 0px -1px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  
   .responsive {
     display: block;
     overflow: hidden;
@@ -302,9 +306,6 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
   background-position: center center;
   -webkit-background-size: cover; 
   background-size: cover; 
-   -moz-box-shadow: 0px -1px 5px 1px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px -1px 5px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px -1px 5px 1px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-inner > :nth-child(2) > .fill {
@@ -317,9 +318,6 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
   background-position: center center;
   -webkit-background-size: cover; 
   background-size: cover; 
-   -moz-box-shadow: inset  0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);;
-  -webkit-box-shadow: inset  0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);;
-  box-shadow: inset 0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);
 }
 
 .carousel-inner > :nth-child(3) > .fill {
@@ -332,9 +330,6 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
   background-position: center center;
   -webkit-background-size: cover; 
   background-size: cover; 
-   -moz-box-shadow: inset  0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);;
-  -webkit-box-shadow: inset  0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);;
-  box-shadow: inset 0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);
 }
 
 .carousel-inner > :nth-child(4) > .fill {
@@ -347,9 +342,6 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
   background-position: center center;
   -webkit-background-size: cover; 
   background-size: cover; 
-   -moz-box-shadow: inset  0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);;
-  -webkit-box-shadow: inset  0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);;
-  box-shadow: inset 0 -5px 8px -3px rgba(0%, 0%, 0%, 0.85);
 }
 
 footer {
