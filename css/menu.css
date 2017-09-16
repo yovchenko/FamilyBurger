@@ -59,8 +59,7 @@ background: rgba(96.4%, 82.5%, 47.7%, 0.9);
 }
 
 .row  img:hover {
-transform: scale(1.06);
-border-radius: 25%;
+transform: scale(1.04);
 }
 
 .item-img {
