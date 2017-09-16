@@ -72,15 +72,15 @@
                     <div class="sort">
                             <select id="selectMenu" name="menu">
                                     <option value="burger">Бургери</option>
-                                    <option value="canada">Піца</option>
-                                    <option value="usa">Роли</option>
-                                    <option value="canada">Салати</option>
-                                    <option value="usa">Різне</option>
+                                    <option value="pizza">Піца</option>
+                                    <option value="roll">Роли</option>
+                                    <option value="salat">Салати</option>
+                                    <option value="else">Різне</option>
                                   </select>
                     </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-xs-6">
-                        <div class="item-img">
+                        <div class="item-img" id="burgerDiv">
                             <a href="#modal-fullscreen" data-toggle="modal">
                                 <h1 class="notify-badge">Чікен Бургер</h1><img src="images/menu/img-1.png" alt="Чікен Бургер"></a>
                         </div>
@@ -112,7 +112,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-xs-6">
-                        <div class="item-img">
+                        <div class="item-img" id="elseDiv">
                             <a href="#modal-fullscreen" data-toggle="modal">
                                 <h1 class="notify-badge">Смажені гомілки</h1><img src="images/menu/img-6.png" alt="Смажені гомілки"></a>
                         </div>
@@ -132,7 +132,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-xs-6">
-                        <div class="item-img">
+                        <div class="item-img" id="pizzaDiv">
                             <a href="#modal-fullscreen" data-toggle="modal">
                                 <h1 class="notify-badge">Піца Чіз Квадро</h1><img src="images/menu/img-9.png" alt="Піца Квадро Чіз"></a>
                         </div>
@@ -184,7 +184,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-xs-6">
-                        <div class="item-img">
+                        <div class="item-img" id="rollDiv">
                             <a href="#modal-fullscreen" data-toggle="modal">
                                 <h1 class="notify-badge">Чікен рол</h1><img src="images/menu/img-17.png" alt="Чікен рол"></a>
                         </div>
@@ -210,7 +210,7 @@
                 </div>
                     <div class="row">
                             <div class="col-lg-offset-3 col-lg-3 col-md-3 col-md-offset-3 col-xs-6">
-                                    <div class="item-img">
+                                    <div class="item-img" id="salatDiv">
                                         <a href="#modal-fullscreen" data-toggle="modal">
                                             <h1 class="notify-badge">Салат</h1><img src="images/menu/img-21.png" alt="Cалат"></a>
                                     </div>
@@ -274,6 +274,7 @@
     <script type="application/javascript" src="js/jquery.arctext.js"></script>
     <script type="application/javascript" src="js/bootstrap.min.js"></script>
     <script type="application/javascript" src="js/main.js"></script>
+    <script type="application/javascript" src="js/menu.js"></script>
     <script>
         var $itemText = $('.notify-badge');
         $itemText.arctext({ radius: 300 });
