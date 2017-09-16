@@ -18,6 +18,10 @@ text-align: center;
 padding:15px 0 15px 0;
 }
 
+option:disabled {
+display: none;
+}
+
 .row  img {
  max-width: 85%;
  border-right: 10px ;
