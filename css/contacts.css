@@ -11,7 +11,7 @@ main {
     font-size: 1.5em;
 }
 
-label[for="message"] {
+label[for="comment"] {
     font-size: 1.5em;
     margin-top: 25px;
  }

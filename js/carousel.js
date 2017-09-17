@@ -47,6 +47,7 @@ $(document).ready(function () {
         }
     }
     addLoadEvent(preloader);
+    $(document).ready(function() {
     let $carousel = $('.carousel');
     $carousel.carousel();
     $carousel.carousel({
@@ -60,4 +61,5 @@ $(document).ready(function () {
     $carousel.swipeleft(function () {
         $(this).carousel('next');
     });
+});
 });
