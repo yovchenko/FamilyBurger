@@ -114,7 +114,6 @@ function addImage() {
 }
 
 $('#selectMenu').change(function(event) {
-    event.preventDefault();
     let $option = $('#selectMenu option:selected').text();
     let str = '';
     if($option === 'Піца') {
