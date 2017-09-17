@@ -259,7 +259,12 @@ text-align: center;
  display: none;
 }
 
-
+.container {
+    padding-right: 8.33333333%;
+    padding-left: 8.33333333%;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 label[for="message"] {
     font-size: 1.3em;
@@ -288,7 +293,12 @@ label[for="message"] {
     display: block;
    }
 
-
+.container {
+    padding-right: 8.33333333%;
+    padding-left: 8.33333333%;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 .container h1 {
    font-size: 1;
