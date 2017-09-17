@@ -23,7 +23,7 @@ address p span {
 }
 
 .container #contactForm .button--split-effect.button--send {
-    margin: 50px 0;
+    margin: 35px 0 45px 0;
 }
 
 .container h1 {
@@ -53,7 +53,7 @@ hr {
 }
 
 .hrBottom {
-    margin-bottom: 25px;
+    margin: 0px 0px 59px 0px;
 }
 
 .map-container:before, .map-container:after, #map:before, #map:after {
