@@ -23,7 +23,6 @@ address p span {
 }
 
 .hrBottom {
-    padding-bottom: 50px;
     z-index: 1;
 }
 
@@ -42,6 +41,10 @@ div[class|="col"] {
 
 .sm-md-line {
  display: none;
+}
+
+main {
+padding-bottom: 50px;
 }
 
 label {
