@@ -252,7 +252,7 @@ text-align: center;
  display: none;
 }
 
-.container {
+main .container {
     padding-right: 8.33333333%;
     padding-left: 8.33333333%;
     margin-right: auto;
@@ -286,7 +286,7 @@ label[for="comment"] {
     display: block;
    }
 
-.container {
+main .container {
     padding-right: 8.33333333%;
     padding-left: 8.33333333%;
     margin-right: auto;
