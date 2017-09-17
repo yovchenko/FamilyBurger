@@ -70,7 +70,8 @@ function scrollFunction() {
         document.getElementById("scrollTop").style.display = "none";
     }
 }
-function goTop() {
+
+$('#scrollTop').on('click', function(event){
+    event.preventDefault();
     $('html,body').animate({ scrollTop: 0 }, 'slow');
-    return false;
-}
+});

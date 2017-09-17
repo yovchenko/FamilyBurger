@@ -70,9 +70,6 @@ hr {
     z-index: 1;
 }
 
-#scrollTop {
-z-index: 9999;
-}
 .map-container:before { top: -5px; left: 0; right: 0; height: 5px; }
 .map-container:after { right: -5px; top: 0; bottom: 0; width: 5px; }
 #map:before { bottom: -5px; left: 0; right: 0; height: 5px; }
