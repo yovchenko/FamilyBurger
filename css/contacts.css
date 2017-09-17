@@ -290,6 +290,10 @@ label[for="comment"] {
    height: 65vh;
 }
 
+.navbar {
+    position: absolute;
+}
+
 .sm-md-line {
     display: block;
    }
