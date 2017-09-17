@@ -29,6 +29,7 @@ address p span {
 
 .bottom {
     margin-bottom: 25px;
+    z-index: 1;
 }
 
 .container #contactForm .button--split-effect.button--send {
