@@ -120,8 +120,12 @@ $('#selectMenu').change(function() {
         str = '#pizzaDiv';
         scrollToDiv (100,str,'slow');
     }
-    else if ($option === 'Роли' || $option === 'Салати') {
+    else if ($option === 'Роли') {
         str = '#rollDiv';
+        scrollToDiv (100,str,'slow');
+    }
+    else if($option === 'Салати') {
+        str = '#salatDiv';
         scrollToDiv (100,str,'slow');
     }
     else if ($option === 'Різне') {
