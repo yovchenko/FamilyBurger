@@ -52,6 +52,10 @@ hr {
     margin-bottom: 15px;
 }
 
+.hrBottom {
+    margin-bottom: 25px;
+}
+
 .map-container:before, .map-container:after, #map:before, #map:after {
     content: '';
     position: absolute;
