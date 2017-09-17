@@ -22,10 +22,6 @@ address p span {
     letter-spacing: 1px;
 }
 
-.hrBottom {
-    z-index: 1;
-}
-
 .container #contactForm .button--split-effect.button--send {
     margin: 50px 0;
 }
@@ -33,6 +29,7 @@ address p span {
 .container h1 {
     position: relative;
     font-size: 1.8em;
+    margin: 15px 0 0 0;
 }
 
 div[class|="col"] {
@@ -44,7 +41,7 @@ div[class|="col"] {
 }
 
 main {
-padding-bottom: 50px;
+padding-bottom: 25px;
 }
 
 label {
@@ -55,10 +52,8 @@ label {
 hr {
     border-top: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
     width: 100%;
-}
-
-.bottom {
-    margin-bottom: 63px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .map-container:before, .map-container:after, #map:before, #map:after {
