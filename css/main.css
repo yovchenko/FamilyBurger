@@ -214,7 +214,7 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
     display: none; 
     position: fixed; 
     bottom: 125px;
-    z-index: 99; 
+    z-index: 999; 
     border: none; 
     outline: none;
     background-color: rgba(94.1%, 28.4%, 10.2%, 0.9); 
