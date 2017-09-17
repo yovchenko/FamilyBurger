@@ -1,5 +1,4 @@
-$(document).ready(function () {
-    function preloader() {
+function preloader() {
         if (document.images && window.matchMedia('(min-width: 768px)').matches) {
             let img1 = new Image();
             let img2 = new Image();
@@ -61,5 +60,4 @@ $(document).ready(function () {
     $carousel.swipeleft(function () {
         $(this).carousel('next');
     });
-});
 });
