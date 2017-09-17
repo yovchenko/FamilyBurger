@@ -72,7 +72,7 @@
          </div>
          </div>
         <div class = "container">
-            <h1>Наші контакти <div class="wrapper">
+            <h1><b>Наші контакти</b><div class="wrapper">
     <svg class="arrow-down arrow-down--scaled">
         <path class="a1" d="M10 10 L15 16 L20 10"></path>
         <path class="a2" d="M5 15 L15 26 L25 15"></path>
@@ -85,24 +85,24 @@
         <address><p>
          <span class="address">Наша адреса: <br>м.Ромни,вул.Соборна 23.</span>
          <span class="phone">Тел.: +38 (000) 000-0000</span>
-         <span class="email">Електронна пошта: <br>familyburger@com</span>
+         <span class="email">Електронна пошта: <br>info@familyburger.com</span>
          </p>
         </address>
         </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <hr class="sm-md-line">
-              <form id="contactForm" action="" method="post">
+              <form id="contactForm" method="post">
               <label for="message">Напишіть нам повідомлення : <br>
-              <textarea name="message" value="Your Message" id="message"></textarea>
+              <textarea name="message" value="Your Message" id="comment" minlength="1" required></textarea>
               </label>
               <label for="name">Ім'я: <br>
-              <input type="text" name="name" id="name" minlength="1" required/>
+              <input type="text" name="name" id="name"/>
               </label>
               <label for="email">Email: <br>
               <input type="email" name="email" id="email" required/>
               </label>
               <input type="text" name="_gotcha" style="display:none"/>
-              <button id="submit" class="button button--send button--split-effect"/>Надіслати</button>
+              <button type="submit" id="send" class="button button--send button--split-effect"/>Надіслати</button>
             </form>
             </div>
             </div>
