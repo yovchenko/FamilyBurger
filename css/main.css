@@ -213,7 +213,7 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
 #scrollTop {
     display: none; 
     position: fixed; 
-    bottom: 150px;
+    bottom: 125px;
     z-index: 999; 
     border: none; 
     outline: none;
