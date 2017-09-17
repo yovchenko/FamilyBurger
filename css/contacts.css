@@ -22,13 +22,8 @@ address p span {
     letter-spacing: 1px;
 }
 
-.feedback {
-    margin-top: 25px;
-    letter-spacing: 1px;
-}
-
-.bottom {
-    margin-bottom: 25px;
+.hrBottom {
+    padding-bottom: 50px;
     z-index: 1;
 }
 
