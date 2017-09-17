@@ -239,6 +239,10 @@ text-align: center;
    height: 65vh;
 }
 
+.navbar {
+    position: absolute;
+}
+
 .container p {
     margin: 0;
     font-size: 1.3em;
