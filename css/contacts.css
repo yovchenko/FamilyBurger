@@ -13,17 +13,17 @@ main {
 
 label[for="comment"] {
     font-size: 1.5em;
-    margin-top: 25px;
+    margin-top: 15px;
  }
 
 address p span {
     display: block;
-    margin-top: 25px;
+    margin-top: 15px;
     letter-spacing: 1px;
 }
 
 .container #contactForm .button--split-effect.button--send {
-    margin: 50px 0;
+    margin: 35px 0;
 }
 
 .container h1 {
@@ -38,10 +38,6 @@ div[class|="col"] {
 
 .sm-md-line {
  display: none;
-}
-
-main {
-padding-bottom: 25px;
 }
 
 label {
