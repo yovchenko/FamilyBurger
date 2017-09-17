@@ -192,6 +192,10 @@ svg {
     transition-duration: .2s;
 }
 
+#scrollTop {
+    bottom: 140px;
+}
+
 .container #contactForm .button--split-effect.button--send::before {
     content: "";
     position: absolute;
