@@ -129,6 +129,7 @@ padding-bottom:2px;
 font-size: 1em;
 border-bottom: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
 padding-bottom:2px;
+margin-top: 6px;
 }
 
 #contactForm input:focus, textarea:focus {

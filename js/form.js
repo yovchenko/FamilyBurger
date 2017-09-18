@@ -1,7 +1,7 @@
 jQuery.extend(jQuery.validator.messages, {
-    required: "Будь ласка,заповніть це поле.&#8679;",
+    required: "Заповніть обов'язкове поле.&#8679;",
     remote: "Please fix this field.",
-    email: "Будь ласка,введіть коректний email.&#8679;",
+    email: "Введіть коректний email.&#8679;",
     url: "Please enter a valid URL.",
     date: "Please enter a valid date.",
     dateISO: "Please enter a valid date (ISO).",
