@@ -83,7 +83,7 @@ hr {
     overflow: hidden;
     position: relative;
   }
- 
+  
   .resize::before {
     content: "";
     display: block;
