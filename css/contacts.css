@@ -297,16 +297,10 @@ label[for="comment"] {
   
   #comment-error {
     font-size: 0.9em;
-    letter-spacing: 1px;
-    border-bottom: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
-    padding-bottom:2px;
     }
 
     #email-error {
         font-size: 1em;
-        letter-spacing: 1px;
-        border-bottom: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
-        padding-bottom:2px;
         }
 }
 
