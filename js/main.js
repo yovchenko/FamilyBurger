@@ -1,4 +1,4 @@
-window.onload = (function () {
+$(document).ready(function () {
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -9,7 +9,8 @@ function scrollFunction() {
 }
 
 $('#scrollTop').on('click', function(event){
-    event.preventDefault();
+    event.stopPropagation();
     $('html,body').animate({ scrollTop: 0 }, 'slow');
+    return false;
 });
 });
