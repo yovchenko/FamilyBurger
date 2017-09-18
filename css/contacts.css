@@ -70,9 +70,28 @@ hr {
 
 
 .map-container {
-height: 75vh;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 75vh;
+    position: absolute;
+    top: 0;
 }
 
+.resize  {
+    display: block;
+    overflow: hidden;
+    position: relative;
+  }
+ 
+  .resize::before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 100%;
+    padding-bottom: 40.25%;
+  }
+  
 .social > .copyright {
 margin: 10px 0 10px 0;
 font-size: 14px;
@@ -235,10 +254,6 @@ text-align: center;
 }
 
 @media all and (max-width: 576px) { 
-.map-container {
-   height: 65vh;
-}
-
 .navbar {
     position: absolute;
 }
@@ -283,13 +298,14 @@ label[for="comment"] {
     .hrBottom {
         margin: 0px 0px 25px 0px;
     }
+
+  .resize::before {
+    padding-bottom: 75.25%;
+  }
+  
 }
 
 @media all and (max-width: 767px) and (min-width: 577px) { 
-.map-container {
-   height: 65vh;
-}
-
 .navbar {
     position: absolute;
 }
@@ -312,4 +328,8 @@ main .container {
 .hrBottom {
     margin: 0px 0px 25px 0px;
 }
+
+.resize::before {
+    padding-bottom: 56.25%;
+  }
 }
