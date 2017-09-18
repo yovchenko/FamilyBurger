@@ -232,7 +232,7 @@ $(function () {
         var contentString = '<div class="info-window">' +
             '<h3>FamilyBurger</h3>' +
             '<div class="info-content">' +
-            '<p>Ласкаво просимо!</p>' +
+            '<h4>Ласкаво просимо!</h4>' +
             '</div>' +
             '</div>';
         var infowindow = new google.maps.InfoWindow({
