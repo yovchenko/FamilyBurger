@@ -1,3 +1,4 @@
+$(document).ready(function () {
 let $images = $('.product-img');
 let itemImg = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
 for (let i = 0; i < itemImg.length; i++) {
@@ -136,8 +137,9 @@ $('#selectMenu').change(function(event) {
 
 function scrollToDiv (targetOffset,targetId,speed) {
     let target = $(targetId);
-    $('html, body').animate({
+    $('html, body').stop().animate({
         scrollTop: target.offset().top
        -targetOffset}, speed);
        $('#selectMenu').val( 'burger' );
 }
+});
