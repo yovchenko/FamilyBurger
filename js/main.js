@@ -10,7 +10,7 @@ function scrollFunction() {
 
 $('#scrollTop').on('click', function(event){
     event.stopPropagation();
-    $('html,body').stop().bodyanimate({ scrollTop: 0 }, 'slow');
+    $('html,body').stop().animate({ scrollTop: 0 }, 'slow');
     return false;
 });
 });
