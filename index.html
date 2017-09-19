@@ -30,14 +30,19 @@
     <link rel="stylesheet" href="css/bootstrap-social.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <script>
+        function upgradeImg(object) {
+           let parent = object.parentNode;
+           parent.parentNode.style.visibility = 'hidden';
+           object.style.visibility = 'visible';
+        }
+    </script>
 </head>
 
 <body>
     <div class="flex-container">
-        <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -47,7 +52,6 @@
                 </button>
                     <a class="navbar-brand" href="">Family<div class="sign"></div>Burger</a>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>
@@ -61,47 +65,62 @@
                         </li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
             </div>
         </nav>
-        <!-- Full Page Image Background Carousel Header -->
         <div class="containerCarousel">
             <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-                <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
                     <li data-target="#myCarousel" data-slide-to="2"></li>
                     <li data-target="#myCarousel" data-slide-to="3"></li>
                 </ol>
-                <!-- Wrapper for Slides -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <!-- Set the first background image using inline CSS below. -->
-                        <div class="fill responsive"></div>
+                        <div class="fill responsive">
+                                <picture>
+                                        <source srcset="images/carousel/img-1-mob.jpg" media="(max-width: 576px)">
+                                        <source srcset="images/carousel/img-1-pad.jpg" media="(max-width: 767px) and (min-width: 577px)">
+                                        <img class="high-quality" src="images/carousel/img-1-desk.jpg" onload="upgradeImg(this)" alt="high-quality-image">
+                                </picture>
+                        </div>
                         <div class="carousel-caption">
                         </div>
                     </div>
                     <div class="item">
-                        <!-- Set the second background image using inline CSS below. -->
-                        <div class="fill responsive"></div>
+                        <div class="fill responsive">
+                                <picture>
+                                        <source srcset="images/carousel/img-2-mob.jpg" media="(max-width: 576px)">
+                                        <source srcset="images/carousel/img-2-pad.jpg" media="(max-width: 767px) and (min-width: 577px)">
+                                        <img class="high-quality" src="images/carousel/img-2-desk.jpg" onload="upgradeImg(this)" alt="high-quality-image">
+                                </picture>
+                        </div>
                         <div class="carousel-caption">
                         </div>
                     </div>
                     <div class="item">
-                        <!-- Set the third background image using inline CSS below. -->
-                        <div class="fill responsive"></div>
+                        <div class="fill responsive">
+                                <picture>
+                                        <source srcset="images/carousel/img-3-mob.jpg" media="(max-width: 576px)">
+                                        <source srcset="images/carousel/img-3-pad.jpg" media="(max-width: 767px) and (min-width: 577px)">
+                                        <img class="high-quality" src="images/carousel/img-3-desk.jpg" onload="upgradeImg(this)" alt="high-quality-image">
+                                </picture>
+                        </div>
                         <div class="carousel-caption">
                         </div>
                     </div>
                     <div class="item">
-                        <!-- Set the third background image using inline CSS below. -->
-                        <div class="fill responsive"></div>
+                        <div class="fill responsive">
+                                <picture>
+                                        <source srcset="images/carousel/img-4-mob.jpg" media="(max-width: 576px)">
+                                        <source srcset="images/carousel/img-4-pad.jpg" media="(max-width: 767px) and (min-width: 577px)">
+                                        <img class="high-quality" src="images/carousel/img-4-desk.jpg" onload="upgradeImg(this)" alt="high-quality-image">
+                                </picture>
+                        </div>
                         <div class="carousel-caption">
                         </div>
                     </div>
                 </div>
-                <!-- Controls -->
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
             <span class="icon-prev"></span>
         </a>
