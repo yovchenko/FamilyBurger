@@ -11,6 +11,11 @@ main {
     font-size: 1.5em;
 }
 
+#map {
+overflow: hidden;
+z-index: 1000;
+}
+
 label[for="comment"] {
     font-size: 1.5em;
     margin-top: 25px;

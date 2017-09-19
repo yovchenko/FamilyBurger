@@ -414,6 +414,11 @@ min-height: 105px;
   height: calc(100vw * (9/16));
 }
 
+.carousel-inner {
+overflow: hidden;
+z-index: 1000;
+}
+
 .carousel-inner > :nth-child(1) > .fill {
   height: calc(100vw * (9/16));
   max-height: none;
