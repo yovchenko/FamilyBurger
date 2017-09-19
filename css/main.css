@@ -482,11 +482,11 @@ display: none;
 margin-top: 104px;
 }
 
-@media all and (orientation:landscape) {
-  .navbar {
-     position: absolute;
-     top: 0px;
-  }
+  @media all and (orientation:landscape) {
+    .navbar {
+       position: absolute;
+       top: 0px;
+    }
 }
 }
 
