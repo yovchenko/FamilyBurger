@@ -1,7 +1,3 @@
-main {
-    margin-top: 104px;
-}
-
 .map-container {
     position: relative;
     overflow: hidden;
@@ -86,6 +82,7 @@ hr {
     display: block;
     overflow: hidden;
     position: relative;
+    margin-top: 105px;
 }
 
 .resize::before {

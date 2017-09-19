@@ -585,6 +585,7 @@ margin-top: 104px;
   .containerCarousel{
   margin-top: 104px;
   }
+  
   @media all and (orientation:landscape) {
     .navbar {
        position: absolute;
