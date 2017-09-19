@@ -46,7 +46,7 @@ function preloader() {
         }
     }
     addLoadEvent(preloader);
-   window.onload = function() {
+    $(document).ready(function() {
     let $carousel = $('.carousel');
     $carousel.carousel();
     $carousel.carousel({
@@ -60,4 +60,4 @@ function preloader() {
     $carousel.swipeleft(function () {
         $(this).carousel('next');
     });
-};
+});
