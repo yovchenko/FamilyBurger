@@ -76,6 +76,7 @@ hr {
     max-height: 75vh;
     position: absolute;
     top: 0;
+    z-index: 1000;
 }
 
 .resize  {
