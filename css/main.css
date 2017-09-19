@@ -9,6 +9,7 @@ text-shadow: -1px 0 rgba(0%,0%,0%, 0.4), 0 1px rgba(0%,0%,0%, 0.4), 1px 0 rgba(0
 
 
 .flex-container {
+  display: block;
 background-image: url("../svg/i-like-food.svg");
 background-size: 75px 75px;
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);

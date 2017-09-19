@@ -46,6 +46,7 @@ height: 100%;
 }
 
 hr {
+    display: flex;
     border-top: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
     width: 100%;
     margin-top: 15px;
