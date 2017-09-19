@@ -5,7 +5,6 @@ main {
 .map-container {
     position: relative;
     overflow: hidden;
-    z-index: 1000;
 }
 
 .container p {
@@ -256,6 +255,10 @@ text-align: center;
 }
 
 @media all and (max-width: 576px) { 
+.navbar {
+    position: absolute;
+}
+
 .container p {
     margin: 0;
     font-size: 1.3em;
@@ -300,19 +303,13 @@ label[for="comment"] {
     #email-error {
         font-size: 1em;
         }
-
-        @media all and (orientation:landscape) {
-            .navbar {
-               position: absolute;
-               top: 0px;
-            }
-            .resize::before {
-                padding-bottom: 40.25%;
-            }
-            }
 }
 
 @media all and (max-width: 767px) and (min-width: 577px) { 
+.navbar {
+    position: absolute;
+}
+
 .sm-md-line {
     display: block;
    }
@@ -336,13 +333,4 @@ main .container {
     padding-bottom: 56.25%;
   }
 
-  @media all and (orientation:landscape) {
-    .navbar {
-       position: absolute;
-       top: 0px;
-    }
-    .resize::before {
-        padding-bottom: 40.25%;
-    }
-    }
 }
