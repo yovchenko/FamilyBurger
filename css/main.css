@@ -484,7 +484,8 @@ margin-top: 104px;
 
 @media all and (orientation:landscape) {
   .navbar {
-    position: absolute;
+     position: absolute;
+     top: 0px;
   }
 }
 }
@@ -576,7 +577,11 @@ margin-top: 104px;
   .containerCarousel{
   margin-top: 104px;
   }
-  
+  @media all and (orientation:landscape) {
+    .navbar {
+       position: absolute;
+       top: 0px;
+    }
   }
 @media (min-width: 992px) { }
 @media (min-width: 1200px) { }

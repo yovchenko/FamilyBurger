@@ -303,6 +303,16 @@ label[for="comment"] {
     #email-error {
         font-size: 1em;
         }
+        
+        @media all and (orientation:landscape) {
+            .navbar {
+               position: absolute;
+               top: 0px;
+            }
+            .resize::before {
+                padding-bottom: 40.25%;
+            }
+            }
 }
 
 @media all and (max-width: 767px) and (min-width: 577px) { 
@@ -332,5 +342,14 @@ main .container {
 .resize::before {
     padding-bottom: 56.25%;
   }
+  @media all and (orientation:landscape) {
+    .navbar {
+       position: absolute;
+       top: 0px;
+    }
+    .resize::before {
+        padding-bottom: 40.25%;
+    }
+    }
 
 }
