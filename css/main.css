@@ -281,6 +281,7 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
   
   #myCarousel {
     box-shadow: inset 0px -1px 1px 1px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
   }
   
   .responsive {
@@ -482,10 +483,11 @@ display: none;
 margin-top: 104px;
 }
 
-@media all and (orientation:landscape) {
-  .navbar {
-    position: absolute;
-  }
+  @media all and (orientation:landscape) {
+    .navbar {
+       position: absolute;
+       top: 0px;
+    }
 }
 }
 
@@ -576,7 +578,11 @@ margin-top: 104px;
   .containerCarousel{
   margin-top: 104px;
   }
-  
+  @media all and (orientation:landscape) {
+    .navbar {
+       position: absolute;
+       top: 0px;
+    }
   }
 @media (min-width: 992px) { }
 @media (min-width: 1200px) { }
