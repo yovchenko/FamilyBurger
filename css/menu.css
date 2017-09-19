@@ -48,16 +48,24 @@ margin: 20px 0 55px 0;
 position: absolute;
 right: 0px;
 font-size: 1.2em;
-padding: 10px;
+padding: 10px 30px 10px 10px;
 color:rgba(255%, 255%, 255%, 0.9);
 cursor: pointer;
+text-align: left;
+background-image: url(../images/drop-down-arrow.svg);
+background-position: 90% 52%;
+background-repeat: no-repeat;
 background-color:rgba(94.1%, 28.4%, 10.2%, 0.9);
 box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
 -moz-box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
 border: 1px solid rgba(96.4%, 82.5%, 47.7%, 0.9);
--webkit-appearance: none;
--moz-appearance: none;
 appearance: none;
+-moz-appearance: none; 
+-webkit-appearance: none;
+}
+
+#selectMenu:hover {
+  color:rgba(255%, 255%, 255%, 1);
 }
 
 option {
