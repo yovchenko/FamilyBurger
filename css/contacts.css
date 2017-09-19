@@ -45,6 +45,12 @@ label {
   letter-spacing: 1px;
 }
 
+#map {
+height: 100%;
+position: relative;
+z-index: 1000;
+}
+
 hr {
     border-top: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
     width: 100%;
@@ -95,10 +101,6 @@ hr {
 .social > .copyright {
 margin: 10px 0 10px 0;
 font-size: 14px;
-}
-
-#map {
-height: 100%;
 }
 
 #contactForm {
