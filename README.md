@@ -1,2 +1,2 @@
 # familyBurger
-Fast food restaurant
+Sorry,the website is under construction.
