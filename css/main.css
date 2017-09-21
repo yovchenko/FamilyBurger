@@ -7,13 +7,22 @@ font-weight: bold;
 text-shadow: -1px 0 rgba(0%,0%,0%, 0.4), 0 1px rgba(0%,0%,0%, 0.4), 1px 0 rgba(0%,0%,0%, 0.4), 0 -1px rgba(0%,0%,0%, 0.4);
 }
 
-
-.flex-container {
-  display: block;
-background-image: url("../svg/i-like-food.svg");
-background-size: 75px 75px;
-background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
+.grid-container {
+display: grid;
+-ms-display: grid;
 min-height: 100vh; 
+overflow: hidden;
+}
+
+.content-grid-container {
+  display: block;
+  overflow: hidden;  
+}
+
+#contentWrap {
+  background-image: url("../svg/i-like-food.svg");
+  background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
+  background-size: 75px 75px;
 }
 
 .navbar {
@@ -308,27 +317,29 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
   margin-top: 105px ;
   }
   
-  #myCarousel {
+#myCarousel {
   box-shadow: inset 0px -1px 1px 1px rgba(0, 0, 0, 0.2);
-  }
+}
   
-  .responsive {
+.responsive {
     display: block;
     overflow: hidden;
     position: relative;
-  }
+    height: calc(100vw * 2/5);
+}
  
-  .responsive::before {
+.responsive::before {
     content: "";
+    position: absolute;
     display: block;
     height: 0;
     width: 100%;
     padding-bottom: 40.25%;
-  }
+}
 
 img[alt="high-quality-image"] {
 position: absolute;
-top: 0;
+top: 0; bottom: 0; left: 0; right: 0;
 height: 100%;
 width: 100%;
 visibility: hidden;
@@ -337,7 +348,7 @@ visibility: hidden;
 .carousel-inner > :nth-child(1) > .fill {
   width: auto;
   max-width: 100vw;
-  height: auto;
+  height: calc(100vw * 2/5);
   max-height: 75vh;
   background-image: url(../images/carousel/low/img-1-desk.jpg);
   background-repeat: no-repeat;
@@ -349,7 +360,7 @@ visibility: hidden;
 .carousel-inner > :nth-child(2) > .fill {
   width: auto;
   max-width: 100vw;
-  height: auto;
+  height: calc(100vw * 2/5);
   max-height: 75vh;
   background-image: url(../images/carousel/low/img-2-desk.jpg);
   background-repeat: no-repeat;
@@ -361,7 +372,7 @@ visibility: hidden;
 .carousel-inner > :nth-child(3) > .fill {
   width: auto;
   max-width: 100vw;
-  height: auto;
+  height: calc(100vw * 2/5);
   max-height: 75vh;
   background-image: url(../images/carousel/low/img-3-desk.jpg);
   background-repeat: no-repeat;
@@ -373,7 +384,7 @@ visibility: hidden;
 .carousel-inner > :nth-child(4) > .fill {
   width: auto;
   max-width: 100vw;
-  height: auto;
+  height: calc(100vw * 2/5);
   max-height: 75vh;
   background-image: url(../images/carousel/low/img-4-desk.jpg);
   background-repeat: no-repeat;
@@ -384,6 +395,7 @@ visibility: hidden;
 
 footer {
   position: relative;
+  overflow: hidden;
 border-top: 1px solid rgba(96.4%, 82.5%, 47.7%, 0.85);
 -moz-box-shadow: 0px -1px 5px 1px rgba(0, 0, 0, 0.3);
 -webkit-box-shadow: 0px -1px 5px 1px rgba(0, 0, 0, 0.3);
@@ -446,25 +458,25 @@ min-height: 105px;
 
 .carousel-inner > :nth-child(1) > .fill {
   height: calc(100vw * (9/16));
-  max-height: none;
+  max-height: 100vh;
   background-image: url(../images/carousel/low/img-1-pad.jpg);
 }
 
 .carousel-inner > :nth-child(2) > .fill {
   height: calc(100vw * (9/16));
-  max-height: none;
+  max-height: 100vh;
   background-image: url(../images/carousel/low/img-2-pad.jpg);
 }
 
 .carousel-inner > :nth-child(3) > .fill {
   height: calc(100vw * (9/16));
-  max-height: none;
+  max-height: 100vh;
   background-image: url(../images/carousel/low/img-3-pad.jpg);
 }
 
 .carousel-inner > :nth-child(4) > .fill {
   height: calc(100vw * (9/16));
-  max-height: none;
+  max-height: 100vh;
   background-image: url(../images/carousel/low/img-4-pad.jpg);
 }
 
@@ -547,22 +559,26 @@ margin-top: 104px;
 }
 
   .carousel-inner > :nth-child(1) > .fill {
-    max-height: none;
+    max-height: 100vh;
+    height: calc(100vw * 3/4);
     background-image: url(../images/carousel/low/img-1-mob.jpg);
   }
   
   .carousel-inner > :nth-child(2) > .fill {
-    max-height: none;
+    max-height: 100vh;
+    height: calc(100vw * 3/4);
     background-image: url(../images/carousel/low/img-2-mob.jpg);
   }
   
   .carousel-inner > :nth-child(3) > .fill {
-    max-height: none;
+    max-height: 100vh;
+    height: calc(100vw * 3/4);
     background-image: url(../images/carousel/low/img-3-mob.jpg);
   }
   
   .carousel-inner > :nth-child(4) > .fill {
-    max-height: none;
+    max-height: 100vh;
+    height: calc(100vw * 3/4);
     background-image: url(../images/carousel/low/img-4-mob.jpg);
   }
   

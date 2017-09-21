@@ -1,6 +1,5 @@
 .menu {
 width: 100%;
-margin-top: 104px;
 padding: 15px 0 15px 0;
 overflow: hidden;
 
@@ -9,6 +8,10 @@ overflow: hidden;
 .menu > .row {
 margin: 0;
 padding: 0px 15px 0px 15px;
+}
+
+#contentWrap {
+margin-top: 104px;
 }
 
 .row {
