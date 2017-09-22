@@ -10,8 +10,7 @@ $(document).ready(function() {
     else if (document.images && window.matchMedia('(max-width: 768px)').matches) {
     $carousel.carousel({
     pause: true,
-    interval: false,
-    wrap: false
+    interval: false
     });
     $carousel.swiperight(function () {
         $(this).carousel('prev');
