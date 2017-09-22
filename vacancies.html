@@ -30,22 +30,11 @@
     <link rel="stylesheet" href="css/bootstrap-social.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <script>
-        function upgradeImg(object) {
-           let parent = object.parentNode;
-           parent.parentNode.style.visibility = 'hidden';
-           object.style.visibility = 'visible';
-        }
-    </script>
-    <style>
-        #contentWrap {
-            min-height: 100vh;   
-        }
-    </style> 
+    <link rel="stylesheet" href="css/vacancies.css">
 </head>
 
 <body>
-    <div class="content-grid-container">
+    <div class="grid-container">
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -63,7 +52,7 @@
                             <a href="menu.html">Меню</a>
                         </li>
                         <li>
-                            <a href="vacancies.html">Вакансії</a>
+                            <a href="#">Вакансії</a>
                         </li>
                         <li>
                             <a href="contacts.html">Контакти</a>
@@ -72,68 +61,6 @@
                 </div>
             </div>
         </nav>
-        <div class="containerCarousel">
-            <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <div class="fill">
-                                <picture>
-                                        <source srcset="images/carousel/img-1-mob.jpg" media="(max-width: 576px)">
-                                        <source srcset="images/carousel/img-1-pad.jpg" media="(max-width: 767px) and (min-width: 577px)">
-                                        <img class="high-quality" src="images/carousel/img-1-desk.jpg" onload="upgradeImg(this)" alt="high-quality-image">
-                                </picture>
-                        </div>
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="fill">
-                                <picture>
-                                        <source srcset="images/carousel/img-2-mob.jpg" media="(max-width: 576px)">
-                                        <source srcset="images/carousel/img-2-pad.jpg" media="(max-width: 767px) and (min-width: 577px)">
-                                        <img class="high-quality" src="images/carousel/img-2-desk.jpg" onload="upgradeImg(this)" alt="high-quality-image">
-                                </picture>
-                        </div>
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="fill">
-                                <picture>
-                                        <source srcset="images/carousel/img-3-mob.jpg" media="(max-width: 576px)">
-                                        <source srcset="images/carousel/img-3-pad.jpg" media="(max-width: 767px) and (min-width: 577px)">
-                                        <img class="high-quality" src="images/carousel/img-3-desk.jpg" onload="upgradeImg(this)" alt="high-quality-image">
-                                </picture>
-                        </div>
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="fill">
-                                <picture>
-                                        <source srcset="images/carousel/img-4-mob.jpg" media="(max-width: 576px)">
-                                        <source srcset="images/carousel/img-4-pad.jpg" media="(max-width: 767px) and (min-width: 577px)">
-                                        <img class="high-quality" src="images/carousel/img-4-desk.jpg" onload="upgradeImg(this)" alt="high-quality-image">
-                                </picture>
-                        </div>
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                </div>
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-    </div>
-        </div>
         <main id="contentWrap">
             <div class="indexContent">
             <div class="container">
@@ -168,10 +95,8 @@
         </div>
     </footer>
     <script type="application/javascript" src="js/jquery-2.2.4.min.js"></script>
-    <script type="application/javascript" src="js/jquery.mobile.custom.min.js"></script>
     <script type="application/javascript" src="js/bootstrap.min.js"></script>
     <script type="application/javascript" src="js/main.js"></script>
-    <script type="application/javascript" src="js/carousel.js"></script>
 </body>
 
 </html>
