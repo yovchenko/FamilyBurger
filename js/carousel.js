@@ -3,7 +3,7 @@ $(document).ready(function() {
        $carousel.carousel({
            interval: 3500,
            pause: "false",
-          wrap: true
+           wrap: true
     });
     $carousel.swiperight(function () {
         $(this).carousel('prev');
