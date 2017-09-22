@@ -9,11 +9,6 @@ function scrollFunction() {
   
     if (document.body.scrollTop > offsetButton() || document.documentElement.scrollTop > offsetButton()) {
         document.getElementById('scrollTop').style.display = "block";
-        $('#myCarousel').carousel({
-            pause: true,
-            interval: false,
-            wrap: false
-            });
     } else {
         document.getElementById('scrollTop').style.display = "none";
     }
