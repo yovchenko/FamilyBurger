@@ -56,3 +56,12 @@ display: none;
         display: initial;
     }
 }
+
+@media all and (max-width: 335px) {
+    .indexContent .container .row div[class*="col"] p {
+        font-size: 5vmin;
+        }
+        .br {
+            display: initial;
+        } 
+}
