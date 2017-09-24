@@ -234,6 +234,59 @@ display: none;
 display: none
 }
 
+.wrapper {
+  max-width: 30px;
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  right: 50%;
+}
+
+svg {
+  width: 30px;
+  max-height: 40px;
+  display: inline-block;
+}
+
+.arrow-down path {
+stroke: rgba(255%, 255%, 255%, 1);
+fill: transparent;
+stroke-width: 1px;	
+animation: arrow 2s infinite;
+-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:.8}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:.8}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrow-down path.a1 {
+animation-delay:-1s;
+-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrow-down path.a2 {
+animation-delay:-0.5s;
+-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrow-down path.a3 {	
+animation-delay:0s;
+-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
 .indexContent .container .row:first-of-type {
   padding-top: 8.33333333%;
 }
