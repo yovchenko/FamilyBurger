@@ -23,6 +23,10 @@
     border-right: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
 }
 
+.br {
+display: none;
+}
+
 .indexContent .container .row div[class*="col"] img {
     max-width: 8em;
     margin: 0px 15px;
@@ -35,14 +39,20 @@
 
 .indexContent .container .row div[class*="col"] p {
     font-size: 1.4em;
-    
+    margin: 0px 3px;
 }
 
 @media all and (max-width: 767px) and (min-width: 577px) { 
+    .br {
+        display: initial;
+    }
 }
 
 @media all and (max-width: 576px) { 
     .indexContent .container .row div[class*="col"] p {
     font-size: 1.2em;
+    }
+    .br {
+        display: initial;
     }
 }
