@@ -4,14 +4,23 @@
 
 .indexContent .container {
     margin-top: 25px;
+    
+}
+
+hr {
+    border-top: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
 }
 
 .indexContent .container .row:last-of-type {
-    padding-bottom: 39px;
+    padding-bottom: 0px;
 }
 
 .indexContent .container .row:first-of-type {
     padding-top: 25px; 
+}
+
+.indexContent .container.jobs {
+   
 }
 
 .indexContent .container .row div[class*="col"] {
