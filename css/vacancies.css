@@ -34,7 +34,7 @@ hr {
 }
 
 .indexContent .container .row div[class*="col"]:not(:last-child) {
-    border-right: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
+   
 }
 
 .br {
