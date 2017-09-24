@@ -52,10 +52,10 @@ position: absolute;
 right: 0px;
 font-size: 1.2em;
 padding: 10px 30px 10px 10px;
-color:rgba(255%, 255%, 255%, 0.9);
+color:rgba(96.4%, 82.5%, 47.7%, 1);
 cursor: pointer;
 text-align: left;
-background-image: url(../images/drop-down-arrow.svg);
+background-image: url(../svg/drop-down-arrow.svg);
 background-position: 90% 52%;
 background-repeat: no-repeat;
 background-color:rgba(94.1%, 28.4%, 10.2%, 0.9);
@@ -67,12 +67,8 @@ appearance: none;
 -webkit-appearance: none;
 }
 
-#selectMenu:hover {
-  color:rgba(255%, 255%, 255%, 1);
-}
-
 option {
-background: rgba(96.4%, 82.5%, 47.7%, 0.9);
+background: rgba(94.1%, 28.4%, 10.2%, 0.9);
 }
 
 .row  img:hover {
