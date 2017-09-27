@@ -3,6 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <script type="text/javascript">
+        var host = "familyburger.com.ua";
+        if ((host == window.location.host) && (window.location.protocol != "https:"))
+            window.location.protocol = "https";
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Vladimir M. Yovchenko">
@@ -98,8 +103,10 @@
               <label for="email">Email: <br>
               <input type="email" name="email" id="email" required/>
               </label>
-              <input type="text" name="_gotcha" style="display:none"/>
+              <div class="messegeSend">
               <button type="submit" id="send" class="button button--send button--split-effect">Надіслати</button>
+              <span class="textAlert"></span>
+              </div>
             </form>
             </div>
             </div>

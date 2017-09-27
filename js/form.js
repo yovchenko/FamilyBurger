@@ -19,20 +19,23 @@ jQuery.extend(jQuery.validator.messages, {
 });
 document.querySelector('button[id=send]').addEventListener('click', sendForm);
 function sendForm(e) {
+    var textAlert = document.getElementsByClassName('textAlert')[0];
     var $contactForm = $('#contactForm');
     if ($contactForm.valid()) {
         e.preventDefault();
         $.ajax({
-            url: "https://formspree.io/info@familyburger.com",
+            url: "https://formspree.io/info@familyburger.com.ua",
             method: "POST",
             data: {
                 name: $('#name').val(),
                 email: $('#email').val(),
                 textarea: $('#comment').val()
             },
-            dataType: "json"
-        }).done(function() {
-            $contactForm.html('');
-        });
+            dataType: "json",
+            beforeSend: function() { textAlert.innerHTML = '<div class="alert alert--loading">Відправлення…</div>';},
+            success: function(data) {textAlert.innerHTML ='<div class="alert alert--success">Надіслано!</div>';},
+            error: function(err) {textAlert.innerHTML = '<div class="alert alert--error">Вибачте,але стався збій.</div>';}
+        })
     }
 }
+
