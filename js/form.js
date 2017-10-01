@@ -24,7 +24,7 @@ function sendForm(e) {
     if ($contactForm.valid()) {
         e.preventDefault();
         $.ajax({
-            url: "https://formspree.io/yovchenko.w@gmail.com",
+            url: "https://formspree.io/info@familyburger.com.ua",
             method: "POST",
             data: {
                 name: $('#name').val(),
@@ -33,8 +33,8 @@ function sendForm(e) {
             },
             dataType: "json",
             beforeSend: function() { textAlert.innerHTML = '<div class="alert alert--loading">Відправлення…</div>';},
-            success: function(data) {textAlert.innerHTML ='<div class="alert alert--success">Надіслано!</div>';},
-            error: function(err) {textAlert.innerHTML = '<div class="alert alert--error">Вибачте,але стався збій.</div>';}
+            success: function(data) {textAlert.innerHTML ='<div class="alert alert--success">Надіслано! &#10003;</div>';},
+            error: function(err) {textAlert.innerHTML = '<div class="alert alert--error">Вибачте,але стався збій. &#10006;</div>';}
         })
     }
 }
