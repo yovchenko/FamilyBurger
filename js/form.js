@@ -24,7 +24,7 @@ function sendForm(e) {
     if ($contactForm.valid()) {
         e.preventDefault();
         $.ajax({
-            url: "https://formspree.io/info@familyburger.com.ua",
+            url: "https://formspree.io/yovchenko.w@gmail.com",
             method: "POST",
             data: {
                 name: $('#name').val(),
