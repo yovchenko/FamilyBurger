@@ -1,11 +1,8 @@
 const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
- 
+const imagemin = require('gulp-imagemin');
+
 gulp.task('default', () =>
-    gulp.src('css/vacancies.css')
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('dist'))
+	gulp.src('images/carousel/img-2-desk.jpg')
+		.pipe(imagemin())
+		.pipe(gulp.dest('dist/images'))
 );

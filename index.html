@@ -42,15 +42,9 @@
            object.style.visibility = 'visible';
         }
     </script>
-    <style>
-        #contentWrap {
-            min-height: 100vh;   
-        }
-    </style> 
 </head>
-
 <body>
-    <div class="content-grid-container">
+    <div class="flex-container">
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -77,13 +71,13 @@
                 </div>
             </div>
         </nav>
-        <div class="containerCarousel">
+        <div class="wrapCarousel">
             <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
                     <li data-target="#myCarousel" data-slide-to="2"></li>
-                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    
                 </ol>
                 <div class="carousel-inner">
                     <div class="item active">
@@ -119,17 +113,7 @@
                         <div class="carousel-caption">
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="fill">
-                                <picture>
-                                        <source srcset="images/carousel/img-4-mob.jpg" media="(max-width: 576px)">
-                                        <source srcset="images/carousel/img-4-pad.jpg" media="(max-width: 767px) and (min-width: 577px)">
-                                        <img class="high-quality" src="images/carousel/img-4-desk.jpg" onload="upgradeImg(this)" alt="high-quality-image">
-                                </picture>
-                        </div>
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
+         
                 </div>
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
             <span class="icon-prev"></span>
@@ -138,9 +122,9 @@
             <span class="icon-next"></span>
         </a>
     </div>
-        </div>
+    </div>
         <main id="contentWrap">
-            <div class="indexContent">
+            <div class="blocks">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6 col-lg-offset-0 col-lg-6"><div class="arrow_box_right"></div><div class="arrow_box_bottom"></div></div>
