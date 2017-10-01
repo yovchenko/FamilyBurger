@@ -1,11 +1,27 @@
+/* alegreya-sans-900italic - latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: italic;
+  font-weight: 900;
+  src: url('../fonts/alegreya-sans-v5-latin_cyrillic-ext_cyrillic-900italic.eot'); /* IE9 Compat Modes */
+  src: local('Alegreya Sans Black Italic'), local('AlegreyaSans-BlackItalic'),
+       url('../fonts/alegreya-sans-v5-latin_cyrillic-ext_cyrillic-900italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/alegreya-sans-v5-latin_cyrillic-ext_cyrillic-900italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/alegreya-sans-v5-latin_cyrillic-ext_cyrillic-900italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/alegreya-sans-v5-latin_cyrillic-ext_cyrillic-900italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/alegreya-sans-v5-latin_cyrillic-ext_cyrillic-900italic.svg#AlegreyaSans') format('svg'); /* Legacy iOS */
+}
+
 html,body {
 height:100%;
 margin: 0;
 -webkit-box-sizing: border-box;
 box-sizing: border-box;
-font-family: 'Alegreya', serif;
+font-family: 'Alegreya Sans';
 font-weight: bold;
-text-shadow: -1px 0 rgba(0%,0%,0%, 0.4), 0 1px rgba(0%,0%,0%, 0.4), 1px 0 rgba(0%,0%,0%, 0.4), 0 -1px rgba(0%,0%,0%, 0.4);
+letter-spacing: 1px;
+text-shadow: 0px 1px 0px rgba(0%,0%,0%, 0.3), 1px 0px 0px rgba(0%,0%,0%, 0.3), 1px 2px 1px rgba(0%,0%,0%, 0.3),
+2px 1px 1px rgba(0%,0%,0%, 0.3);
 }
 
 .grid-container {
@@ -13,14 +29,23 @@ display: grid;
 -ms-display: grid;
 min-height: 100vh; 
 overflow: hidden;
+margin-top: 105px;
+background-image: url("../svg/i-like-food.svg");
+background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
+background-size: 75px 75px;
 }
 
-.content-grid-container {
-  display: block;
-  overflow: hidden;  
-}
-
-#contentWrap {
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh; 
+  -webkit-box-orient: vertical; 
+  -webkit-box-direction: normal; 
+  -ms-flex-direction: column; 
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 105px;
   background-image: url("../svg/i-like-food.svg");
   background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
   background-size: 75px 75px;
@@ -73,9 +98,28 @@ top: -12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: 'Alegreya', serif;
+  text-shadow:0px 1px 0px rgba(0%,0%,0%, 0.3), 1px 0px 0px rgba(0%,0%,0%, 0.3), 1px 2px 1px rgba(0%,0%,0%, 0.3),
+  2px 1px 1px rgba(0%,0%,0%, 0.3);
 }
 
-.indexContent .container .row div {
+.wrapCarousel {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+#contentWrap {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.blocks {
+  margin: 57px 0px;
+}
+
+.blocks .container .row div {
   height: 350px;
   padding-right: 0px; 
   padding-left: 0px; 
@@ -291,30 +335,6 @@ animation-delay:0s;
 -webkit-animation-delay:0s; /* Safari 和 Chrome */
 }
 
-.indexContent .container .row:first-of-type {
-  padding-top: 8.33333333%;
-}
-
-.indexContent .container .row:last-of-type {
-  padding-bottom: 8.33333333%;
-}
-
-.indexContent .container .row:first-of-type div[class*="col"]:first-of-type {
- 
-}
-
-.indexContent .container .row:first-of-type div[class*="col"]:last-of-type {
-
-}
-
-.indexContent .container .row:last-of-type div[class*="col"]:first-of-type {
-
-}
-
-.indexContent .container .row:last-of-type div[class*="col"]:last-of-type {
-
-}
-
 .nav-sign {
 display: -webkit-box;
 display: -ms-flexbox;
@@ -411,6 +431,7 @@ position: relative;
 padding-top: 1.6em;
 cursor: pointer;
 }
+
 
 .navbar-inverse .navbar-nav>li>a:hover {
 color: rgba(94.1%, 28.4%, 10.2%, 1);
@@ -534,10 +555,10 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
   }
 }
 
-.containerCarousel{
-margin-top: 105px;
- }
-  
+.carouselContainer {
+margin-bottom: 50px;
+}
+
 #myCarousel {
 -webkit-box-shadow: inset 0px -1px 1px 1px rgba(0, 0, 0, 0.2);
 box-shadow: inset 0px -1px 1px 1px rgba(0, 0, 0, 0.2);
@@ -614,6 +635,10 @@ align-items: center;
 -webkit-box-pack: end;
 -ms-flex-pack: end;
 justify-content: flex-end;
+}
+
+footer p {
+letter-spacing: 0.5px;
 }
 
 .social {
@@ -727,10 +752,6 @@ border-radius: 4px;
 display: none;
 }
 
-.containerCarousel{
-margin-top: 104px;
-}
-
   @media all and (orientation:landscape) {
     .navbar {
        position: absolute;
@@ -818,10 +839,6 @@ margin-top: 104px;
   
   .carousel-inner ~ a[class] {
   display: none;
-  }
-  
-  .containerCarousel{
-  margin-top: 104px;
   }
   
   @media all and (orientation:landscape) {

@@ -10,10 +10,6 @@ margin: 0;
 padding: 0px 15px 0px 15px;
 }
 
-#contentWrap {
-margin-top: 104px;
-}
-
 .row {
 text-align: center;
 }
@@ -59,6 +55,7 @@ background-image: url(../svg/drop-down-arrow.svg);
 background-position: 90% 52%;
 background-repeat: no-repeat;
 background-color:rgba(94.1%, 28.4%, 10.2%, 0.9);
+-webkit-box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
 box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
 -moz-box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
 border: 1px solid rgba(96.4%, 82.5%, 47.7%, 0.9);
@@ -76,6 +73,7 @@ background: rgba(94.1%, 28.4%, 10.2%, 0.9);
 }
 
 .row  img:hover {
+-webkit-transform: scale(1.04);
 transform: scale(1.04);
 }
 
@@ -100,8 +98,8 @@ background-size: contain;
 background-repeat: no-repeat;
 height: 18em;
 width: 90%;
--webkit-filter: drop-shadow(1px 3px 10px rgba(255%, 255%, 255%, 0.60));
-filter: drop-shadow(1px 3px 10px rgba(255%, 255%, 255%, 0.60));
+-webkit-filter: drop-shadow(1px 3px 1px rgba(255%, 255%, 255%, 0.3));
+filter: drop-shadow(1px 3px 1px rgba(255%, 255%, 255%, 0.3));
 }
 
 .modal-fullscreen {
@@ -148,9 +146,20 @@ background: rgba(0%,0%,0%, 0.5);
 text-align: center;
 margin-left: 50px;
 margin-top: 5px;
+padding: 0px 10px;
+padding-right: 20px;
 font-size: 1.6em;
 line-height: 1.6em;
-text-shadow: 3px -3px 50px rgba(255, 255, 255, 0.3), 2px -2px 50px rgba(255, 255, 255, 0.4), 1px -1px 50px rgba(255, 255, 255, 0.5), 0px 1px 1px rgba(255, 255, 255, 0.3), 0px 3px 1px rgba(0,0,0,0.6), 0px 4px 1px rgba(0,0,0,0.6), 0px 6px 5px rgba(0,0,0,0.6), 3px 3px 2px rgba(0,0,0,0.6);
+text-shadow: 1px 1px rgba(0%,0%,0%, 0.5), 2px 1px rgba(0%,0%,0%, 0.4), 3px 1px rgba(0%,0%,0%, 0.3), 0px -1px 5px rgba(255, 255, 255, 0.25), 0px 1px 5px rgba(255, 255, 255, 0.25);
+}
+
+.modal-body > .container > .row > div > h2 > b::after {
+  content: "";
+  display: block;
+  padding: 2px 0;
+  line-height: 1px;
+  margin-bottom: -25px;
+  border-top: 2px dashed rgba(96.4%, 82.5%, 47.7%, 0.85);
 }
 
 .modal-header {
@@ -166,7 +175,7 @@ text-shadow: 3px -3px 50px rgba(255, 255, 255, 0.3), 2px -2px 50px rgba(255, 255
     font-size: 1.6em;
     font-family: 'Alegreya', serif;
     font-weight: bold;
-    text-shadow: 0px 1px 1px #b2a98f, 0px 3px 1px rgba(0,0,0,0.4), 0px 4px 1px rgba(0,0,0,0.4), 0px 6px 5px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px rgba(0%,0%,0%, 0.3), 2px 1px rgba(0%,0%,0%, 0.4), 1px 2px 6px rgba(0%,0%,0%, 0.5);
     top: 0;
     margin-right: 10px;
     color: rgba(94.1%, 28.4%, 10.2%, 1);
@@ -211,6 +220,7 @@ margin: 0;
 }
 
 .row  img:hover {
+-webkit-transform: scale(1.06);
 transform: scale(1.06);
 }
 

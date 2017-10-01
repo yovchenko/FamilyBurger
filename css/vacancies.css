@@ -1,7 +1,3 @@
-#contentWrap {
-    margin-top: 105px;
-}
-
 .indexContent .container {
     margin-top: 25px;
 }
@@ -16,6 +12,10 @@ hr {
     border-top: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
 }
 
+.wrapper {
+    margin-left: -15px;
+}
+
 .indexContent .container .row:last-of-type {
     padding-bottom: 0px;
 }
@@ -24,8 +24,8 @@ hr {
     padding-top: 25px; 
 }
 
-.indexContent .container.jobs {
-   
+.indexContent {
+    height: 100vh;
 }
 
 .indexContent .container .row div[class*="col"] {
@@ -69,6 +69,10 @@ display: none;
 @media all and (max-width: 576px) { 
     .indexContent .container .row div[class*="col"] p {
     font-size: 1.2em;
+    margin: 3px 3px;
+    position: absolute;
+    left: 0;
+    right: 0;
     }
     .br {
         display: initial;
@@ -79,6 +83,9 @@ display: none;
     }
     .wrapper {
         display: none;
+    }
+    .container h1 {
+        padding-top: 15px;
     }
 }
 

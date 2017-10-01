@@ -1,3 +1,7 @@
+.push {
+height: 100%;
+}
+
 .container p {
     font-size: 1.5em;
 }
@@ -50,6 +54,12 @@ hr {
     margin: 0px 0px 59px 0px;
 }
 
+.info-window h3,.info-window h4  {
+    font-family: 'Alegreya Sans';
+    font-weight: 900;
+    text-align: center;
+}
+
 .map-container:before, .map-container:after, #map:before, #map:after {
     content: '';
     position: absolute;
@@ -65,14 +75,8 @@ hr {
 
 
 .map-container {
-    display: block;
-    width: auto;
-    height: auto;
-    max-width: 100vw;
-    max-height: 75vh;
     position: relative;
     overflow: hidden;
-    margin-top: 105px;
 }
 
 #map {
@@ -101,6 +105,7 @@ flex-direction: column;
 width: 100%;
 margin: 2px;
 resize:vertical;
+font-family: "Times New Roman", Times, serif;
 color: rgba(0%,0%,0%, 0.8);
 background-color: rgba(92.2%, 89%, 80.4%, 0.9);
 border: 1px solid rgba(0%,0%,0%, 0.3);
