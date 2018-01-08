@@ -1,1 +1,76 @@
-$(document).ready(function(){var t=document.getElementsByClassName("ribbon")[0],e=document.getElementsByClassName("description")[0],n=document.getElementsByClassName("product-img")[0];ProductsModel=function(t){this.XMLHttpRequest=t},ProductsModel.prototype.getProducts=function(t,e){var n=new this.XMLHttpRequest;n.onload=function(n){var o=JSON.parse(n.currentTarget.responseText)[t];e(o)},n.open("GET","https://familyburger.com.ua/products.json",!0),n.send()};var o=function(t,e){this.element=t,this.index=e.indexOf(t)};o.prototype.render=function(o){var r=this.index+1;t.innerHTML=String(o.price),e.innerHTML="<b>"+o.name+"</b><br>"+o.description,n.style.backgroundImage='url("images/product/img-'+r+'.png")'},o.prototype.slideDown=function(){var e=25,n=setInterval(function(){50>e?(e+=.5,t.style.height=e+"%"):(t.style.height=e+"%",clearInterval(n),n=null)},25)};var r=function(t,e){this.productsView=t,this.productsModel=e,this.productsModel.getProducts(this.productsView.index,this.onClickShowProduct.bind(this))};r.prototype.onClickShowProduct=function(t){this.productsView.slideDown(),this.productsView.render(t)},function(){var t,e=Array.prototype.slice.call(document.querySelectorAll(".container .item-img")),n=new ProductsModel(XMLHttpRequest),i=e.length;for(t=0;t<i;t++)e[t].onclick=function(){var t=new o(this,e);new r(t,n)}}(),window.addEventListener("load",function(){var t,e=document.getElementsByTagName("img"),n=e.length;for(t=0;t<n;t++)e[t].getAttribute("data-src")&&e[t].setAttribute("src",e[t].getAttribute("data-src"))},!1),$(".notify-badge").arctext({radius:300})});
+$(document).ready(function () {
+  var price = document.getElementsByClassName('ribbon')[0],
+    description = document.getElementsByClassName('description')[0],
+    image = document.getElementsByClassName('product-img')[0];
+  ProductsModel = function ProductsModel(XMLHttpRequest) {
+    this.XMLHttpRequest = XMLHttpRequest;
+  };
+  ProductsModel.prototype.getProducts = function getProducts(index, fn) {
+    var oReq = new this.XMLHttpRequest();
+    oReq.onload = function onLoad(e) {
+      var ajaxResponse = JSON.parse(e.currentTarget.responseText),
+        product = ajaxResponse[index];
+      fn(product);
+    };
+
+    oReq.open('GET', 'https://familyburger.com.ua/products.json', true);
+    oReq.send();
+  };
+  var ProductsView = function ProductsView(element, items) {
+    this.element = element;
+    this.index = items.indexOf(element);
+  };
+  ProductsView.prototype.render = function render(viewModel) {
+    var imageIndex = this.index + 1;
+    price.innerHTML = String(viewModel.price);
+    description.innerHTML = '<b>' + viewModel.name + '</b><br>' + viewModel.description;
+    image.style.backgroundImage = 'url("images/product/img-' + imageIndex + '.png")';
+  };
+  ProductsView.prototype.slideDown = function slideDown() {
+    var hgt = 25,
+      interval = setInterval(function () {
+        if (50 > hgt) {
+          hgt += 0.5;
+          price.style.height = hgt + "%";
+        } else {
+          price.style.height = hgt + "%";
+          clearInterval(interval);
+          interval = null;
+        }
+      }, 25);
+  }
+  var ProductsController = function ProductsController(productsView, productsModel) {
+    this.productsView = productsView;
+    this.productsModel = productsModel;
+    this.productsModel.getProducts(this.productsView.index, this.onClickShowProduct.bind(this));
+  };
+  ProductsController.prototype.onClickShowProduct = function onClickShowProduct(productModelData) {
+    this.productsView.slideDown();
+    this.productsView.render(productModelData);
+  };
+  (function initialize() {
+    var i,
+      itemImg = Array.prototype.slice.call(document.querySelectorAll('.container .item-img')),
+      productsModel = new ProductsModel(XMLHttpRequest),
+      len = itemImg.length;
+    for (i = 0; i < len; i++) {
+      itemImg[i].onclick = function () {
+        var productsView = new ProductsView(this, itemImg);
+        var controller = new ProductsController(productsView, productsModel);
+      }
+    }
+  })();
+  window.addEventListener('load', function () {
+    var y,
+      allimages = document.getElementsByTagName('img'),
+      allImgLen = allimages.length;
+    for (y = 0; y < allImgLen; y++) {
+      if (allimages[y].getAttribute('data-src')) {
+        allimages[y].setAttribute('src', allimages[y].getAttribute('data-src'));
+      }
+    }
+  }, false)
+  $('.notify-badge').arctext({
+    radius: 300
+  });
+});
