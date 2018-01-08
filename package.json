@@ -12,10 +12,6 @@
     "normalize.css": "^7.0.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "gulp": "^3.9.1",
-    "gulp-imagemin": "^3.3.0",
-=======
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "fontfaceobserver": "^2.0.13",
@@ -26,7 +22,6 @@
     "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^3.4.0",
     "gulp-minifier": "^0.2.2",
->>>>>>> master
     "gulp-minify": "^1.0.0"
   },
   "scripts": {
