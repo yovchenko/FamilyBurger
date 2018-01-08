@@ -1,0 +1,4 @@
+User-Agent:*
+Host: familyburger.com.ua
+
+Sitemap:  https://familyburger.com.ua/sitemap.xml

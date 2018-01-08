@@ -1,166 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Vladimir M. Yovchenko">
-    <title>Family Burger</title>
-    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya:900" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-social.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script>
-        function upgradeImg(object) {
-           let parent = object.parentNode;
-           parent.parentNode.style.visibility = 'hidden';
-           object.style.visibility = 'visible';
-        }
-    </script>
-</head>
-
-<body>
-    <div class="flex-container">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                    <a class="navbar-brand" href="">Family<div class="sign"></div>Burger</a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="#">Про нас</a>
-                        </li>
-                        <li>
-                            <a href="menu.html">Меню</a>
-                        </li>
-                        <li>
-                            <a href="contacts.html">Контакти</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="containerCarousel">
-            <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <div class="fill responsive">
-                                <picture>
-                                        <source srcset="images/carousel/img-1-mob.jpg" media="(max-width: 576px)">
-                                        <source srcset="images/carousel/img-1-pad.jpg" media="(max-width: 767px) and (min-width: 577px)">
-                                        <img class="high-quality" src="images/carousel/img-1-desk.jpg" onload="upgradeImg(this)" alt="high-quality-image">
-                                </picture>
-                        </div>
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="fill responsive">
-                                <picture>
-                                        <source srcset="images/carousel/img-2-mob.jpg" media="(max-width: 576px)">
-                                        <source srcset="images/carousel/img-2-pad.jpg" media="(max-width: 767px) and (min-width: 577px)">
-                                        <img class="high-quality" src="images/carousel/img-2-desk.jpg" onload="upgradeImg(this)" alt="high-quality-image">
-                                </picture>
-                        </div>
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="fill responsive">
-                                <picture>
-                                        <source srcset="images/carousel/img-3-mob.jpg" media="(max-width: 576px)">
-                                        <source srcset="images/carousel/img-3-pad.jpg" media="(max-width: 767px) and (min-width: 577px)">
-                                        <img class="high-quality" src="images/carousel/img-3-desk.jpg" onload="upgradeImg(this)" alt="high-quality-image">
-                                </picture>
-                        </div>
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="fill responsive">
-                                <picture>
-                                        <source srcset="images/carousel/img-4-mob.jpg" media="(max-width: 576px)">
-                                        <source srcset="images/carousel/img-4-pad.jpg" media="(max-width: 767px) and (min-width: 577px)">
-                                        <img class="high-quality" src="images/carousel/img-4-desk.jpg" onload="upgradeImg(this)" alt="high-quality-image">
-                                </picture>
-                        </div>
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                </div>
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-    </div>
-        </div>
-      
-        <main id="contentWrap">
-            <div class="container">
-                <div class="row">
-
-                </div>
-            </div>
-        </main>
-    </div>
-    <footer>
-        <div class="container">
-            <div class="footer">
-                    <p class="design">Design by VY</p>
-                <div class="social">
-                    <a href="https://vk.com/familyburger/" class="btn btn-social-icon btn-vk" target="_blank">
-                <span class="fa fa-vk"></span>
-            </a>
-                    <a href="https://www.facebook.com/groups/FamilyBurgerr/" class="btn btn-social-icon btn-facebook" target="_blank">
-                <span class="fa fa-facebook"></span>
-            </a>
-                    <p class="copyright">&copy; Copyright 2017</p> <div class="offsetScroll"><section id="section"> 
-                            <button id="scrollTop" title="Go top"> <span class="arrow arrow-up"></span></button>
-                            </section></div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script type="application/javascript" src="js/jquery-2.2.4.min.js"></script>
-    <script type="application/javascript" src="js/jquery.mobile.custom.min.js"></script>
-    <script type="application/javascript" src="js/bootstrap.min.js"></script>
-    <script type="application/javascript" src="js/main.js"></script>
-    <script type="application/javascript" src="js/carousel.js"></script>
-</body>
-
-</html>
+<!DOCTYPE html><html lang="uk"><head><meta charset="UTF-8"><script>var host = "familyburger.com.ua";
+        if ((host == window.location.host) && (window.location.protocol != "https:"))
+            window.location.protocol = "https";</script><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="author" content="Vladimir M. Yovchenko"><title>Family Burger - ресторан швидкого харчування в місті Ромни. | Фамілі Бургер адреса: м.Ромни,вул.Соборна 23.</title><meta name="keywords" content="Family Burger,Фамілі Бургер,familiburger,ФаміліБургер,Ромни,Romny,Україна,Сумська область,фаст-фуд,їсти,їжа,заклад,ресторан,меню,кухня,бургери,піца,салати,снеки,роли,курячі страви,десерти,напої"><meta name="description" content="Family Burger - це швидке обслуговування,якісна кухня,чудовий сервіс. Фаст-фуд Family Burger пропонує: бургери,піца,салати,снеки,роли,курячі страви,десерти,напої,тощо."><link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"><link rel="manifest" href="/manifest.json"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="css/index.css"><script>//carousel images preload
+        function preload(object) {
+            object.style.visibility = 'visible';
+        }</script></head><body><span class="targetTop"></span><div class="flex-container"><header><nav class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="index.html"><span class="sign"></span></a></div><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav"><li><a href="menu.html">Меню</a></li><li><a href="vacancies.html">Вакансії</a></li><li><a href="contacts.html">Контакти</a></li></ul></div></div></nav></header><div class="wrapCarousel"><div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel"><ol class="carousel-indicators"><li data-target="#myCarousel" data-slide-to="0" class="active"></li><li data-target="#myCarousel" data-slide-to="1"></li><li data-target="#myCarousel" data-slide-to="2"></li></ol><div class="carousel-inner"><div class="item active"><div class="fill"><picture><source srcset="images/carousel/img-1-mob.jpg" media="(max-width: 576px)"><source srcset="images/carousel/img-1-pad.jpg" media="(max-width: 767px) and (min-width: 577px)"><source srcset="images/carousel/img-1-desk.jpg" media="(min-width: 768px)"><img id="high-quality-1" class="high-quality" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" onload="preload(this);" alt="high-quality-image"></picture></div><div class="carousel-caption"></div></div><div class="item"><div class="fill"><picture><source srcset="images/carousel/img-2-mob.jpg" media="(max-width: 576px)"><source srcset="images/carousel/img-2-pad.jpg" media="(max-width: 767px) and (min-width: 577px)"><source srcset="images/carousel/img-2-desk.jpg" media="(min-width: 768px)"><img id="high-quality-2" class="high-quality" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" onload="preload(this);" alt="high-quality-image"></picture></div><div class="carousel-caption"></div></div><div class="item"><div class="fill"><picture><source srcset="images/carousel/img-3-mob.jpg" media="(max-width: 576px)"><source srcset="images/carousel/img-3-pad.jpg" media="(max-width: 767px) and (min-width: 577px)"><source srcset="images/carousel/img-3-desk.jpg" media="(min-width: 768px)"><img id="high-quality-3" class="high-quality" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" onload="preload(this);" alt="high-quality-image"></picture></div><div class="carousel-caption"></div></div></div><a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="icon-prev"></span> </a><a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="icon-next"></span></a></div></div><main id="contentWrap"><div class="blocks"><div class="container"><div class="row"><div class="col-xs-12 col-md-6 col-lg-6"><div class="arrow_box_right"><section class="notes"><a class="note sticky1"><div class="pin"></div><div class="text"><h1>Смачно</h1><h3>куштувати</h3></div></a><a class="note sticky2"><div class="pin"></div><div class="text"><h1>Швидко</h1><h3>харчуватися</h3></div></a><a class="note sticky3"><div class="pin"></div><div class="text"><h1>Затишно</h1><h3>відпочивати</h3></div></a></section></div><div class="arrow_box_bottom"><section class="notes"><a class="note sticky1"><div class="pin"></div><div class="text"><h1>Смачно</h1><h3>куштувати</h3></div></a><a class="note sticky2"><div class="pin"></div><div class="text"><h1>Швидко</h1><h3>харчуватися</h3></div></a><a class="note sticky3"><div class="pin"></div><div class="text"><h1>Затишно</h1><h3>відпочивати</h3></div></a></section></div></div><div class="col-xs-12 col-md-6 col-lg-6"><div class="arrow_box_inner_left"><h2 style="color:white; text-align:center;">Вибачте,сторінка в розробці.</h2></div><div class="arrow_box_inner_bottom"></div></div></div><div class="row"><div class="col-xs-12 col-md-6 col-lg-6"><div class="arrow_box_inner_right"></div><div class="arrow_box_inner_top"></div></div><div class="col-xs-12 col-md-6 col-lg-6"><div class="arrow_box_left"><section class="notes"><a class="note sticky1"><div class="pin"></div><div class="text"><img src="svg/coffee.svg" alt="coffee"></div></a><a class="note sticky2"><div class="pin"></div><div class="text"><img src="svg/pizza.svg" alt="pizza"></div></a><a class="note sticky3"><div class="pin"></div><div class="text"><img src="svg/burger.svg" alt="burger"></div></a></section></div><div class="arrow_box_top"><section class="notes"><a class="note sticky1"><div class="pin"></div><div class="text"><img src="svg/coffee.svg" alt="coffee"></div></a><a class="note sticky2"><div class="pin"></div><div class="text"><img src="svg/pizza.svg" alt="pizza"></div></a><a class="note sticky3"><div class="pin"></div><div class="text"><img src="svg/burger.svg" alt="burger"></div></a></section></div></div></div></div></div><div class="push"></div></main></div><footer data-role="header" data-position="fixed" data-fullscreen="true"><div class="container"><div class="footer"><p class="design">Design by VY</p><div class="social"><a href="https://www.facebook.com/groups/FamilyBurgerr/" class="btn btn-social-icon btn-facebook" target="_blank"><span class="fa fa-facebook"></span> </a><a href="" class="btn btn-social-icon btn-instagram" target="_blank"><span class="fa fa-instagram"></span> </a><a href="" class="btn btn-social-icon btn-yt" target="_blank"><span class="fa fa-youtube"></span> </a><a href="https://vk.com/familyburger/" class="btn btn-social-icon btn-vk" target="_blank"><span class="fa fa-vk"></span></a><p class="copyright">&copy; Copyright 2017</p><div class="offsetScroll"><div id="section"><button id="scrollTop" title="Go top"><span class="arrow arrow-up"></span></button></div></div></div></div></div></footer><script src="js/jquery-2.2.4.min.js"></script><script src="js/jquery.mobile.custom.min.js"></script><script src="js/bootstrap.min.js"></script><script src="js/picturefill.min.js" async></script><script src="js/fontfaceobserver.js" async></script><script src="js/carousel.js"></script><script src="js/main.js" defer="defer"></script><script type="application/ld+json">{
+         "@context": "http://schema.org",
+         "@type": "Restaurant",
+         "name": "Family Burger",
+         "url": "https://familyburger.com.ua",
+         "description": "Family Burger - ресторан швидкого харчування в місті Ромни.", 
+         "telephone": "+38(068) 012-12-12",
+         "email": "info@familyburger.com",
+         "image": "https://familyburger.com.ua/images/restaurant.jpg",
+         "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Україна, Ромни",
+            "postalCode": "42000",
+            "streetAddress": "м.Ромни,вул.Соборна 23"
+         }
+        }</script></body></html>

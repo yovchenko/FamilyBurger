@@ -2,25 +2,40 @@
   "name": "familyBurger",
   "version": "1.0.0",
   "description": "Fast food restaurant",
-  "main": "index.js",
+  "main": "main.js",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
+    "dev": "^0.1.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
     "lodash": "^4.17.4",
     "normalize.css": "^7.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "fontfaceobserver": "^2.0.13",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-fontmin": "^0.7.4",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-minifier": "^0.2.2",
+    "gulp-minify": "^1.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yovchenko/familyBurger.git"
+    "url": "git+https://github.com/familyBurger/familyBurger.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yovchenko/familyBurger/issues"
+    "url": "https://github.com/familyBurger/familyBurger/issues"
   },
-  "homepage": "https://github.com/yovchenko/familyBurger#readme"
+  "homepage": "https://github.com/familyBurger/familyBurger#readme"
 }
