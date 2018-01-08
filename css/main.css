@@ -917,7 +917,13 @@ footer p {
   color: white;
   -ms-flex-item-align: end;
   align-self: flex-end;
-  margin-bottom: 22px;
+  margin: 50px 0px 22px 0px;
+}
+
+@supports (display: grid) {
+  .container .design {
+    margin-top: 0px;
+  }
 }
 
 .copyright {

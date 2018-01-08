@@ -175,3 +175,5 @@ $(document).ready(function () {
   
 });
 
+
+console.log($('.design').height());

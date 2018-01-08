@@ -132,6 +132,7 @@
         font-family: 'Alegreya Sans';
         font-weight: 900;
         text-align: center;
+        margin: 0 auto;
     }
 
     .map-container:before,

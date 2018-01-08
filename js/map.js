@@ -225,7 +225,7 @@ $(function () {
         var map = new google.maps.Map(mapCanvas, mapOptions);
         var markerImage = {
         url: 'svg/marker.svg',
-        scaledSize: new google.maps.Size(75, 75)
+        scaledSize: new google.maps.Size(50, 50)
         }
         var marker = new google.maps.Marker({
             position: location,
@@ -234,7 +234,7 @@ $(function () {
             optimized: false
         });
         var contentString = '<div class="info-window">' +
-            '<h3>FamilyBurger</h3>' +
+            '<h3>Family Burger</h3>' +
             '<div class="info-content">' +
             '<h4>Ласкаво просимо!</h4>' +
             '</div>' +

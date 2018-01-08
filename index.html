@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <script type="text/javascript">
+    <script>
         var host = "familyburger.com.ua";
         if ((host == window.location.host) && (window.location.protocol != "https:"))
             window.location.protocol = "https";
@@ -11,11 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Vladimir M. Yovchenko">
-    <title>Family Burger - ресторан швидкого харчування в місті Ромни.Контакти:тел.:(068) 012-12-12 | Фамілі Бургер - фаст-фуд</title>
-    <meta name="keywords" content="Family Burger,Фамілі Бургер,familiburger,ФаміліБургер,Ромни,Romny,фаст-фуд,їсти,їжа,заклад,ресторан,меню,кухня"
-    />
-    <meta name="description" content="Family Burger в Ромнах є ресторан швидкого обслуговування,харчування."
-    />
+    <title>Family Burger - ресторан швидкого харчування в місті Ромни. | Фамілі Бургер адреса: м.Ромни,вул.Соборна 23.</title>
+    <meta name="keywords" content="Family Burger,Фамілі Бургер,familiburger,ФаміліБургер,Ромни,Romny,Україна,Сумська область,фаст-фуд,їсти,їжа,заклад,ресторан,меню,кухня,бургери,піца,салати,снеки,роли,курячі страви,десерти,напої"/>
+    <meta name="description" content="Family Burger - це швидке обслуговування,якісна кухня,чудовий сервіс. Фаст-фуд Family Burger пропонує: бургери,піца,салати,снеки,роли,курячі страви,десерти,напої,тощо."/>
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
@@ -92,8 +90,8 @@
                             <picture>
                                 <source srcset="images/carousel/img-1-mob.jpg" media="(max-width: 576px)">
                                 <source srcset="images/carousel/img-1-pad.jpg" media="(max-width: 767px) and (min-width: 577px)">
-                                <source srcset="images/carousel/img-1-desk.jpg">
-                                <img id="high-quality-1" class="high-quality" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                <source srcset="images/carousel/img-1-desk.jpg" media="(min-width: 768px)">
+                                <img id="high-quality-1" class="high-quality" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                     onload="preload(this);" alt="high-quality-image">
                             </picture>
                         </div>
@@ -105,8 +103,8 @@
                             <picture>
                                 <source srcset="images/carousel/img-2-mob.jpg" media="(max-width: 576px)">
                                 <source srcset="images/carousel/img-2-pad.jpg" media="(max-width: 767px) and (min-width: 577px)">
-                                <source srcset="images/carousel/img-2-desk.jpg">
-                                <img id="high-quality-2" class="high-quality" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                <source srcset="images/carousel/img-2-desk.jpg" media="(min-width: 768px)">
+                                <img id="high-quality-2" class="high-quality" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                     onload="preload(this);" alt="high-quality-image">
                             </picture>
                         </div>
@@ -118,8 +116,8 @@
                             <picture>
                                 <source srcset="images/carousel/img-3-mob.jpg" media="(max-width: 576px)">
                                 <source srcset="images/carousel/img-3-pad.jpg" media="(max-width: 767px) and (min-width: 577px)">
-                                <source srcset="images/carousel/img-3-desk.jpg">
-                                <img id="high-quality-3" class="high-quality" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                <source srcset="images/carousel/img-3-desk.jpg" media="(min-width: 768px)">
+                                <img id="high-quality-3" class="high-quality" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                     onload="preload(this);" alt="high-quality-image">
                             </picture>
                         </div>
@@ -289,10 +287,23 @@
     <script src="js/jquery.mobile.custom.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/picturefill.min.js" async></script>
-    <script src="js/polyfill.min.js" async></script>
     <script src="js/fontfaceobserver.js" async></script>
     <script src="js/carousel.js"></script>
     <script src="js/main.js" defer></script>
+    <script type="application/ld+json">
+        {
+         "@context": "http://schema.org",
+         "@type": "Organization",
+         "name": "Family Burger",
+         "url": "https://familyburger.com.ua",
+         "description": "Family Burger - ресторан швидкого харчування в місті Ромни.", 
+         "contactPoint": {
+         "@type": "ContactPoint",
+         "telephone": "+38(068) 012-12-12",
+         "contactType": "customer service"
+                          }
+        }
+    </script>
 </body>
 
 </html>
