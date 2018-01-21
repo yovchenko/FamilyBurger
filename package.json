@@ -22,7 +22,8 @@
     "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^3.4.0",
     "gulp-minifier": "^0.2.2",
-    "gulp-minify": "^1.0.0"
+    "gulp-minify": "^1.0.0",
+    "gulp-svgmin": "^1.2.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

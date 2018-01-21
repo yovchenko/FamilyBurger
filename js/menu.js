@@ -1,76 +1,129 @@
-$(document).ready(function () {
-  var price = document.getElementsByClassName('ribbon')[0],
-    description = document.getElementsByClassName('description')[0],
-    image = document.getElementsByClassName('product-img')[0];
-  ProductsModel = function ProductsModel(XMLHttpRequest) {
-    this.XMLHttpRequest = XMLHttpRequest;
-  };
-  ProductsModel.prototype.getProducts = function getProducts(index, fn) {
-    var oReq = new this.XMLHttpRequest();
-    oReq.onload = function onLoad(e) {
-      var ajaxResponse = JSON.parse(e.currentTarget.responseText),
-        product = ajaxResponse[index];
-      fn(product);
+    'use strict';
+    var option = document.getElementById('selectMenu'),
+        targetElement = document.getElementsByClassName('flex-row')[0];
+
+    var ProductsModel = function ProductsModel(XMLHttpRequest) {
+        this.XMLHttpRequest = XMLHttpRequest;
     };
 
-    oReq.open('GET', 'https://familyburger.com.ua/products.json', true);
-    oReq.send();
-  };
-  var ProductsView = function ProductsView(element, items) {
-    this.element = element;
-    this.index = items.indexOf(element);
-  };
-  ProductsView.prototype.render = function render(viewModel) {
-    var imageIndex = this.index + 1;
-    price.innerHTML = String(viewModel.price);
-    description.innerHTML = '<b>' + viewModel.name + '</b><br>' + viewModel.description;
-    image.style.backgroundImage = 'url("images/product/img-' + imageIndex + '.png")';
-  };
-  ProductsView.prototype.slideDown = function slideDown() {
-    var hgt = 25,
-      interval = setInterval(function () {
-        if (50 > hgt) {
-          hgt += 0.5;
-          price.style.height = hgt + "%";
-        } else {
-          price.style.height = hgt + "%";
-          clearInterval(interval);
-          interval = null;
+    ProductsModel.prototype.getProducts = function getProducts(fn) {
+        var oReq = new this.XMLHttpRequest();
+        oReq.onload = function onLoad(e) {
+            var ajaxResponse = JSON.parse(e.currentTarget.responseText),
+                product = ajaxResponse;
+            fn(product);
+        };
+        oReq.open('GET', 'https://familyburger.com.ua/products.json', true);
+        oReq.send();
+    };
+
+    var ProductsView = function ProductsView(element, select) {
+        this.element = element;
+        this.select = select;
+        this.onChangeGetProduct = null;
+    };
+
+    ProductsView.prototype.render = function render(viewModel) {
+        var x,
+            y,
+            items,
+            itemIdx,
+            flag = true,
+            that = this,
+            imgPreload = [],
+            itemsByName = [],
+            itemsByPrice = [],
+            itemsByDescription = [],
+            itemsLen = viewModel.length,
+            loader = document.getElementsByClassName('loader')[0],
+            selectValue = this.select.options[this.select.selectedIndex].value;
+            this.element.innerHTML = '';
+            loader.classList.remove('contentLoaded');
+        for (x = 0; x < itemsLen; x++) {
+            if (viewModel[x].type === selectValue) {
+                if (flag) {
+                    itemIdx = x;
+                    flag = false;
+                }
+                this.element.innerHTML += '<div class="item-img"><a href="#modal-fullscreen" data-toggle="modal"><h1 class="notify-badge">' +
+                    viewModel[x].name + '</h1><img src="images/menuLowQuality/img-' +
+                    (x + 1) + '.png"alt="' + viewModel[x].name + '"></a></div>';
+                imgPreload.push(new Image());
+                itemsByName.push(viewModel[x].name);
+                itemsByPrice.push(viewModel[x].price);
+                itemsByDescription.push(viewModel[x].description);
+            }
         }
-      }, 25);
-  }
-  var ProductsController = function ProductsController(productsView, productsModel) {
-    this.productsView = productsView;
-    this.productsModel = productsModel;
-    this.productsModel.getProducts(this.productsView.index, this.onClickShowProduct.bind(this));
-  };
-  ProductsController.prototype.onClickShowProduct = function onClickShowProduct(productModelData) {
-    this.productsView.slideDown();
-    this.productsView.render(productModelData);
-  };
-  (function initialize() {
-    var i,
-      itemImg = Array.prototype.slice.call(document.querySelectorAll('.container .item-img')),
-      productsModel = new ProductsModel(XMLHttpRequest),
-      len = itemImg.length;
-    for (i = 0; i < len; i++) {
-      itemImg[i].onclick = function () {
-        var productsView = new ProductsView(this, itemImg);
-        var controller = new ProductsController(productsView, productsModel);
-      }
+        items = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
+        itemsLen = items.length;
+        for (y = 0; y < itemsLen; y++) {
+            imgPreload[y].src = './images/menuHighQuality/img-' + (itemIdx + y + 1) + '.png';
+            items[y].addEventListener('click', function () {
+                that.onClickShowDescription(items.indexOf(this) +
+                    itemIdx, itemsByPrice[items.indexOf(this)], itemsByName[items.indexOf(this)], itemsByDescription[items.indexOf(this)]);
+            });
+        };
+        this.select.addEventListener('change', function () {
+            that.onChangeGetProducts(viewModel);
+        });
+        imgPreload[y - 1].addEventListener("load", function() {
+            loader.classList.add('contentLoaded');
+        });
+        $('.notify-badge').arctext({
+            radius: 300
+        });
+    };
+
+    ProductsView.prototype.showItemDescription = function showItem(elementIndex, elementName, elementDescription) {
+        var description = document.getElementsByClassName("description")[0],
+            image = document.getElementsByClassName("product-img")[0];
+            description.innerHTML = "<b>" + elementName + "</b><br>" + elementDescription,
+            image.style.backgroundImage = 'url("images/menuHighQuality/img-' + (elementIndex + 1) + '.png")';
     }
-  })();
-  window.addEventListener('load', function () {
-    var y,
-      allimages = document.getElementsByTagName('img'),
-      allImgLen = allimages.length;
-    for (y = 0; y < allImgLen; y++) {
-      if (allimages[y].getAttribute('data-src')) {
-        allimages[y].setAttribute('src', allimages[y].getAttribute('data-src'));
-      }
-    }
-  }, false)
-  $('.notify-badge').arctext({
-    radius: 300
-  });
-});
+
+    ProductsView.prototype.slideDown = function slideDown(price) {
+        var ribbon = document.getElementsByClassName('ribbon')[0],
+            hgt = 25,
+            interval = setInterval(function () {
+                if (50 > hgt) {
+                    hgt += 0.5;
+                    ribbon.style.height = hgt + "%";
+                } else {
+                    ribbon.style.height = hgt + "%";
+                    clearInterval(interval);
+                    interval = null; // garbage collection
+                }
+            }, 25);
+        ribbon.innerHTML = price;
+    };
+
+    var ProductsController = function ProductsController(productsModel, productsView) {
+        this.productsModel = productsModel;
+        this.productsView = productsView;
+    };
+
+    ProductsController.prototype.initialize = function initialize() {
+        this.productsModel.getProducts(this.onLoadShowProducts.bind(this));
+        this.productsView.onChangeGetProducts = this.onChangeGetProducts.bind(this);
+        this.productsView.onClickShowDescription = this.onClickShowDescription.bind(this);
+    };
+
+    ProductsController.prototype.onLoadShowProducts = function onLoadShowProducts(productModelData) {
+        this.productsView.render(productModelData);
+    };
+
+    ProductsController.prototype.onChangeGetProducts = function onChangeGetProducts(newProductData) {
+        this.productsView.render(newProductData);
+    };
+
+    ProductsController.prototype.onClickShowDescription = function onClickShowDescription(itemIndex, itemPrice, itemName, itemModal) {
+        this.productsView.showItemDescription(itemIndex, itemName, itemModal);
+        this.productsView.slideDown(itemPrice);
+    };
+
+    (function initialize() {
+        var model = new ProductsModel(XMLHttpRequest),
+            view = new ProductsView(targetElement, option),
+            controller = new ProductsController(model, view);
+        controller.initialize();
+    })();

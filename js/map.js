@@ -1,5 +1,4 @@
-$(function () {
-    function initMap() {
+function initMap() {
         var location = new google.maps.LatLng(50.7467787, 33.4862403);
         var mapCanvas = document.getElementById('map');
         var mapOptions = {
@@ -247,7 +246,8 @@ $(function () {
         marker.addListener('click', function () {
             infowindow.open(map, marker);
         });
-    }
-
-    google.maps.event.addDomListener(window, 'load', initMap);
+    };
+$('.modal-fullscreen').on('shown.bs.modal', function () {
+    initMap();
 });
+
