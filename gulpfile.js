@@ -1,8 +1,8 @@
 var gulp = require('gulp');
-var svgmin = require('gulp-svgmin');
+var htmlmin = require('gulp-htmlmin');
  
-gulp.task('default', function () {
-    return gulp.src('svg/*.svg')
-        .pipe(svgmin())
-        .pipe(gulp.dest('./out'));
+gulp.task('minify', function() {
+  return gulp.src('./*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist'));
 });

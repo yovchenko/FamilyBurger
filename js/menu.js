@@ -1,129 +1,132 @@
-    'use strict';
-    var option = document.getElementById('selectMenu'),
-        targetElement = document.getElementsByClassName('flex-row')[0];
+'use strict';
+var ProductsModel = function ProductsModel(XMLHttpRequest) {
+    this.XMLHttpRequest = XMLHttpRequest;
+    this.ajaxResponse = '';
+};
 
-    var ProductsModel = function ProductsModel(XMLHttpRequest) {
-        this.XMLHttpRequest = XMLHttpRequest;
+ProductsModel.prototype.getProducts = function getProducts(fn) {
+    var oReq = new this.XMLHttpRequest();
+    oReq.onload = function onLoad(e) {
+        this.ajaxResponse = JSON.parse(e.currentTarget.responseText),
+            fn(this.ajaxResponse);
     };
+    oReq.open('GET', 'https://familyburger.com.ua/products.json', true);
+    oReq.send();
+};
 
-    ProductsModel.prototype.getProducts = function getProducts(fn) {
-        var oReq = new this.XMLHttpRequest();
-        oReq.onload = function onLoad(e) {
-            var ajaxResponse = JSON.parse(e.currentTarget.responseText),
-                product = ajaxResponse;
-            fn(product);
-        };
-        oReq.open('GET', 'https://familyburger.com.ua/products.json', true);
-        oReq.send();
-    };
+var ProductsView = function ProductsView() {
+    this.viewElement = document.getElementsByClassName('flex-row')[0];
+    this.select = document.getElementById('selectMenu');
+    this.description = document.getElementsByClassName("description")[0];
+    this.image = document.getElementsByClassName("product-img")[0];
+    this.loader = document.getElementsByClassName('loader')[0];
+    this.table = document.getElementsByClassName('js-drinks-table')[0];
+    this.ribbon = document.getElementsByClassName('ribbon')[0];
+};
 
-    var ProductsView = function ProductsView(element, select) {
-        this.element = element;
-        this.select = select;
-        this.onChangeGetProduct = null;
-    };
-
-    ProductsView.prototype.render = function render(viewModel) {
-        var x,
-            y,
-            items,
-            itemIdx,
-            flag = true,
-            that = this,
-            imgPreload = [],
-            itemsByName = [],
-            itemsByPrice = [],
-            itemsByDescription = [],
-            itemsLen = viewModel.length,
-            loader = document.getElementsByClassName('loader')[0],
-            selectValue = this.select.options[this.select.selectedIndex].value;
-            this.element.innerHTML = '';
-            loader.classList.remove('contentLoaded');
-        for (x = 0; x < itemsLen; x++) {
-            if (viewModel[x].type === selectValue) {
-                if (flag) {
-                    itemIdx = x;
-                    flag = false;
+ProductsView.prototype.render = function render(viewModel) {
+    var x,
+        y,
+        z,
+        itemIdx,
+        flag = true,
+        option = this.select.options[this.select.selectedIndex].value,
+        drinks = [],
+        imgPreload = [];
+    this.viewModel = viewModel;
+    this.viewElement.innerHTML = '';
+    this.table.innerHTML = '';
+    if(option !== 'Drinks') {
+    this.loader.classList.remove('contentLoaded');
+    this.table.classList.remove('is-visible');
+    for (x = 0; x < viewModel.length; x++) {
+        if (viewModel[x].type === option) {
+            if (flag) {
+                itemIdx = x;
+                flag = false;
+            }
+            this.viewElement.innerHTML += '<div class="item-img"><a href="#modal-fullscreen" data-toggle="modal"><h1 class="notify-badge">' +
+                viewModel[x].name + '</h1><img src="images/menuLowQuality/img-' +
+                (x + 1) + '.png"alt="' + viewModel[x].name + '"></a></div>';
+            imgPreload.push(new Image());
+        }
+    }
+    this.onClickShowDescription(itemIdx, imgPreload);
+    $('.notify-badge').arctext({
+        radius: 300
+    });
+    }
+    else {
+        this.table.classList.add('is-visible');
+        var html = '<tbody>';
+        for (y = 0; y < viewModel.length; y++) {
+        if (viewModel[y].type === option) {
+        drinks = viewModel[y].description.split(';');
+        html += '<tr><th>' + viewModel[y].name + '</th>';
+                for (z = 0; z < drinks.length; z++) {
+                    if (z < drinks.length - 1) html += '<td>' +  drinks[z] + '</td>';
+                    else html += '<td>' +  drinks[z] + '</td></tr>';
                 }
-                this.element.innerHTML += '<div class="item-img"><a href="#modal-fullscreen" data-toggle="modal"><h1 class="notify-badge">' +
-                    viewModel[x].name + '</h1><img src="images/menuLowQuality/img-' +
-                    (x + 1) + '.png"alt="' + viewModel[x].name + '"></a></div>';
-                imgPreload.push(new Image());
-                itemsByName.push(viewModel[x].name);
-                itemsByPrice.push(viewModel[x].price);
-                itemsByDescription.push(viewModel[x].description);
             }
         }
-        items = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
-        itemsLen = items.length;
-        for (y = 0; y < itemsLen; y++) {
-            imgPreload[y].src = './images/menuHighQuality/img-' + (itemIdx + y + 1) + '.png';
-            items[y].addEventListener('click', function () {
-                that.onClickShowDescription(items.indexOf(this) +
-                    itemIdx, itemsByPrice[items.indexOf(this)], itemsByName[items.indexOf(this)], itemsByDescription[items.indexOf(this)]);
-            });
-        };
-        this.select.addEventListener('change', function () {
-            that.onChangeGetProducts(viewModel);
-        });
-        imgPreload[y - 1].addEventListener("load", function() {
-            loader.classList.add('contentLoaded');
-        });
-        $('.notify-badge').arctext({
-            radius: 300
-        });
-    };
-
-    ProductsView.prototype.showItemDescription = function showItem(elementIndex, elementName, elementDescription) {
-        var description = document.getElementsByClassName("description")[0],
-            image = document.getElementsByClassName("product-img")[0];
-            description.innerHTML = "<b>" + elementName + "</b><br>" + elementDescription,
-            image.style.backgroundImage = 'url("images/menuHighQuality/img-' + (elementIndex + 1) + '.png")';
+        this.table.innerHTML = html + '</tbody>';
     }
+};
 
-    ProductsView.prototype.slideDown = function slideDown(price) {
-        var ribbon = document.getElementsByClassName('ribbon')[0],
-            hgt = 25,
-            interval = setInterval(function () {
-                if (50 > hgt) {
-                    hgt += 0.5;
-                    ribbon.style.height = hgt + "%";
-                } else {
-                    ribbon.style.height = hgt + "%";
-                    clearInterval(interval);
-                    interval = null; // garbage collection
-                }
-            }, 25);
-        ribbon.innerHTML = price;
-    };
+ProductsView.prototype.showItemDescription = function showItemDescription(idxNum, firstNum) {
+    this.description.innerHTML = "<b>" + this.viewModel[firstNum + idxNum].name + "</b><br>" + this.viewModel[firstNum + idxNum].description,
+        this.image.style.backgroundImage = 'url("images/menuHighQuality/img-' + (firstNum + idxNum + 1) + '.png")';
+    this.ribbon.innerHTML = this.viewModel[firstNum + idxNum].price;
+}
 
-    var ProductsController = function ProductsController(productsModel, productsView) {
-        this.productsModel = productsModel;
-        this.productsView = productsView;
-    };
+var ProductsController = function ProductsController(productsModel, productsView) {
+    this.productsModel = productsModel;
+    this.productsView = productsView;
+};
 
-    ProductsController.prototype.initialize = function initialize() {
-        this.productsModel.getProducts(this.onLoadShowProducts.bind(this));
-        this.productsView.onChangeGetProducts = this.onChangeGetProducts.bind(this);
-        this.productsView.onClickShowDescription = this.onClickShowDescription.bind(this);
-    };
+ProductsController.prototype.initialize = function initialize() {
+    this.productsModel.getProducts(this.onLoadShowProducts.bind(this));
+    this.productsView.onClickShowDescription = this.onClickShowDescription.bind(this);
+    this.attachEvent(this.productsView.select, 'change', this.selectEventHandler.bind(this));
+};
 
-    ProductsController.prototype.onLoadShowProducts = function onLoadShowProducts(productModelData) {
-        this.productsView.render(productModelData);
-    };
+ProductsController.prototype.onLoadShowProducts = function onLoadShowProducts(productModelData) {
+    this.productsView.render(productModelData);
+};
 
-    ProductsController.prototype.onChangeGetProducts = function onChangeGetProducts(newProductData) {
-        this.productsView.render(newProductData);
-    };
+ProductsController.prototype.selectEventHandler = function selectEventHandler() {
+    this.productsView.render(this.productsView.viewModel);
+}
 
-    ProductsController.prototype.onClickShowDescription = function onClickShowDescription(itemIndex, itemPrice, itemName, itemModal) {
-        this.productsView.showItemDescription(itemIndex, itemName, itemModal);
-        this.productsView.slideDown(itemPrice);
-    };
+ProductsController.prototype.attachEvent = function attachEvent(element, type, handler) {
+    if (element.addEventListener) element.addEventListener(type, handler, false);
+    else element.attachEvent("on" + type, handler);
+}
 
-    (function initialize() {
-        var model = new ProductsModel(XMLHttpRequest),
-            view = new ProductsView(targetElement, option),
-            controller = new ProductsController(model, view);
-        controller.initialize();
-    })();
+ProductsController.prototype.itemsEventHandler = function itemsEventHandler(itemIndex, firstItem) {
+    this.productsView.showItemDescription(itemIndex, firstItem);
+}
+
+ProductsController.prototype.onClickShowDescription = function onClickShowDescription(idx, images) {
+    this.index = idx;
+    var x,
+        items = [],
+        controller = this,
+        items = Array.prototype.slice.call(document.getElementsByClassName('item-img'));
+    for (x = 0; x < items.length; x++) {
+        this.attachEvent(items[x], 'click', function () {
+            controller.itemsEventHandler(items.indexOf(this), controller.index);
+        });
+        images[x].src = './images/menuHighQuality/img-' + (idx + x + 1) + '.png';
+    }
+    this.attachEvent(images[x - 1], 'load' ,function() {
+        controller.productsView.loader.classList.add('contentLoaded');
+    });
+};
+
+(function initialize() {
+    var model = new ProductsModel(XMLHttpRequest),
+        view = new ProductsView(),
+        controller = new ProductsController(model, view);
+    controller.initialize();
+})();

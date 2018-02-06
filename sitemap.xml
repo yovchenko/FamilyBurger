@@ -4,15 +4,13 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 	<url>
 		<loc>https://familyburger.com.ua/</loc>
+		<xhtml:link rel="alternate" hreflang="uk" href="https://familyburger.com.ua"/>
     <lastmod>2017-12-22T20:23:11+00:00</lastmod>
-		<image:image>
-		  <image:loc>https://familyburger.com.ua/images/vacancies/employee.jpg</image:loc>
-		</image:image>
     <priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://familyburger.com.ua/index.html</loc>
-		<xhtml:link rel="alternate" hreflang="uk" href="https://familyburger.com.ua" />
+		<xhtml:link rel="alternate" hreflang="uk" href="https://familyburger.com.ua/index.html"/>
     <lastmod>2017-12-22T20:23:11+00:00</lastmod>
     <priority>0.80</priority>
 	</url>
@@ -26,12 +24,18 @@
 		<loc>https://familyburger.com.ua/vacancies.html</loc>
 		<xhtml:link rel="alternate" hreflang="uk" href="https://familyburger.com.ua/vacancies.html" />
     <lastmod>2017-12-22T20:23:11+00:00</lastmod>
+		<image:image>
+		  <image:loc>https://familyburger.com.ua/images/vacancies/employee.jpg</image:loc>
+		</image:image>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://familyburger.com.ua/contacts.html</loc>
 		<xhtml:link rel="alternate" hreflang="uk" href="https://familyburger.com.ua/contacts.html" />
     <lastmod>2017-12-22T20:23:11+00:00</lastmod>
+		<image:image>
+		  <image:loc>https://familyburger.com.ua/images/restaurant.jpg</image:loc>
+		</image:image>
 		<priority>0.80</priority>
 	</url>
 </urlset>

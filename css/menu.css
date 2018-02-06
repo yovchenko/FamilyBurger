@@ -7221,6 +7221,7 @@ button.list-group-item-danger.active:hover {
 .close {
     float: right;
     font-size: 21px;
+    outline: none;
     font-weight: 700;
     line-height: 1;
     color: #000;
@@ -7281,7 +7282,7 @@ button.close {
 }
 
 .modal-open .modal {
-    overflow-x: hidden;
+    overflow: hidden;
     overflow-y: auto
 }
 
@@ -12849,7 +12850,7 @@ body {
     font-size: 140%;
     letter-spacing: 1.2px;
     line-height: 200%;
-    text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .3), 1px 0 0 rgba(0%, 0%, 0%, .3), 1px 1px 1px rgba(0%, 0%, 0%, .3), 2px 1px 1px rgba(0%, 0%, 0%, .3)
+    text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .5), 1px 0 0 rgba(0%, 0%, 0%, .5), 1px 1px 1px rgba(0%, 0%, 0%, .5), 2px 1px 1px rgba(0%, 0%, 0%, .5)
 }
 
 .grid-container {
@@ -14147,10 +14148,6 @@ option:disabled {
     margin: 0 0 75px 0
 }
 
-select::-ms-expand {
-    display: none
-}
-
 #selectMenu {
     position: absolute;
     right: 0;
@@ -14159,6 +14156,7 @@ select::-ms-expand {
     padding: 10px 30px 10px 10px;
     color: #fff;
     cursor: pointer;
+    outline: none;
     text-align: left;
     background-image: url(../svg/drop-down-arrow.svg);
     background-position: 90% 52%;
@@ -14167,14 +14165,92 @@ select::-ms-expand {
     -webkit-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
     box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
     -moz-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
-    border: 1px solid rgba(96.4%, 82.5%, 47.7%, .9);
+    border: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+    text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .5), 1px 0 0 rgba(0%, 0%, 0%, .5), 1px 1px 1px rgba(0%, 0%, 0%, .5), 2px 1px 1px rgba(0%, 0%, 0%, .5);
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none
 }
 
-option {
-    background: rgba(94.1%, 28.4%, 10.2%, .9)
+#selectMenu::-ms-value {
+    background: transparent;
+    color:#fff;
+}
+
+select:focus::-ms-value {
+    color:#fff;
+    background: transparent;
+}
+
+select::-ms-expand {
+    display: none
+}
+
+#selectMenu option {
+    background: rgba(94.1%, 28.4%, 10.2%, .9);
+    text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .5), 1px 0 0 rgba(0%, 0%, 0%, .5), 1px 1px 1px rgba(0%, 0%, 0%, .5), 2px 1px 1px rgba(0%, 0%, 0%, .5);
+}
+
+#selectMenu:-moz-focusring {
+    color: #fff;
+    outline: none;
+    text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .5), 1px 0 0 rgba(0%, 0%, 0%, .5), 1px 1px 1px rgba(0%, 0%, 0%, .5), 2px 1px 1px rgba(0%, 0%, 0%, .5);
+}
+
+#selectMenu option {
+    color: #fff;
+    outline: none;
+    background: transparent;
+    text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .5), 1px 0 0 rgba(0%, 0%, 0%, .5), 1px 1px 1px rgba(0%, 0%, 0%, .5), 2px 1px 1px rgba(0%, 0%, 0%, .5);
+}
+
+.js-drinks-table {
+    display: none;
+    width: 100%;
+    margin-top: 85px;
+    border-collapse: initial;
+}
+
+.js-drinks-table.is-visible {
+    display: block;
+    color: #fff;
+    text-align: center;
+}
+
+.js-drinks-table.is-visible th {
+    display: block;
+    flex: 1 0 100%;
+    font-size: 1.6em;
+    line-height: 1.8;
+    text-align: center;
+    border-bottom: 3px dashed rgba(96.4%, 82.5%, 47.7%, .85);
+}
+
+.js-drinks-table.is-visible tbody {
+    width: 100%;
+    display: inline;
+}
+
+.js-drinks-table.is-visible tr {
+    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 50%;
+    margin: 5px 0px;
+    background-color: rgba(94.1%, 28.4%, 10.2%, .9);
+    -webkit-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
+    box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
+    -moz-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
+    border: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+}
+
+.js-drinks-table.is-visible tr td {
+    display: inline-block;
+    flex: 1 0 45%;
+    font-size: 1.5em;
+    line-height: 1.5;
+    text-align: center;
+    padding: 5px 15px;
 }
 
 .loader {
@@ -14299,7 +14375,7 @@ option {
     padding: 2px 0;
     line-height: 1px;
     margin-bottom: -25px;
-    border-top: 2px dashed rgba(96.4%, 82.5%, 47.7%, .85)
+    border-top: 3px dashed rgba(96.4%, 82.5%, 47.7%, .85)
 }
 
 .modal-header {
@@ -14309,8 +14385,9 @@ option {
 .ribbon {
     background: rgba(255, 255, 255, .2);
     position: absolute;
-    width: 60px;
+    width: 65px;
     right: -50px;
+    height: 35%;
     line-height: 25px;
     font-size: 1.5em;
     line-height: 1.5;
@@ -14321,7 +14398,8 @@ option {
     margin-right: 10px;
     color: rgba(94.1%, 28.4%, 10.2%, 1);
     -webkit-filter: drop-shadow(1px 3px 10px rgba(255, 255, 255, .6));
-    filter: drop-shadow(1px 3px 10px rgba(255, 255, 255, .6))
+    filter: drop-shadow(1px 3px 10px rgba(255, 255, 255, .6));
+    will-change: height;
 }
 
 .ribbon:after,
@@ -14374,6 +14452,21 @@ option {
         font-size: 1.4em;
         line-height: 1.4em;
     }
+
+    .js-drinks-table {
+        margin-top: 75px;
+    }
+
+    .js-drinks-table.is-visible th {
+        font-size: 1.5em;
+        line-height: 1.7;
+    }
+
+    .js-drinks-table.is-visible tr td {
+        flex: 1 0 100%;
+        font-size: 1.4em;
+        line-height: 1.4;
+    }
 }
 
 @media all and (max-width:576px) {
@@ -14404,6 +14497,21 @@ option {
     #selectMenu {
         font-size: 1.3em;
         line-height: 1.3em;
+    }
+
+    .js-drinks-table {
+        margin-top: 65px;
+    }
+
+    .js-drinks-table.is-visible th {
+        font-size: 1.4em;
+        line-height: 1.6;
+    }
+
+    .js-drinks-table.is-visible tr td {
+        flex: 1 0 100%;
+        font-size: 1.3em;
+        line-height: 1.3;
     }
 }
 
