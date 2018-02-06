@@ -43,37 +43,37 @@
 
 <body id='body'>
     <span class="targetTop"></span>
-    <div class="flex-container">
-        <header>
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="index.html">
-                            <span class="sign"></span>
-                        </a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li>
-                                <a href="menu.html">Меню</a>
-                            </li>
-                            <li>
-                                <a href="vacancies.html">Вакансії</a>
-                            </li>
-                            <li>
-                                <a href="contacts.html">Контакти</a>
-                            </li>
-                        </ul>
-                    </div>
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <span class="sign"></span>
+                    </a>
                 </div>
-            </nav>
-        </header>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="menu.html">Меню</a>
+                        </li>
+                        <li>
+                            <a href="vacancies.html">Вакансії</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html">Контакти</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="flex-container">
         <div class="wrapCarousel">
             <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -321,19 +321,6 @@
     <script src="js/fontfaceobserver.js" async></script>
     <script src="js/carousel.js"></script>
     <script src="js/main.js" defer="defer"></script>
-    <script>
-       $(window).on("scroll", function() {
-        var scrollHeight = $(document).height();
-        var scrollPosition = $(window).height() + $(window).scrollTop();
-        console.log((scrollHeight - scrollPosition) / scrollHeight)
-        if ((scrollHeight - scrollPosition) / scrollHeight <= 0) {
-         document.getElementsByClassName('fixed-footer')[0].classList.add('bottom');
-        }
-        else {
-        document.getElementsByClassName('fixed-footer')[0].classList.remove('bottom');
-        }
-    }); 
-    </script>
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
