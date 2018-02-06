@@ -12833,6 +12833,8 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100%;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
     position: relative;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -13701,8 +13703,6 @@ footer {
 
 .fixed-footer{
     transform: translate3d(0,0,0);
-    z-index : 99999;
-    -webkit-backface-visibility: hidden;
     position: absolute;
     bottom: 0;
     width: 100%;
