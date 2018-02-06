@@ -12833,6 +12833,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100%;
+    position: relative;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-color: hsla(43, 86%, 72%, .75);
@@ -13675,9 +13676,6 @@ footer {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    position: sticky;
-  
-    top: -100%;
     overflow: hidden;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
     background-color: hsla(43, 80%, 80%, 1);
@@ -13690,6 +13688,7 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
     min-height: 105px;
     position: relative;
     -webkit-box-align: center;
@@ -13698,6 +13697,16 @@ footer {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end
+}
+
+.fixed-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.fixed-footer.bottom {
+    position: fixed;
 }
 
 footer p {

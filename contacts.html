@@ -182,7 +182,7 @@
             </div>
         </main>
     </div>
-    <footer>
+    <footer class="fixed-footer">
         <div class="container">
             <div class="footer">
                 <p class="design">Design by VY</p>
@@ -218,6 +218,19 @@
     <script src="js/map.js" async></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCav1JNc2dJTItVyk_zI9D_ZgVqzUNeZ1s"></script>
     <script src="js/main.js" defer="defer"></script>
+    <script>
+            $(window).on("scroll", function() {
+            var scrollHeight = $(document).height();
+            var scrollPosition = $(window).height() + $(window).scrollTop();
+            console.log((scrollHeight - scrollPosition) / scrollHeight)
+            if ((scrollHeight - scrollPosition) / scrollHeight <= 0) {
+             document.getElementsByClassName('fixed-footer')[0].classList.add('bottom');
+            }
+            else {
+            document.getElementsByClassName('fixed-footer')[0].classList.remove('bottom');
+            }
+        }); 
+        </script>
 </body>
 
 </html>
