@@ -13700,6 +13700,9 @@ footer {
 }
 
 .fixed-footer{
+    transform: translate3d(0,0,0);
+    z-index : 99999;
+    -webkit-backface-visibility: hidden;
     position: absolute;
     bottom: 0;
     width: 100%;
