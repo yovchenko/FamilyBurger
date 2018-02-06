@@ -12821,13 +12821,14 @@ fieldset[disabled] .btn-yahoo:hover {
 
 html {
     height: 100%;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 body {
     margin: 0;
     padding: 0;
     width: 100%;
+    overflow-x: auto;
     min-height: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -13757,12 +13758,6 @@ footer {
     background-color: hsla(43, 80%, 80%, 1);
     -webkit-box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3);
     box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3)
-}
-
-.fixed-footer.bottom {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
 }
 
 .footer {
