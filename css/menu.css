@@ -12866,6 +12866,13 @@ body {
     background-size: 75px 75px;
 }
 
+.footer-fixed.fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: all 1.5s ease;
+}
+
 .flex-container {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 auto;

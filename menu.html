@@ -116,7 +116,7 @@
             </div>
         </main>
     </div>
-    <footer id='footer'>
+    <footer class='footer-fixed'>
         <div class="container">
             <div class="footer">
                 <p class="design">Design by VY</p>
@@ -152,15 +152,18 @@
     <script src="js/main.js" defer="defer"></script>
     <script src="js/scroll.js"></script>
     <script>
-           $(window).on("scroll", function() {
-            var scrollHeight = $(document).height();
-            var scrollPosition = $(window).height() + $(window).scrollTop();
-            if ((scrollHeight - scrollPosition) / scrollHeight <= 0) {
-                $('#footer').scrollFix({
-                 side: 'bottom'
-                });
-            }
-        }); 
+   
+    document.onscroll= function(e) {
+                    var scrollHeight = $(document).height() - 1;
+                    var scrollPosition = $(window).height() + $(window).scrollTop();
+                        if((scrollHeight - scrollPosition) / scrollHeight <= 0) {
+                           document.getElementsByClassName('footer-fixed')[0].classList.add('fixed');
+                    }
+                    else {
+                           document.getElementsByClassName('footer-fixed')[0].classList.remove('fixed');
+                    }
+                    e.preventDefault();
+                };
     </script>
 </body>
 
