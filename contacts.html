@@ -219,22 +219,20 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCav1JNc2dJTItVyk_zI9D_ZgVqzUNeZ1s"></script>
     <script src="js/main.js" defer="defer"></script>
     <script>
-            $(window).on("scroll", function() {
-            var scrollHeight = $(document).height();
-            var scrollPosition = $(window).height() + $(window).scrollTop();
+          
+          
                 document.ontouchmove = function(e) {
+                    var scrollHeight = $(document).height();
+                    var scrollPosition = $(window).height() + $(window).scrollTop();
                     var target = document.getElementById('body');
                     while(target) {
                         if((scrollHeight - scrollPosition) / scrollHeight <= 0)
                             return;
                         target = target.parentNode;
                     }
-                
                     e.preventDefault();
                 };
-            
           
-        }); 
         </script>
 </body>
 
