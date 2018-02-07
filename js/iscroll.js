@@ -79,7 +79,6 @@ var m = Math,
 
 	// Helpers
 	translateZ = has3d ? ' translateZ(0)' : '',
-
 	// Constructor
 	iScroll = function (el, options) {
 		var that = this,
@@ -139,6 +138,21 @@ var m = Math,
 			onZoomEnd: null
 		};
 
+		var body = document.body,
+			html = document.documentElement;
+		var height = Math.max( body.scrollHeight, body.offsetHeight, 
+			html.clientHeight, html.scrollHeight, html.offsetHeight );
+			console.log(height);
+			var myScroll = new IScroll('#body',{
+			bounceEasing: {
+			style: 'cubic-bezier(0,0,1,1)',
+			fn: function (k) { return k; }
+			}
+			});
+			
+	
+		
+			
 		// User defined options
 		for (i in options) that.options[i] = options[i];
 		
@@ -1100,5 +1114,6 @@ dummyStyle = null;	// for the sake of it
 
 if (typeof exports !== 'undefined') exports.iScroll = iScroll;
 else window.iScroll = iScroll;
+
 
 })(window, document);

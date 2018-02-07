@@ -32,13 +32,10 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <script src="js/iscroll.js"></script>
-    <script src="js/new.js"></script> 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src *; object-src 'none'">
     <link rel="stylesheet" href="css/vacancies.css">
 </head>
 
-<body id='body' onload="loaded()">
+<body id='body'>
     <span class="targetTop"></span>
     <div class="grid-container">
         <header>
@@ -165,6 +162,20 @@
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js" defer="defer"></script>
+    <script>
+            $(window).on("scroll", function() {
+            var scrollHeight = $(document).height();
+            var scrollPosition = $(window).height() + $(window).scrollTop();
+           
+            $(document).bind(
+                'touchmove',
+                function(e) {
+                  e.preventDefault();
+                }
+             );
+           
+        }); 
+        </script> 
 </body>
 
 </html>

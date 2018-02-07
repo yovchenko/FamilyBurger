@@ -10,7 +10,6 @@ function offsetButton() {
   window.onscroll = scrollFunction;
 
   function scrollFunction() {
-      console.log('ss')
     var scrollOffset = offsetButton();
     var scrollElm = checkBrowserSupport();
     if (scrollElm > scrollOffset && scrollElm > window.innerHeight) {
