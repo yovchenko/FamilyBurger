@@ -12866,11 +12866,26 @@ body {
     background-size: 75px 75px;
 }
 
+.grid-container.bottom {
+    padding-bottom: 105px;
+}
+
+footer {
+    width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
+    background-color: hsla(43, 80%, 80%, 1);
+    -webkit-box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3);
+    box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3)
+}
+
 .footer-fixed.fixed {
     position: fixed;
     bottom: 0;
-    width: 100%;
-    transition: all 1.5s ease;
 }
 
 .flex-container {
@@ -13683,18 +13698,6 @@ address .btn-facebook:hover {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover
-}
-
-footer {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    position: relative;
-    overflow: hidden;
-    background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
-    background-color: hsla(43, 80%, 80%, 1);
-    -webkit-box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3);
-    box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3)
 }
 
 .footer {

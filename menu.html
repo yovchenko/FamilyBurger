@@ -157,10 +157,12 @@
                     var scrollHeight = $(document).height() - 1;
                     var scrollPosition = $(window).height() + $(window).scrollTop();
                         if((scrollHeight - scrollPosition) / scrollHeight <= 0) {
+                           document.getElementsByClassName('grid-container')[0].classList.add('bottom');
                            document.getElementsByClassName('footer-fixed')[0].classList.add('fixed');
                     }
                     else {
                            document.getElementsByClassName('footer-fixed')[0].classList.remove('fixed');
+                           document.getElementsByClassName('grid-container')[0].classList.remove('bottom');
                     }
                     e.preventDefault();
                 };
