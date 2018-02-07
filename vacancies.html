@@ -14,6 +14,7 @@
     <meta name="keywords"
         content="Family Burger,Фемілі Бургер,familiburger,ФеміліБургер,Ромни,Romny,в Ромнах,робота,вакансії,заклад,ресторан,фаст-фуд">
     <meta name="description" content="Family Burger - це цікава робота,пристойна зарплатня,кар'єра у місті Ромни.">
+   
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
@@ -31,11 +32,13 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <script src="js/iscroll.js"></script>
+    <script src="js/new.js"></script> 
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src *; object-src 'none'">
     <link rel="stylesheet" href="css/vacancies.css">
 </head>
 
-<body id='body'>
+<body id='body' onload="loaded()">
     <span class="targetTop"></span>
     <div class="grid-container">
         <header>
@@ -162,16 +165,6 @@
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js" defer="defer"></script>
-    <script src="js/iscroll.js" defer="defer"></script>
-    <script>
-    var wrapper = document.getElementById('body');
-var myScroll = new IScroll(wrapper,{
-    bounceEasing: {
-    style: 'cubic-bezier(0,0,1,1)',
-    fn: function (k) { return k; }
-}
-});
-    </script>
 </body>
 
 </html>
