@@ -9,6 +9,7 @@ function checkBrowserSupport() {
 function scrollFunction() {
     var e = offsetButton(),
         t = checkBrowserSupport();
+        console.log(t)
     t > e && t > window.innerHeight ? document.getElementById("scrollTop").style.display = "block" : document.getElementById("scrollTop").style.display = "none", t >= 105 ? document.getElementsByClassName("navbar")[0].classList.add("scrolled-nav") : document.getElementsByClassName("navbar")[0].classList.remove("scrolled-nav")
 }
 
