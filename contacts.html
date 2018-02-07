@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/contacts.css">
 </head>
 
-<body>
+<body id="body">
     <span class="targetTop"></span>
     <div class="grid-container">
         <header>
@@ -218,19 +218,26 @@
     <script src="js/map.js" async></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCav1JNc2dJTItVyk_zI9D_ZgVqzUNeZ1s"></script>
     <script src="js/main.js" defer="defer"></script>
-   <script>
+    <script>
             $(window).on("scroll", function() {
             var scrollHeight = $(document).height();
             var scrollPosition = $(window).height() + $(window).scrollTop();
-            console.log((scrollHeight - scrollPosition) / scrollHeight)
+           
             if ((scrollHeight - scrollPosition) / scrollHeight <= 0) {
-             document.getElementsByClassName('fixed-footer')[0].classList.add('bottom');
+                document.ontouchmove = function(e) {
+                    var target = document.getElementById('body');
+                    while(target) {
+                        if(checkIfElementShouldScroll(target))
+                            return;
+                        target = target.parentNode;
+                    }
+                
+                    e.preventDefault();
+                };
             }
-            else {
-            document.getElementsByClassName('fixed-footer')[0].classList.remove('bottom');
-            }
+          
         }); 
-        </script> 
+        </script>
 </body>
 
 </html>
