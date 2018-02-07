@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="css/vacancies.css">
 </head>
 
-<body>
+<body id='body'>
     <span class="targetTop"></span>
     <div class="grid-container">
         <header>
@@ -162,6 +162,16 @@
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js" defer="defer"></script>
+    <script src="js/iscroll.js" defer="defer"></script>
+    <script>
+    var wrapper = document.getElementById('body');
+var myScroll = new IScroll(wrapper,{
+    bounceEasing: {
+    style: 'cubic-bezier(0,0,1,1)',
+    fn: function (k) { return k; }
+}
+});
+    </script>
 </body>
 
 </html>

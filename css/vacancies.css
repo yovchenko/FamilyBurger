@@ -12832,8 +12832,10 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100%;
+    width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    position: absolute;
     background-color: hsla(43, 86%, 72%, .75);
     background-image: url(../svg/i-like-food.svg);
     background-size: 75px 75px;
