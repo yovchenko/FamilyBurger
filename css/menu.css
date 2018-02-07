@@ -12827,16 +12827,12 @@ fieldset[disabled] .btn-yahoo:hover {
 
 html {
     height: 100%;
-    overflow-x: hidden;
 }
 
 body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
-    position: fixed;
-    overflow-x: hidden;
     min-height: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
