@@ -12864,6 +12864,7 @@ body {
     background-color: hsla(43, 86%, 72%, .75);
     background-image: url(../svg/i-like-food.svg);
     background-size: 75px 75px;
+    transform: translate3d(0,0,0);
 }
 
 .grid-container.bottom {
@@ -12876,6 +12877,7 @@ footer {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     position: relative;
+    transform: translate3d(0,0,0);
     overflow: hidden;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
     background-color: hsla(43, 80%, 80%, 1);
