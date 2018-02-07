@@ -152,9 +152,15 @@
     <script src="js/main.js" defer="defer"></script>
     <script src="js/scroll.js"></script>
     <script>
-    $('#footer').scrollFix({
-     side: 'bottom'
-    });
+           $(window).on("scroll", function() {
+            var scrollHeight = $(document).height();
+            var scrollPosition = $(window).height() + $(window).scrollTop();
+            if ((scrollHeight - scrollPosition) / scrollHeight <= 0) {
+                $('#footer').scrollFix({
+                 side: 'bottom'
+                });
+            }
+        }); 
     </script>
 </body>
 
