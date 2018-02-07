@@ -222,12 +222,10 @@
             $(window).on("scroll", function() {
             var scrollHeight = $(document).height();
             var scrollPosition = $(window).height() + $(window).scrollTop();
-           
-            if ((scrollHeight - scrollPosition) / scrollHeight <= 0) {
                 document.ontouchmove = function(e) {
                     var target = document.getElementById('body');
                     while(target) {
-                        if(checkIfElementShouldScroll(target))
+                        if((scrollHeight - scrollPosition) / scrollHeight <= 0)
                             return;
                         target = target.parentNode;
                     }
