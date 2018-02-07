@@ -167,13 +167,12 @@
             var scrollHeight = $(document).height();
             var scrollPosition = $(window).height() + $(window).scrollTop();
            
-            $(document).bind(
-                'touchmove',
-                function(e) {
-                  e.preventDefault();
-                }
-             );
-           
+            if ((scrollHeight - scrollPosition) / scrollHeight <= 0) {
+            document.body.ontouchmove = function(e) {
+    e.stopPropagation();
+};
+            }
+          
         }); 
         </script> 
 </body>
