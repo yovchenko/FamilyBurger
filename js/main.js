@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded',init,false);
 console.log(typeof(IScroll) === 'function')
 if (typeof(IScroll) === 'function') {
-  document.getElementsByClassName('push')[0].classList.add('iscroll');
+  document.getElementsByClassName('body')[0].classList.add('iscroll');
 }
 function init() {
  var myScroll;
@@ -15,12 +15,16 @@ function init() {
     myScroll.on('scrollStart', function () {
       console.log('start' + '=' + this.y)
           document.getElementsByClassName('navbar')[0].classList.add('scrolled-nav');
+          document.getElementsByClassName('fixed-footer')[0].classList.remove('scrolled-footer');
   });
 
  myScroll.on('scrollEnd', function () {
   console.log('end' + '=' + this.y)
       if ( this.y >= 0 ) {
           document.getElementsByClassName('navbar')[0].classList.remove('scrolled-nav');
+      }
+      if ( this.y <= -(this.wrapperHeight - 310)) {
+          document.getElementsByClassName('fixed-footer')[0].classList.add('scrolled-footer');
       }
   });
 

@@ -12902,7 +12902,7 @@ body {
     display: none;
 }
 
-.push.iscroll {
+.body.iscroll .push {
     display: block;
     height: 105px;
 }
@@ -13698,10 +13698,10 @@ footer {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    position: sticky;
     overflow: hidden;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
-    background-color: #FAD591;
+    background-color: #FAD591;   -webkit-transition: all .3s linear 0s;
+    transition: all .3s linear 0s;
     -webkit-box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3);
     box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3)
 }
@@ -13718,14 +13718,31 @@ footer {
     align-items: center;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
-    justify-content: flex-end
+    justify-content: flex-end;
 }
 
-.fixed-footer{
+.body.iscroll .footer {
+    min-height: 75px;
+}
+
+.body.iscroll .fixed-footer.scrolled-footer .footer {
+    height: 105px;
+}
+
+.body.iscroll .fixed-footer {
+    max-height: 75px;
     position: absolute;
     bottom: 0;
     width: 100%;
     z-index: 2;
+    -webkit-transition: all .3s linear 0s;
+    transition: all .3s linear 0s;
+}
+
+.body.iscroll .fixed-footer.scrolled-footer {
+    max-height: 105px;
+    -webkit-transition: all .3s linear 0s;
+    transition: all .3s linear 0s;
 }
 
 footer p {
@@ -14264,6 +14281,7 @@ hr {
 }
 
 .modal-body>.container>.row div .info-window {
+    color: #fff;
     padding: 5px;
     margin-top: 3px;
     background-color: rgba(94.1%, 28.4%, 10.2%, .9);
