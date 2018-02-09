@@ -1,8 +1,8 @@
-var scrollHeight = $(document).height(),
+var scrollHeight = $(document).height() - 1,
   scrollPosition = $(window).height() + $(window).scrollTop(),
   header = document.getElementsByClassName('navbar')[0];
 
-if ($(window).height() === scrollPosition) {
+if ($(window).height() >= scrollPosition) {
   header.classList.add('on-top');
 } 
 
@@ -20,9 +20,9 @@ window.onscroll = scrollFunction;
 function scrollFunction() {
   var scrollOffset = offsetButton();
   var scrollElm = checkBrowserSupport();
-  scrollHeight = $(document).height();
+  scrollHeight = $(document).height() - 1;
   scrollPosition = $(window).height() + $(window).scrollTop();
-  if ($(window).height() === scrollPosition) {
+  if ($(window).height() >= scrollPosition) {
     header.classList.add('on-top');
   } else {
     header.classList.remove('on-top');
