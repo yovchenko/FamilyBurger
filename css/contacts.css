@@ -12836,7 +12836,7 @@ body {
     min-height: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #f5d27ad9;
+    background-color: hsla(43, 86%, 72%, 0.851);
     background-image: url(../svg/i-like-food.svg);
     background-size: 75px 75px;
     font-family: 'Alegreya Sans';
