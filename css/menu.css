@@ -12826,16 +12826,18 @@ fieldset[disabled] .btn-yahoo:hover {
 }
 
 html {
-    height: 100%;
+    height: 100%
 }
 
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
     min-height: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    background-color: hsla(43, 86%, 72%, .85);
+    background-image: url(../svg/i-like-food.svg);
+    background-size: 75px 75px;
     font-family: 'Alegreya Sans';
     display: -webkit-box;
     display: -ms-flexbox;
@@ -12848,7 +12850,7 @@ body {
     font-size: 140%;
     letter-spacing: 1.2px;
     line-height: 200%;
-    text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .5), 1px 0 0 rgba(0%, 0%, 0%, .5), 1px 1px 1px rgba(0%, 0%, 0%, .5), 2px 1px 1px rgba(0%, 0%, 0%, .5)
+    text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .7), 1px 0 0 rgba(0%, 0%, 0%, .7), 1px 1px 1px rgba(0%, 0%, 0%, .7), 2px 1px 1px rgba(0%, 0%, 0%, .7)
 }
 
 .grid-container {
@@ -12860,34 +12862,7 @@ body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column;
-    background-color: hsla(43, 86%, 72%, .75);
-    background-image: url(../svg/i-like-food.svg);
-    background-size: 75px 75px;
-    transform: translate3d(0,0,0);
-}
-
-.grid-container.bottom {
-    padding-bottom: 105px;
-}
-
-footer {
-    width: 100%;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    position: relative;
-    transform: translate3d(0,0,0);
-    overflow: hidden;
-    background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
-    background-color: hsla(43, 80%, 80%, 1);
-    -webkit-box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3);
-    box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3)
-}
-
-.footer-fixed.fixed {
-    position: fixed;
-    bottom: 0;
+    flex-direction: column
 }
 
 .flex-container {
@@ -12899,9 +12874,6 @@ footer {
     display: flex;
     width: 100%;
     padding-top: 105px;
-    background-color: hsla(43, 86%, 72%, .75);
-    background-image: url(../svg/i-like-food.svg);
-    background-size: 75px 75px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -12911,7 +12883,7 @@ footer {
 .navbar {
     margin: 0;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
-    background-color: hsla(43, 80%, 80%, 1);
+    background-color:  #FAD591;
     min-height: 105px;
     -webkit-box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25);
     box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25)
@@ -13054,7 +13026,7 @@ a:focus {
 }
 
 .navbar-inverse .navbar-nav>li>a {
-    color: rgba(94.1%, 28.4%, 10.2%, 1);
+    color: #fff;
     font-size: 1.5em;
     position: relative;
     padding-top: 1.8em;
@@ -13702,6 +13674,18 @@ address .btn-facebook:hover {
     background-size: cover
 }
 
+footer {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
+    background-color:  #FAD591;
+    -webkit-box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3);
+    box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3)
+}
+
 .footer {
     display: block;
     display: -webkit-box;
@@ -14182,7 +14166,7 @@ option:disabled {
     box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
     -moz-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
     border: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
-    text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .5), 1px 0 0 rgba(0%, 0%, 0%, .5), 1px 1px 1px rgba(0%, 0%, 0%, .5), 2px 1px 1px rgba(0%, 0%, 0%, .5);
+    text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .7), 1px 0 0 rgba(0%, 0%, 0%, .7), 1px 1px 1px rgba(0%, 0%, 0%, .7), 2px 1px 1px rgba(0%, 0%, 0%, .7);
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none
@@ -14308,7 +14292,7 @@ select::-ms-expand {
 
 .notify-badge span {
     height: 50px;
-    color: rgba(94.1%, 28.4%, 10.2%, 1);
+    color: #fff;
     line-height: 50px;
 }
 

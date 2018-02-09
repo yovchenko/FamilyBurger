@@ -1620,7 +1620,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
-    color: rgba(94.1%, 28.4%, 10.2%, 1);
+    color: #fff;
     background-color: #fff
 }
 
@@ -1634,7 +1634,7 @@ textarea {
 }
 
 a {
-    color: rgba(94.1%, 28.4%, 10.2%, 1);
+    color: #fff;
     text-decoration: none
 }
 
@@ -12833,12 +12833,9 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100%;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: hsla(43, 86%, 72%, .75);
+    background-color: #f5d27ad9;
     background-image: url(../svg/i-like-food.svg);
     background-size: 75px 75px;
     font-family: 'Alegreya Sans';
@@ -12853,34 +12850,24 @@ body {
     font-size: 140%;
     letter-spacing: 1.2px;
     line-height: 200%;
-    text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .5), 1px 0 0 rgba(0%, 0%, 0%, .5), 1px 1px 1px rgba(0%, 0%, 0%, .5), 2px 1px 1px rgba(0%, 0%, 0%, .5)
-}
-
-.header {
-    position: absolute;
-    width: 100%;
-    z-index: 2;
-    top: 0;
+    text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .7), 1px 0 0 rgba(0%, 0%, 0%, .7), 1px 1px 1px rgba(0%, 0%, 0%, .7), 2px 1px 1px rgba(0%, 0%, 0%, .7)
 }
 
 .grid-container {
-    top: 105px;
+    padding-top: 105px;
+    padding-bottom: 105px;
     width: 100%;
-    bottom: 0;
-    position: absolute;
     -webkit-box-flex: 1;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column;
-    left: 0;
-    z-index: 1;
+    flex-direction: column
 }
 
-.grid-container.scrolled-nav {
-   top: 0;
+.body.keyboard-open .grid-container {
+    padding-bottom: 0;
 }
 
 .flex-container {
@@ -12896,15 +12883,6 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column
-}
-
-.push {
-    display: none;
-}
-
-.body.iscroll .push {
-    display: block;
-    height: 105px;
 }
 
 .navbar {
@@ -12933,7 +12911,7 @@ a:focus {
     float: right
 }
 
-.navbar.navbar-inverse.navbar-fixed-top.scrolled-nav {
+.navbar.navbar-inverse.navbar-fixed-top.scrolled-nav{
     min-height: 70px
 }
 
@@ -13463,7 +13441,7 @@ svg {
     -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
     filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
     border: 1px solid rgba(0, 0, 0, .2);
-    margin-left: 10px
+    margin-left: 15px
 }
 
 address .btn-yt:hover,
@@ -13698,51 +13676,31 @@ footer {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 75px;
     overflow: hidden;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
-    background-color: #FAD591;   -webkit-transition: all .3s linear 0s;
-    transition: all .3s linear 0s;
+    background-color: #FAD591;
     -webkit-box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3);
     box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3)
 }
 
-.footer {
-    display: block;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    min-height: 105px;
+.body.keyboard-open footer{
     position: relative;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    min-height: 105px;
 }
 
-.body.iscroll .footer {
+.footer-wrapper {
     min-height: 75px;
-}
-
-.body.iscroll .fixed-footer.scrolled-footer .footer {
-    height: 105px;
-}
-
-.body.iscroll .fixed-footer {
-    max-height: 75px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    z-index: 2;
+    position: relative;
     -webkit-transition: all .3s linear 0s;
-    transition: all .3s linear 0s;
+    transition: all .3s linear 0s
 }
 
-.body.iscroll .fixed-footer.scrolled-footer {
-    max-height: 105px;
-    -webkit-transition: all .3s linear 0s;
-    transition: all .3s linear 0s;
+.footer-wrapper.scrolled-footer {
+    min-height: 105px;
 }
 
 footer p {
@@ -13750,32 +13708,47 @@ footer p {
     color: #fff
 }
 
-.social {
+.footer-wrapper.scrolled-footer .social {
     float: right;
-    flex: 1 0 auto;
-    text-align: right;
-    margin: 0
+}
+
+.footer-wrapper .social {
+    float: right;
+    padding-top: 20.5px;
+    -webkit-transition: all .3s linear 0s;
+    transition: all .3s linear 0s
+}
+
+.footer-wrapper.scrolled-footer .copyright {
+    opacity: 1;
+    -webkit-transition: opacity .3s linear 0.3s;
+    transition: opacity .3s linear .3s
+}
+
+.footer-wrapper.scrolled-footer .design {
+    opacity: 1;
+    -webkit-transition: opacity .3s linear 0.3s;
+    transition: opacity .3s linear .3s
 }
 
 .container .design {
-    float: left;
-    flex: 0 1 auto;
-    font-size: 1.3em;
-    color: #fff;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-    margin: 50px 0 22px 0
-}
-
-@supports (display:grid) {
-    .container .design {
-        margin-top: 0
-    }
+    position: absolute;
+    left: 0;
+    bottom: 11.25px;
+    margin: auto;
+    opacity: 0;
 }
 
 .copyright {
-    margin-top: 10px;
-    text-align: right
+    position: absolute;
+    right: 0;
+    bottom: 11.25px;
+    margin: auto;
+    opacity: 0;
+}
+
+.footer-wrapper.scrolled-footer .copyright {
+  
 }
 
 .btn-facebook,
@@ -14139,6 +14112,10 @@ footer p {
     }
 }
 
+.push {
+    height: 100%
+}
+
 #contentWrap {
     position: relative
 }
@@ -14281,7 +14258,6 @@ hr {
 }
 
 .modal-body>.container>.row div .info-window {
-    color: #fff;
     padding: 5px;
     margin-top: 3px;
     background-color: rgba(94.1%, 28.4%, 10.2%, .9);
@@ -14770,5 +14746,3 @@ textarea:focus {
         font-size: 4.8vmin
     }
 }
-
-

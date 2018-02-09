@@ -1,32 +1,137 @@
+var scrollHeight = $(document).height();
+var scrollPosition = $(window).height() + $(window).scrollTop();
+var header = document.getElementsByClassName('navbar')[0];
+var footer = document.getElementsByClassName('footer-wrapper')[0];
+var keyboard = false;
 
-document.addEventListener('DOMContentLoaded',init,false);
-console.log(typeof(IScroll) === 'function')
-if (typeof(IScroll) === 'function') {
-  document.getElementsByClassName('body')[0].classList.add('iscroll');
+window.addEventListener("orientationchange", function () {
+  if (keyboard) {
+    window.lastOrientation = true;
+  }
+}, false);
+
+function updateWindowSize() {
+  window.lastInnerWidth = window.innerWidth;
+  window.lastInnerHeight = window.innerHeight;
+  // Stays the same for iOS, so that's our ticket to detect iOS keyboard
+  window.lastOrientation = false;
+  window.lastBodyHeight = document.body.clientHeight;
+};
+
+function detectKeyboard() {
+  function orientationChange() {
+    if (window.lastOrientation) {
+      return !window.lastOrientation;
+    } else {
+      return window.lastOrientation;
+    }
+  }
+
+  // No orientation change, keyboard opening
+  if ((window.lastInnerHeight - window.innerHeight > 150) && window.innerWidth == window.lastInnerWidth) {
+    let keyboardHeight = window.lastInnerHeight - window.innerHeight;
+    updateWindowSize();
+    return keyboardHeight;
+  }
+  // Orientation change with keyboard already opened
+  if (orientationChange() && keyboard) {
+    let keyboardHeight = screen.height - window.topBarHeight - window.innerHeight;
+    updateWindowSize();
+    return keyboardHeight;
+  }
+
+  // No orientation change, keyboard closing
+  if ((window.innerHeight - window.lastInnerHeight > 150) && window.innerWidth == window.lastInnerWidth) {
+    let keyboardHeight = -1;
+    updateWindowSize();
+    return keyboardHeight;
+  }
+
+  // Orientation change or regular resize, no keyboard action
+  let keyboardHeight = 0;
+  updateWindowSize();
+  return keyboardHeight;
+};
+
+function keyboardShift(keyboardHeight) {
+  document.getElementsByClassName('body')[0].className = 'body keyboard-open';
+  keyboard = true;
+};
+
+function removeKeyboardShift() {
+  document.getElementsByClassName('body')[0].className = 'body';
+  keyboard = false;
+};
+
+// OnStart innit
+(function () {
+  updateWindowSize();
+  window.topBarHeight = screen.height - window.innerHeight;
+  window.addEventListener("resize", resizeThrottler, false);
+
+  let resizeTimeout;
+
+  function resizeThrottler() {
+    // ignore resize events as long as an actualResizeHandler execution is in the queue
+    if (!resizeTimeout) {
+      resizeTimeout = setTimeout(function () {
+        resizeTimeout = null;
+        actualResizeHandler();
+        // The actualResizeHandler will execute at a rate of 15fps
+      }, 66);
+    }
+  }
+
+  function actualResizeHandler() {
+     offsetButton;
+    let keyboardHeight = detectKeyboard();
+    if (keyboardHeight > 0) {
+      keyboardShift(keyboardHeight);
+    } else if (keyboardHeight == -1) {
+      removeKeyboardShift();
+    }
+  }
+}());
+
+if ($(window).height() === scrollPosition) {
+  header.classList.remove('scrolled-nav');
 }
-function init() {
- var myScroll;
-  myScroll = new IScroll('#wrapper', { 
-     mouseWheel: true,
-     scrollbars: true
- });
- document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
- var scrollOffset = document.getElementById('contentWrap').offsetTop;
-    myScroll.on('scrollStart', function () {
-      console.log('start' + '=' + this.y)
-          document.getElementsByClassName('navbar')[0].classList.add('scrolled-nav');
-          document.getElementsByClassName('fixed-footer')[0].classList.remove('scrolled-footer');
-  });
+else if ((scrollHeight - scrollPosition) / scrollHeight <= 0) {
+  footer.classList.add('scrolled-footer')
+}
+else {
+  header.classList.add('scrolled-nav');
+}
 
- myScroll.on('scrollEnd', function () {
-  console.log('end' + '=' + this.y)
-      if ( this.y >= 0 ) {
-          document.getElementsByClassName('navbar')[0].classList.remove('scrolled-nav');
-      }
-      if ( this.y <= -(this.wrapperHeight - 310)) {
-          document.getElementsByClassName('fixed-footer')[0].classList.add('scrolled-footer');
-      }
-  });
+  function offsetButton() {
+    return document.getElementById('contentWrap').offsetTop;
+  };
+
+  function checkBrowserSupport() {
+    return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+  }
+
+  window.onscroll = scrollFunction;
+
+  function scrollFunction() {
+    var scrollOffset = offsetButton();
+    var scrollElm = checkBrowserSupport();
+    scrollHeight = $(document).height();
+    scrollPosition = $(window).height() + $(window).scrollTop();
+    header.classList.add('scrolled-nav');
+    footer.classList.remove('scrolled-footer')
+    if (scrollElm > scrollOffset) {
+      document.getElementById('scrollTop').style.display = "block";
+    } else {
+      document.getElementById('scrollTop').style.display = "none";
+    }
+    if ((scrollHeight - scrollPosition) / scrollHeight <= 0) {
+      footer.classList.add('scrolled-footer')
+    }
+    if ($(window).height() === scrollPosition) {
+      header.classList.remove('scrolled-nav');
+    }
+  }
 
   function scrollIt(destination) {
     var duration = arguments.length <= 1 || arguments[1] === undefined ? 200 : arguments[1];
@@ -134,6 +239,31 @@ function init() {
     return pixels / pixelsPerMs;
   }
 
+    // Scroll to section 
+  $('#selectMenu').change(function (event) {
+    var scrollTime = 0;
+    var $option = $('#selectMenu option:selected').text();
+    if ($option === 'Піца') {
+       var pizza = document.getElementById('pizza');
+        scrollTime = scrollGetSpeed(pizza);
+        scrollIt(pizza, scrollTime, 'linear', function () {});
+    } else if ($option === 'Роли') {
+      var roll = document.getElementById('roll');
+        scrollTime = scrollGetSpeed(roll);
+        scrollIt(roll, scrollTime, 'linear', function () {});
+    } else if ($option === 'Салати') {
+      var salat = document.getElementById('salat');
+        scrollTime = scrollGetSpeed(salat); 
+        scrollIt(salat, scrollTime, 'linear', function () {});
+    } else if ($option === 'Різне') {
+      var food = document.getElementById('chicken');
+        scrollTime = scrollGetSpeed(food);
+        scrollIt(food, scrollTime, 'linear', function () {});
+    }
+    $(this).val('burger');
+});
+
+  // Scroll to section 
   document.getElementById('scrollTop').addEventListener('click', function (event) {
     event.stopPropagation();
     event.preventDefault();
@@ -142,12 +272,11 @@ function init() {
   });
 
   document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
-    var scrolledNav = document.getElementsByClassName('navbar')[0];
-    if (this.getAttribute("aria-expanded") === 'false' || this.getAttribute("aria-expanded") === null && !scrolledNav.classList.contains("activeBar")) {
-      scrolledNav.classList.add("activeBar");
-      scrolledNav.style.height = 'auto';
+    if (this.getAttribute("aria-expanded") === 'false' || this.getAttribute("aria-expanded") === null && !header.classList.contains("activeBar")) {
+      header.classList.add("activeBar");
+      header.style.height = 'auto';
     } else {
-      scrolledNav.classList.remove("activeBar");
+      header.classList.remove("activeBar");
     }
-  }
-}
+  };
+  
