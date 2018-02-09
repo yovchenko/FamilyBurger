@@ -13692,6 +13692,10 @@ footer {
     transition: all .3s linear 0s
 }
 
+.body.bottom footer {
+    position: fixed;
+}
+
 .body.bottom .footer-wrapper {
     min-height: 105px;
 }
