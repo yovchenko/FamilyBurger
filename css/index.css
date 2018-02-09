@@ -12875,6 +12875,11 @@ body {
     flex-direction: column
 }
 
+footer {
+    border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+    border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+}
+
 .navbar {
     margin: 0;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
@@ -12887,6 +12892,10 @@ body {
 .navbar.navbar-inverse.navbar-fixed-top.on-top {
     position: absolute;
 } 
+.navbar.navbar-inverse {
+    border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+    border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+}
 
 a:focus {
     outline: 0
@@ -13751,6 +13760,8 @@ address .btn-facebook:hover {
 }
 
 footer {
+    border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+    border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
