@@ -12855,27 +12855,6 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    background-color: hsla(43, 86%, 72%, .75);
-    background-image: url(../svg/i-like-food.svg);
-    background-size: 75px 75px;
-}
-
-.flex-container {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    padding-top: 105px;
-    background-color: hsla(43, 86%, 72%, .75);
-    background-image: url(../svg/i-like-food.svg);
-    background-size: 75px 75px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column
 }
 
 .navbar {

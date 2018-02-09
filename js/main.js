@@ -1,28 +1,28 @@
-function offsetButton() {
-    return document.getElementById('contentWrap').offsetTop;
-  };
 
-  function checkBrowserSupport() {
-    return (window.pageYOffset || document.body.scrollTop);
-  }
+document.addEventListener('DOMContentLoaded',init,false);
+console.log(typeof(IScroll) === 'function')
+if (typeof(IScroll) === 'function') {
+  document.getElementsByClassName('push')[0].classList.add('iscroll');
+}
+function init() {
+ var myScroll;
+  myScroll = new IScroll('#wrapper', { 
+     mouseWheel: true,
+     scrollbars: true
+ });
+ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+ var scrollOffset = document.getElementById('contentWrap').offsetTop;
+    myScroll.on('scrollStart', function () {
+      console.log('start' + '=' + this.y)
+          document.getElementsByClassName('navbar')[0].classList.add('scrolled-nav');
+  });
 
-  window.onresize = offsetButton;
-  window.onscroll = scrollFunction;
-
-  function scrollFunction() {
-    var scrollOffset = offsetButton();
-    var scrollElm = checkBrowserSupport();
-    if (scrollElm > scrollOffset && scrollElm > window.innerHeight) {
-      document.getElementById('scrollTop').style.display = "block";
-    } else {
-      document.getElementById('scrollTop').style.display = "none";
-    }
-    if (scrollElm >= 105) {
-      document.getElementsByClassName('navbar')[0].classList.add('scrolled-nav');
-    } else {
-      document.getElementsByClassName('navbar')[0].classList.remove('scrolled-nav');
-    }
-  }
+ myScroll.on('scrollEnd', function () {
+  console.log('end' + '=' + this.y)
+      if ( this.y >= 0 ) {
+          document.getElementsByClassName('navbar')[0].classList.remove('scrolled-nav');
+      }
+  });
 
   function scrollIt(destination) {
     var duration = arguments.length <= 1 || arguments[1] === undefined ? 200 : arguments[1];
@@ -145,4 +145,5 @@ function offsetButton() {
     } else {
       scrolledNav.classList.remove("activeBar");
     }
-  };
+  }
+}

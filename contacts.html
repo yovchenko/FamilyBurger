@@ -34,10 +34,9 @@
     <link rel="stylesheet" href="css/contacts.css">
 </head>
 
-<body id="body">
+<body>
     <span class="targetTop"></span>
-    <div class="grid-container">
-        <header>
+    <header class="header">
             <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container">
                     <div class="navbar-header">
@@ -67,6 +66,8 @@
                 </div>
             </nav>
         </header>
+    <div class="grid-container"  id="wrapper">
+        <div id="scroller">
         <div class="svg-container"></div>
         <div class="container">
             <div class="row">
@@ -180,7 +181,9 @@
                     </div>
                 </div>
             </div>
+            <div class='push'></div>
         </main>
+        </div>
     </div>
     <footer class="fixed-footer">
         <div class="container">
@@ -217,6 +220,30 @@
     <script src="js/form.js"></script>
     <script src="js/map.js" async></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCav1JNc2dJTItVyk_zI9D_ZgVqzUNeZ1s"></script>
+
+ <!--   <script src="js/probe.js"></script>
+    <script>
+        var scroll = new IScroll('#scroller', {
+        bounce: false,
+        momentum: true,
+        mouseWheel: true,
+        keyBindings: true,
+        probeType: 3
+        });
+      scroll.on('scroll', function () {
+      console.log(this)
+      if ( this.y < -205 ) {
+          document.getElementById('scrollTop').style.display = "block";
+          document.getElementsByClassName('navbar')[0].classList.add('scrolled-nav');
+      }
+      else {
+          document.getElementsByClassName('navbar')[0].classList.remove('scrolled-nav');
+          document.getElementById('scrollTop').style.display = "none";
+      }
+  });
+    </script> -->
+
+    <script src="js/iscroll.js"></script>
     <script src="js/main.js" defer="defer"></script>
 </body>
 
