@@ -1,4 +1,5 @@
 var keyboardHeight,
+resizeTimeout,
 scrollHeight = $(document).height(),
 scrollPosition = $(window).height() + $(window).scrollTop(),
 header = document.getElementsByClassName('navbar')[0],
@@ -69,9 +70,6 @@ function removeKeyboardShift() {
   updateWindowSize();
   window.topBarHeight = screen.height - window.innerHeight;
   window.addEventListener("resize", resizeThrottler, false);
-
-  let resizeTimeout;
-
   function resizeThrottler() {
     // ignore resize events as long as an actualResizeHandler execution is in the queue
     if (!resizeTimeout) {
