@@ -1,18 +1,10 @@
 var scrollHeight = $(document).height(),
   scrollPosition = $(window).height() + $(window).scrollTop(),
-  header = document.getElementsByClassName('navbar')[0],
-  body = document.getElementsByClassName('body')[0];
+  header = document.getElementsByClassName('navbar')[0];
 
 if ($(window).height() === scrollPosition) {
-  header.classList.remove('scrolled-nav');
-} else if (scrollPosition >= $(document).height()) {
-  body.classList.add('bottom');
-  document.addEventListener('touchmove', function (e) {
-    e.preventDefault();
-  }, false);
-} else {
-  header.classList.add('scrolled-nav');
-}
+  header.classList.add('on-top');
+} 
 
 function offsetButton() {
   return document.getElementById('contentWrap').offsetTop;
@@ -22,34 +14,36 @@ function checkBrowserSupport() {
   return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
 }
 
-$(window).scroll(function () {
+window.onresize = offsetButton;
+window.onscroll = scrollFunction;
+
+function scrollFunction() {
   var scrollOffset = offsetButton();
   var scrollElm = checkBrowserSupport();
   scrollHeight = $(document).height();
-  scrollPosition = $(this).height() + $(this).scrollTop();
-  header.classList.add('scrolled-nav');
-  body.classList.remove('bottom');
-  if (scrollElm > scrollOffset) {
+  scrollPosition = $(window).height() + $(window).scrollTop();
+  if ($(window).height() === scrollPosition) {
+    header.classList.add('on-top');
+  } else {
+    header.classList.remove('on-top');
+  }
+  if (scrollElm > scrollOffset && scrollElm > window.innerHeight) {
     document.getElementById('scrollTop').style.display = "block";
   } else {
     document.getElementById('scrollTop').style.display = "none";
   }
-  if (scrollPosition >= $(document).height()) {
-    body.classList.add('bottom');
-    document.addEventListener('touchmove', function (e) {
-      e.preventDefault();
-    }, false);
+  if (scrollElm >= 105) {
+    document.getElementsByClassName('navbar')[0].classList.add('scrolled-nav');
+  } else {
+    document.getElementsByClassName('navbar')[0].classList.remove('scrolled-nav');
   }
-  if ($(this).height() === scrollPosition) {
-    header.classList.remove('scrolled-nav');
-  }
-});
+}
 
 function scrollIt(destination) {
   var duration = arguments.length <= 1 || arguments[1] === undefined ? 200 : arguments[1];
   var easing = arguments.length <= 2 || arguments[2] === undefined ? 'linear' : arguments[2];
   var callback = arguments[3];
-
+ 
   // Predefine list of available timing functions
   var easings = {
     linear: function linear(t) {
@@ -144,38 +138,13 @@ function scrollIt(destination) {
   scroll();
 }
 
-//measure scroll speed
-function scrollGetSpeed(elem) {
+  //measure scroll speed
+function scrollGetSpeed (elem) {
   var pixels = document.body.clientHeight + elem.offsetTop,
-    pixelsPerMs = 4;
+  pixelsPerMs = 4; 
   return pixels / pixelsPerMs;
 }
 
-// Scroll to section 
-$('#selectMenu').change(function (event) {
-  var scrollTime = 0;
-  var $option = $('#selectMenu option:selected').text();
-  if ($option === 'Піца') {
-    var pizza = document.getElementById('pizza');
-    scrollTime = scrollGetSpeed(pizza);
-    scrollIt(pizza, scrollTime, 'linear', function () {});
-  } else if ($option === 'Роли') {
-    var roll = document.getElementById('roll');
-    scrollTime = scrollGetSpeed(roll);
-    scrollIt(roll, scrollTime, 'linear', function () {});
-  } else if ($option === 'Салати') {
-    var salat = document.getElementById('salat');
-    scrollTime = scrollGetSpeed(salat);
-    scrollIt(salat, scrollTime, 'linear', function () {});
-  } else if ($option === 'Різне') {
-    var food = document.getElementById('chicken');
-    scrollTime = scrollGetSpeed(food);
-    scrollIt(food, scrollTime, 'linear', function () {});
-  }
-  $(this).val('burger');
-});
-
-// Scroll to section 
 document.getElementById('scrollTop').addEventListener('click', function (event) {
   event.stopPropagation();
   event.preventDefault();
@@ -184,11 +153,11 @@ document.getElementById('scrollTop').addEventListener('click', function (event) 
 });
 
 document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
-  if (this.getAttribute("aria-expanded") === 'false' || this.getAttribute("aria-expanded") === null && !header.classList.contains("activeBar")) {
-    header.classList.add("activeBar");
-    header.style.height = 'auto';
+  var scrolledNav = document.getElementsByClassName('navbar')[0];
+  if (this.getAttribute("aria-expanded") === 'false' || this.getAttribute("aria-expanded") === null && !scrolledNav.classList.contains("activeBar")) {
+    scrolledNav.classList.add("activeBar");
+    scrolledNav.style.height = 'auto';
   } else {
-    header.classList.remove("activeBar");
+    scrolledNav.classList.remove("activeBar");
   }
-}
-  
+};

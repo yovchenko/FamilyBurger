@@ -12834,7 +12834,7 @@ body {
     min-height: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: hsla(43, 86%, 72%, .85);
+    background-color: hsla(43, 86%, 72%, 0.9);
     background-image: url(../svg/i-like-food.svg);
     background-size: 75px 75px;
     font-family: 'Alegreya Sans';
@@ -12858,6 +12858,21 @@ body {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.flex-container {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding-top: 105px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -13679,7 +13694,7 @@ footer {
     position: relative;
     overflow: hidden;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
-    background-color:  #FAD591;
+    background-color:  #fad591;
     -webkit-box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3);
     box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3)
 }
@@ -14128,7 +14143,7 @@ hr {
     border: 3px solid rgba(94.1%, 28.4%, 10.2%, .8);
     margin: 5px;
     border-radius: 50%;
-    background-color: #FAD591;
+    background-color: hsl(39, 91%, 77%);
     -webkit-box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2);
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2);
     -moz-box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2)
