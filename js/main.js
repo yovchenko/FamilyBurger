@@ -3,16 +3,13 @@ var scrollHeight = $(document).height(),
   header = document.getElementsByClassName('navbar')[0],
   body = document.getElementsByClassName('body')[0];
 
-  document.addEventListener('touchmove', function (e) {
-    if (scrollPosition > $(document).height()) {
-    e.preventDefault();
-    }
-  }, false);
-
 if ($(window).height() === scrollPosition) {
   header.classList.remove('scrolled-nav');
 } else if (scrollPosition >= $(document).height()) {
   body.classList.add('bottom');
+  document.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+  }, false);
 } else {
   header.classList.add('scrolled-nav');
 }
@@ -39,6 +36,9 @@ $(window).scroll(function () {
   }
   if (scrollPosition >= $(document).height()) {
     body.classList.add('bottom');
+    document.addEventListener('touchmove', function (e) {
+      e.preventDefault();
+    }, false);
   }
   if ($(this).height() === scrollPosition) {
     header.classList.remove('scrolled-nav');
