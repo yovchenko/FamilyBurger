@@ -1,8 +1,9 @@
-var scrollHeight = $(document).height();
-var scrollPosition = $(window).height() + $(window).scrollTop();
-var header = document.getElementsByClassName('navbar')[0];
-var footer = document.getElementsByClassName('footer-wrapper')[0];
-var keyboard = false;
+var keyboardHeight,
+scrollHeight = $(document).height(),
+scrollPosition = $(window).height() + $(window).scrollTop(),
+header = document.getElementsByClassName('navbar')[0],
+footer = document.getElementsByClassName('footer-wrapper')[0],
+keyboard = false;
 
 window.addEventListener("orientationchange", function () {
   if (keyboard) {
@@ -29,26 +30,26 @@ function detectKeyboard() {
 
   // No orientation change, keyboard opening
   if ((window.lastInnerHeight - window.innerHeight > 150) && window.innerWidth == window.lastInnerWidth) {
-    let keyboardHeight = window.lastInnerHeight - window.innerHeight;
+    keyboardHeight = window.lastInnerHeight - window.innerHeight;
     updateWindowSize();
     return keyboardHeight;
   }
   // Orientation change with keyboard already opened
   if (orientationChange() && keyboard) {
-    let keyboardHeight = screen.height - window.topBarHeight - window.innerHeight;
+    keyboardHeight = screen.height - window.topBarHeight - window.innerHeight;
     updateWindowSize();
     return keyboardHeight;
   }
 
   // No orientation change, keyboard closing
   if ((window.innerHeight - window.lastInnerHeight > 150) && window.innerWidth == window.lastInnerWidth) {
-    let keyboardHeight = -1;
+    keyboardHeight = -1;
     updateWindowSize();
     return keyboardHeight;
   }
 
   // Orientation change or regular resize, no keyboard action
-  let keyboardHeight = 0;
+  keyboardHeight = 0;
   updateWindowSize();
   return keyboardHeight;
 };
@@ -84,7 +85,7 @@ function removeKeyboardShift() {
 
   function actualResizeHandler() {
      offsetButton;
-    let keyboardHeight = detectKeyboard();
+    keyboardHeight = detectKeyboard();
     if (keyboardHeight > 0) {
       keyboardShift(keyboardHeight);
     } else if (keyboardHeight == -1) {
