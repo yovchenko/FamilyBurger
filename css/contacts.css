@@ -12825,14 +12825,13 @@ fieldset[disabled] .btn-yahoo:hover {
     height: 0
 }
 
-html {
+html,body {
     height: 100%;
 }
 
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
     min-height: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -12848,6 +12847,7 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     font-weight: 700;
+    padding-bottom: 44px;
     font-size: 140%;
     letter-spacing: 1.2px;
     line-height: 200%;
@@ -12855,20 +12855,17 @@ body {
 }
 
 .grid-container {
-    padding-top: 105px;
-    padding-bottom: 105px;
     width: 100%;
+    position: relative;
     -webkit-box-flex: 1;
     -ms-flex: 1 0 auto;
+    padding-bottom: 75px;
     flex: 1 0 auto;
+    padding-top: 105px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column
-}
-
-.body.keyboard-open .grid-container {
-    padding-bottom: 0;
 }
 
 .flex-container {
@@ -13677,9 +13674,9 @@ footer {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    position: absolute;
+    bottom: 0;
     min-height: 75px;
     overflow: hidden;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
@@ -13688,29 +13685,24 @@ footer {
     box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3)
 }
 
-.body.keyboard-open footer{
-    position: relative;
-    min-height: 105px;
-}
-
 .footer-wrapper {
-    min-height: 75px;
     position: relative;
+    min-height: 75px;
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s
 }
 
-.footer-wrapper.scrolled-footer {
+.body.bottom footer {
+    position: fixed;
+}
+
+.body.bottom .footer-wrapper {
     min-height: 105px;
 }
 
 footer p {
     font-size: 1.3em;
     color: #fff
-}
-
-.footer-wrapper.scrolled-footer .social {
-    float: right;
 }
 
 .footer-wrapper .social {
@@ -13720,13 +13712,13 @@ footer p {
     transition: all .3s linear 0s
 }
 
-.footer-wrapper.scrolled-footer .copyright {
+.body.bottom .footer-wrapper .copyright {
     opacity: 1;
     -webkit-transition: opacity .3s linear 0.3s;
     transition: opacity .3s linear .3s
 }
 
-.footer-wrapper.scrolled-footer .design {
+.body.bottom  .footer-wrapper .design {
     opacity: 1;
     -webkit-transition: opacity .3s linear 0.3s;
     transition: opacity .3s linear .3s
@@ -13746,10 +13738,6 @@ footer p {
     bottom: 11.25px;
     margin: auto;
     opacity: 0;
-}
-
-.footer-wrapper.scrolled-footer .copyright {
-  
 }
 
 .btn-facebook,
@@ -13941,12 +13929,6 @@ footer p {
     .arrow_box_top .notes .text img {
         width: 60%;
         height: 60%
-    }
-}
-
-@media screen and (orientation:landscape) and (max-width:767px) {
-    .navbar {
-        position: absolute
     }
 }
 
