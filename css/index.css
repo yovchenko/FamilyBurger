@@ -5342,7 +5342,8 @@ textarea.input-group-sm>.input-group-btn>.btn {
     position: fixed;
     right: 0;
     left: 0;
-    z-index: 1030
+    z-index: 1030;
+    -webkit-backface-visibility:hidden;
 }
 
 @media (min-width:768px) {
@@ -12851,6 +12852,9 @@ body {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
+    background-color: hsla(45, 76%, 72%, 1);
+    background-image: url(../svg/i-like-food.svg);
+     background-size: 75px 75px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -12864,7 +12868,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: hsla(43, 86%, 72%, 0.9);
+    background-color: hsla(45, 76%, 72%, 1);
     background-image: url(../svg/i-like-food.svg);
      background-size: 75px 75px;
     width: 100%;
@@ -12882,16 +12886,14 @@ footer {
 
 .navbar {
     margin: 0;
+    position: absolute;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
-    background-color:  hsl(39, 91%, 77%);
+    background-color:  hsla(45, 76%, 72%, 1);
     min-height: 105px;
     -webkit-box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25);
     box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25)
 }
 
-.navbar.navbar-inverse.navbar-fixed-top.on-top {
-    position: absolute;
-} 
 .navbar.navbar-inverse {
     border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
     border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
@@ -12914,12 +12916,9 @@ a:focus {
     float: right
 }
 
-.flex-container .scrolled-nav {
-    min-height: 70px
-}
-
-.grid-container .scrolled-nav {
-    min-height: 70px
+.navbar.navbar-inverse.navbar-fixed-top.scrolled-nav {
+    min-height: 70px;
+    position: fixed;
 }
 
 .scrolled-nav .navbar-toggle {
@@ -13528,7 +13527,7 @@ svg {
     -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
     filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
     border: 1px solid rgba(0, 0, 0, .2);
-    margin-left: 10px
+    margin-left: 15px
 }
 
 address .btn-yt:hover,
@@ -13766,24 +13765,15 @@ footer {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
-    background-color:  hsl(39, 91%, 77%);
+    background-color:  hsla(45, 76%, 72%, 1);
     -webkit-box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3);
     box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3)
 }
 
 .footer {
     display: block;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     min-height: 105px;
     position: relative;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end
 }
 
 footer p {
@@ -13793,30 +13783,25 @@ footer p {
 
 .social {
     float: right;
-    flex: 1 0 auto;
-    text-align: right;
-    margin: 0
+    margin-top: 35.5px;
 }
 
 .container .design {
-    float: left;
-    flex: 0 1 auto;
-    font-size: 1.3em;
-    color: #fff;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-    margin: 50px 0 22px 0
-}
-
-@supports (display:grid) {
-    .container .design {
-        margin-top: 0
-    }
+   position: absolute;
+   bottom: 3.75px;
+   left: 0;
+   margin: 0;
+   -webkit-transition: all .3s linear 0s;
+   transition: all .3s linear 0s
 }
 
 .copyright {
-    margin-top: 10px;
-    text-align: right
+   position: absolute;
+   bottom: 3.75px;
+   right: 0;
+   margin: 0;
+   -webkit-transition: all .3s linear 0s;
+   transition: all .3s linear 0s
 }
 
 .btn-facebook,
