@@ -1,13 +1,10 @@
 {
-  "name": "familyBurger",
+  "name": "family-burger",
   "version": "1.0.0",
-  "description": "Fast food restaurant",
+  "description": "Fast food restaurant in Romny",
   "main": "main.js",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
-    "dev": "^0.1.3",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
     "lodash": "^4.17.4",
     "normalize.css": "^7.0.0"
   },
@@ -31,13 +28,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/familyBurger/familyBurger.git"
+    "url": "git+https://github.com/yovchenko/family-burger.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/familyBurger/familyBurger/issues"
-  },
-  "homepage": "https://github.com/familyBurger/familyBurger#readme"
+  "author": "Volodymyr M. Yovchenko",
+  "license": "ISC"
 }
