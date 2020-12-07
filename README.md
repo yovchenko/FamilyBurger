@@ -36,6 +36,6 @@ this website has been tested and works on the following browsers:
 ---------------------------
 Volodymyr M. Yovchenko
 
-All bugs and fixes can be sent to yovchenko.w@gmail.com
+All bugs and fixes can be sent to volodymyr.yovchenko@gmail.com
 
 Thank you for your attention to the website.
